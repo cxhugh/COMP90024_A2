@@ -1,0 +1,83 @@
+---
+- name: Uninstall old versions of docker
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['docker', 'docker-engine', 'docker.io']
+    state: absent
+
+- name: Install dependencies
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['apt-transport-https', 'ca-certificates', 'curl', 'python-setuptools', 'software-properties-common']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+- name: Add Docker apt repository key
+  tags: 'docker'
+  become: yes
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker apt repository and update apt cache
+  tags: 'docker'
+  become: yes
+  apt_repository:
+    repo: "deb https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} stable"
+    mode: '644'
+    update_cache: yes
+    state: present
+
+- name: Install docker
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['docker-ce']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+- name: Install docker-compose
+  tags: 'docker'
+  become: yes
+  pip:
+    name: ['docker-compose']
+    state: latest
+
+- name: Start Docker
+  systemd:
+    state: started
+    name: docker
+
+- name: Create config directory
+  become: yes
+  file:
+    path: /etc/systemd/system/docker.service.d
+    state: directory
+    mode: 0766
+
+- name: Create config file
+  become: yes
+  file:
+    path: /etc/systemd/system/docker.service.d/http-proxy.conf
+    state: touch
+    mode: 0766
+
+- name: Setup proxy for docker
+  become: yes
+  lineinfile:
+    path: /etc/systemd/system/docker.service.d/http-proxy.conf
+    line: "{{ item }}"
+  with_items:
+    - '[Service]'
+    - 'Environment="http_proxy=http://wwwproxy.unimelb.edu.au:8000" "https_proxy=http://wwwproxy.unimelb.edu.au:8000" "ftp_proxy=http://wwwproxy.unimelb.edu.au:8000" "no_proxy=localhost,127.0.0.1,127.0.1.1,ubuntu"'
+
+- name: Flush changes and restart docker
+  become: yes
+  systemd:
+    daemon_reload: yes
+    state: restarted
+    name: docker    
