@@ -1,0 +1,28 @@
+#This file is developed by Team  of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+
+---
+- name: Create couchdb directory
+  tags: 'couchdb'
+  become: yes
+  file:
+    path: "{{ couchdb_dir }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    recurse: yes
+    state: directory
+      
+- name: Copy the cluster installation script on master node
+  tags: 'couchdb'
+  become: yes
+  copy:
+    src: "{{ local_submodules_dir }}/run-couchdb-cluster.sh"
+    dest: "./{{ couchdb_dir }}/run-couchdb-cluster.sh"
+
+- name: Setup cluster on master node
+  tags: 'couchdb'
+  become: yes
+  command: "{{ item }}"
+  with_items:
+    - bash ./{{ couchdb_dir }}/run-couchdb-cluster.sh
