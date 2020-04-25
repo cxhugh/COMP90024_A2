@@ -1,3 +1,0 @@
-standalone couchDB in a VM: ./run-couchdb.sh
-#might not be useful in ass2
-cluster couchDB in a VM: ./run-couchdb-cluster.sh 
