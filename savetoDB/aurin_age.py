@@ -14,7 +14,7 @@ local = "http://127.0.0.1:5984/"
 couch = couchdb.Server(local)
 
 #database_name = "test_db"
-database_name = "aurin_age_db3"
+database_name = "aurin_age_db2"
 
 try:
     db = couch[database_name]
