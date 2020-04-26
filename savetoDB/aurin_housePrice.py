@@ -14,7 +14,7 @@ local = "http://127.0.0.1:5984/"
 couch = couchdb.Server(local)
 
 #database_name = "test_db"
-database_name = "aurin_weeklyincome_db2"
+database_name = "aurin_housePrice_db2"
 
 try:
     db = couch[database_name]
@@ -39,7 +39,7 @@ def process_json(data):
     return
 
 if __name__ == "__main__":
-    file = open("../aurin/VIChouseholdweeklyIncome.json", encoding='utf8').read()
+    file = open("../aurin/VIC2019HousePrice.json", encoding='utf8').read()
     data = json.loads(file)
     data = data['features']
     process_json(data)
