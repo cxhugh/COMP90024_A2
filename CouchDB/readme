@@ -1,2 +1,0 @@
-standalone couchDB in a VM: ./run-couchdb.sh
-cluster couchDB in a VM: ./run-couchdb-cluster.sh 

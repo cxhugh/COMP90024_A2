@@ -1,0 +1,9 @@
+- hosts: dbserver, harvester1, harvester2
+  become: yes
+  vars_files:
+     - ./host_vars/vars.yml
+  roles:
+     - common
+     - volumes
+     - couchdb
+     - couchdb-cluster
