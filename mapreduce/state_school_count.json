@@ -1,0 +1,36 @@
+{
+    "rows": [
+        {
+            "value": 134,
+            "key": "ACT"
+        },
+        {
+            "value": 3161,
+            "key": "NSW"
+        },
+        {
+            "value": 189,
+            "key": "NT"
+        },
+        {
+            "value": 1738,
+            "key": "QLD"
+        },
+        {
+            "value": 728,
+            "key": "SA"
+        },
+        {
+            "value": 256,
+            "key": "TAS"
+        },
+        {
+            "value": 2255,
+            "key": "VIC"
+        },
+        {
+            "value": 1096,
+            "key": "WA"
+        }
+    ]
+}
