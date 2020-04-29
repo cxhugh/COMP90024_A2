@@ -1,0 +1,40 @@
+- hosts: demo3
+  tasks:
+    - name: Start Docker
+      systemd:
+        state: started
+        name: docker
+
+    - name: Create config directory
+      tags: 'docker'
+      become: yes
+      file:
+        path: /etc/systemd/system/docker.service.d
+        state: directory
+        mode: 0766
+
+    - name: Create config file
+      tags: 'docker'
+      become: yes
+      file:
+        path: /etc/systemd/system/docker.service.d/http-proxy.conf
+        state: touch
+        mode: 0766
+
+    - name: Setup proxy for docker
+      tags: 'docker'
+      become: yes
+      lineinfile:
+        path: /etc/systemd/system/docker.service.d/http-proxy.conf
+        line: "{{ item }}"
+      with_items:
+        - '[Service]'
+        - 'Environment="http_proxy=http://wwwproxy.unimelb.edu.au:8000" "https_proxy=http://wwwproxy.unimelb.edu.au:8000" "ftp_proxy=http://wwwproxy.unimelb.edu.au:8000" "no_proxy=localhost,127.0.0.1,127.0.1.1,ubuntu"'
+
+    - name: Flush changes and restart docker
+      tags: 'docker'
+      become: yes
+      systemd:
+        daemon_reload: yes
+        state: restarted
+        name: docker    
