@@ -1,20 +1,11 @@
 import couchdb
 import json
-from couchdb import Session
 
-auth = Session()
-auth.name = "admin"
-auth.password = "admin"
+server = "http://admin:admin@172.26.129.233:5984/"
+#local = "http://127.0.0.1:5984/"
 
-server = "http//172.26.130.151:5984/"
-server2 = "http://172.26.128.114:5984/" #
-local = "http://127.0.0.1:5984/"
-
-#couch = couchdb.Server(server,session=auth)
-couch = couchdb.Server(local)
-
-#database_name = "test_db"
-database_name = "aurin_age_db2"
+couch = couchdb.Server(server)
+database_name = "aurin_age_db"
 
 try:
     db = couch[database_name]
