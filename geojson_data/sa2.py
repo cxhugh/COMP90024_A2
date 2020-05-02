@@ -40,7 +40,7 @@ def get_suburbID_frm_place(place):
                 area = place_polygon.intersection(suburb_polygon).area
                 if area > max_area:
                     max_area = area
-                    max_area_sub_id = item['properties']['STE_NAME16']
+                    max_area_sub_id = item['properties']['SA2_MAIN16']
     return max_area_sub_id
 
 place= {
