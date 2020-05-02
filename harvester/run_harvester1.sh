@@ -1,0 +1,1 @@
+nohup python3 -u twitter_search.py >> harvester1.out 2>&1 &
