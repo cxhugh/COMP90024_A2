@@ -5,7 +5,7 @@ import couchdb
 import json
 import time
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from breakpoint_restart import save_point
+from breakpoint_restart import save_point,get_breakPoint
 
 # CONSTANT
 TWEETSPREQUERY = 100 # max for search api
@@ -46,10 +46,10 @@ def generate_api(key_group):
 
     return api
 
-def search_tweets(query,api,db):
+def search_tweets(query,api,db,max_id=-1):
     sinceId = None
-    max_id = -1
-    request_times = 0   
+    max_id = max_id
+    request_times = 0  
     while True:
         try:
             if max_id <= 0:
@@ -185,29 +185,42 @@ def register_database():
     
     return db
 
+def get_topic_words(for_timeline=False):
+    topic_words = []
+    with open("topic_words.txt",'r') as f:
+        topic_words = f.read().split(',')
+        topic_words = [w.strip() for w in topic_words]
+    f.close()    
+    if for_timeline:
+        topic_words = [" "+w.lower() for w in topic_words]   
+    
+    return topic_words
+
 
 if __name__ == "__main__":
     db = register_database()     
     api = generate_api('api-1')
     get_account_status(api)
 
-    topic_words = []
-    with open("topic_words.txt",'r') as f:
-        topic_words = f.read().split(',')
-        topic_words = [w.strip() for w in topic_words]
-    f.close()
-    
-    if os.path.exists("progress_log.json"):
-        with open("progress_log.json",'r') as f:
-            state = json.load(f)
+    topic_words = get_topic_words()
+       
+    # recover from break point
+    cur_user, cur_word, user_list, topic_finish = get_breakPoint()
+    print("break :",cur_user,cur_word,topic_finish)
 
-    # TODO: 断点重启
     #search by key_words and location
-    for word in topic_words:
-        search_tweets(word,api,db)
+    if not topic_finish:
+        if cur_word:
+            w = topic_words.index(cur_word)
+            topic_words = topic_words[w:]
+        for word in topic_words:
+            search_tweets(word,api,db)
 
     #search by user 
-    topic_words = [" "+w.lower() for w in topic_words]
+    topic_words = get_topic_words(for_timeline=True)
+    if cur_user:
+        u = user_list.index(cur_user)
+        user_list = user_list[u:]
     for i in range(len(user_list)):
         print(num)
         user = user_list[i]
