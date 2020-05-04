@@ -1,0 +1,32 @@
+---
+
+- hosts: harvester1
+  tasks:
+    - name: copy python files to server
+      copy:
+        src: ../harvester
+        dest: /home/ubuntu
+        mode: 0755
+        owner: ubuntu
+        group: ubuntu
+
+    - name: Update apt
+      become: yes
+      apt:
+        upgrade: yes
+        update_cache: yes
+# apt-get upgrade; apt-get update
+
+    - name: install python libraries
+      pip:
+        name: ['tweepy','couchdb','vaderSentiment']
+        state: latest
+
+    - name: run search api
+      shell: bash run_harvester1.sh
+      args:
+        chdir: /home/ubuntu/harvester/
+      register: is_api_run
+
+    - name: display shell script result
+      debug: msg="{{is_api_run.stdout}}"
