@@ -60,5 +60,6 @@ if __name__ == "__main__":
     number_of_Apis = 3
     for i,geocode in enumerate(location_dict.values()):
         if i%number_of_Apis == (int(key_group[-1])-1):
+            # print(i,geocode)
             search_harvesrter_run(key_group,geocode,db)  
 
