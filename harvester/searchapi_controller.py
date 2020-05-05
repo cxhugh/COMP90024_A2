@@ -1,7 +1,7 @@
 import sys, getopt
 import json
 import twitter_search
-from breakpoint_restart import save_point,get_breakPoint
+from breakpoint_restart import get_breakPoint,clear_breakpoint
 
 def search_harvesrter_run(key_group,geocode,db):
     api = twitter_search.generate_api(key_group)
@@ -32,6 +32,7 @@ def search_harvesrter_run(key_group,geocode,db):
             pass
     twitter_search.search_tweets_by_user(user_list=user_list,api=api,db=db,topic_words=topic_words,
         key_group=key_group)
+    clear_breakpoint(key_group)
 
 def main(argv):
     api = ''

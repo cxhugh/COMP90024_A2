@@ -34,3 +34,8 @@ def get_breakPoint(key_group='api-1'):
         f.close()
     
     return cur_user, cur_topic_word, user_list, topic_finish
+
+def clear_breakpoint(key_group):
+    filename = 'progress_log' + key_group + '.json'
+    if os.path.exists(filename):
+        os.remove(filename)

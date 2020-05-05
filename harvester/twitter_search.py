@@ -130,8 +130,7 @@ def search_tweets_by_user(user_list,api,db,topic_words,key_group):
                                     'user_name':tweet['user']['screen_name'],
                                     'sentiment':sentiment_score,
                                     'coordinates':coordinates}
-                                db.save(filter_tweet_info)
-                                print(filter_tweet_info)                            
+                                db.save(filter_tweet_info)                         
         except Exception as e:
             print(e)
 
@@ -173,7 +172,6 @@ def register_database():
         else:
             db = server[db_name]
     except couchdb.PreconditionFailed as e:
-        db = server[db_name]
         print(e)
     except Exception as e:
         command_str = 'curl -X DELETE' + db_server + '/' + db_name

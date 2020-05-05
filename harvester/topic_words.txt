@@ -6,4 +6,4 @@ Penfolds, penfold, Cape Mentelle, Yellow Tail , Jacob’s Creek, Jim Barry, Wolf
 liquid,mixed drink,bar,winery,brewery,sake,rice wine,beerhouse,liqueur,Whisky,Gin,bordeaux,claret,sherry,
 rye,malt,hock,port,punch,draught beer,shandy,bitter,ale,lager,stout,aperitif,VSOP,red wine,spirit,Corona(Beer),
 Victoria Bitter,Tooheys,Coopers,Carlton Draught,Little Creatures,James Squire,Matilda Bay,Shiraz,Guinness,Heineken,Blue Moon,Budweiser,budweiser,Beck's,
-Hoegaarden Witbier,Coors Light,XXXX,Cascade Brewery,Crown Lager,XXXX Gold,VB,Tooheys New,Tooheys Extra Dry ,Carlton Mid,Carlton Dry,Corona Extra,Pure Blonde,
+Hoegaarden Witbier,Coors Light,XXXX,Cascade Brewery,Crown Lager,XXXX Gold,VB,Tooheys New,Tooheys Extra Dry ,Carlton Mid,Carlton Dry,Corona Extra,Pure Blonde
