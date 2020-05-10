@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+          <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfUzLtZNwN63aB4KiFNpmf50vWxsvLBQ&libraries=visualization&language=en">
+</script>
+            <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfUzLtZNwN63aB4KiFNpmf50vWxsvLBQ&callback=initMap&language=en">
+    </script>
+
+<!--     Site Title-->
+
+    <title>COMP90024 Team5</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- Material Icon -->
+    <link rel="stylesheet" href="../static/css/materialdesignicons.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="../static/css/magnific-popup.css" />
+    <!-- Carousel Slider -->
+    <link rel="stylesheet" href="../static/css/owl.carousel.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
+    <!-- Custom  CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+
+<body>
+    <!-- Start Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- End preloader -->
+
+    <div id="main-wrapper">
+        <!-- Start Navbar -->
+        <div class="menu-toggler">
+            <span>
+                <i class="mdi mdi-menu"></i>
+            </span>
+        </div>
+        <header>
+            <div class="header-navbar h-100">
+                <a class="navbar-brand" href="#">
+<!--                    <b>U</b><span>Unimelb</span>-->
+                    <img src="../static/images/slider-img/123.png" class="img-fluid" alt="Unimelb">
+                </a>
+                <nav class="navbar menu-list">
+                    <ul class="list-group text-center" id="menu">
+                        <li class="list-group-item">
+                            <a class="active" href="#home">
+                                <span class="menu-icon mx-auto"><i class="mdi mdi-home-outline"></i></span>
+                                <span>home</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#RS">
+                                <span class="menu-icon mx-auto"><i class="mdi mdi-grid-large"></i></span>
+                                <span>RS</span>
+                            </a>
+                        </li>
+<!--                        <li class="list-group-item">-->
+<!--                            <a href="#services">-->
+<!--                                <span class="menu-icon mx-auto"><i class="mdi mdi-briefcase-outline"></i></span>-->
+<!--                                <span>Services</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+                        <!--
+                        <li class="list-group-item">
+                            <a href="#portfolio">
+                                <span class="menu-icon mx-auto"><i class="mdi mdi-grid-large"></i></span>
+                                <span>Portfolio</span>
+                            </a>
+                        </li>
+                        -->
+<!--                        <li class="list-group-item">-->
+<!--                            <a href="#client">-->
+<!--                                <span class="menu-icon mx-auto"><i class="mdi mdi-chart-bubble"></i></span>-->
+<!--                                <span>Clients</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+                        <li class="list-group-item">
+                            <a href="#contact">
+                                <span class="menu-icon mx-auto"><i class="mdi mdi-chat-processing-outline"></i></span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </header>
+        <!-- End Navbar -->
+        <!-- Start Home -->
+        <section class="home-bg section active" id="home">
+            <div id="particles-js">
+            </div>
+            <div class="section-area">
+                <div class="section-content">
+                    <div class="hero-text-area">
+                        <div class="welcome-area">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="hero-text text-center">
+                                            <div class="wel-txt">Hello</div>
+                                            <h1>We&nbsp;<span class="typed"></span>
+<!--                                                <span class="typed"></span>-->
+                                            </h1>
+                                        </div>
+<!--                                        <ul >-->
+<!--                                            <li>Photo</li>-->
+<!--                                            <li><i class="mdi mdi-circle mdi-10px ml-3 mr-3"></i></li>-->
+<!--                                            <li>Photo Editing</li>-->
+<!--                                            <li><i class="mdi mdi-circle mdi-10px ml-3 mr-3"></i></li>-->
+<!--                                            <li>Photo Exibition</li>-->
+<!--                                        </ul>-->
+                                        <div class="informative-txt d-flex justify-content-center align-items-center">
+                                            <br>This Web presents all the visual data analysis have been done by Team 5 harvesting Australia Twitter Data and AURIN data.<br><br>
+                                            Click buttons at the left for the analysis result.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Home -->
+        <!-- Start About-Us -->
+        <section class="section bg-light line-vector" id="RS">
+            <div class="section-area">
+                <div class="section-content">
+                    <div class="container">
+                        <div class="title-block mx-auto">
+                            <div class="section_title mb-4 text-center">
+                                <h2><span>Remote Study</span></h2>
+                                <p class="section_subtitle mx-auto">This is about visualization of remote study.</p>
+                            </div>
+                        </div>
+                        <div class="row1 align-items-center">
+<!--                            <div class="col-md-6 col-sm-12">-->
+<!--                                <div class="about-text-block">-->
+<!--                                    <div class="about-content">-->
+<!--                                        <h4>-->
+<!--                                            KNOW<br> ABOUT MYSELF-->
+<!--                                        </h4>-->
+<!--                                        <div class="text">is simply dummy text of the printing and typesetting industry. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>-->
+<!--                                        <div class="text">is simply dummy text of the printing and typesetting industry. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div   class="col-md-6 col-sm-12">
+                                <div class="about-img-box">
+                                    <div id="main-abcde" class="image" style="width: 700px;height: 500px">
+<!--                                        <img src="images/slider-img/123.png" class="img-fluid" alt="">-->
+
+                                    </div>
+
+                                </div>
+
+
+                                <script src = "../static/js/chart1.js"></script>
+                            </div>
+
+                        </div>
+                        <div class="row2 align-items-center">
+<!--                            <div class="col-md-6 col-sm-12">-->
+<!--                                <div class="about-text-block">-->
+<!--                                    <div class="about-content">-->
+<!--                                        <h4>-->
+<!--                                            KNOW<br> ABOUT MYSELF-->
+<!--                                        </h4>-->
+<!--                                        <div class="text">is simply dummy text of the printing and typesetting industry. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>-->
+<!--                                        <div class="text">is simply dummy text of the printing and typesetting industry. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div   class="col-md-6 col-sm-12">
+                                <div class="about-img-box">
+                                    <div id="main-abcd" class="image" style="width: 700px;height: 500px">
+<!--                                        <img src="images/slider-img/123.png" class="img-fluid" alt="">-->
+
+                                    </div>
+
+                                </div>
+
+                                    <script src = "../static/js/map1.js"> </script>
+
+                            </div>
+
+                        </div>
+
+<!--                        &lt;!&ndash;Start Counter Block&ndash;&gt;-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-lg-3 col-6">-->
+<!--                                <div class="counter-block">-->
+<!--                                    <span class="mdi mdi-fire"></span>-->
+<!--                                    <div class="details">-->
+<!--                                        <h3 class="mb-0 mt-0 number"><em class="count">455</em></h3>-->
+<!--                                        <p class="mb-0">Projects completed</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-3 col-6">-->
+<!--                                <div class="counter-block">-->
+<!--                                    <span class="mdi mdi-coffee-outline"></span>-->
+<!--                                    <div class="details">-->
+<!--                                        <h3 class="mb-0 mt-0 number"><em class="count">775</em></h3>-->
+<!--                                        <p class="mb-0">Cup of coffee</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-3 col-6">-->
+<!--                                <div class="counter-block">-->
+<!--                                    <span class="mdi mdi-account-multiple-outline"></span>-->
+<!--                                    <div class="details">-->
+<!--                                        <h3 class="mb-0 mt-0 number"><em class="count">300</em></h3>-->
+<!--                                        <p class="mb-0">Satisfied clients</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-3 col-6">-->
+<!--                                <div class="counter-block">-->
+<!--                                    <span class="mdi mdi-trophy-outline"></span>-->
+<!--                                    <div class="details">-->
+<!--                                        <h3 class="mb-0 mt-0 number"><em class="count">10</em></h3>-->
+<!--                                        <p class="mb-0">Nominees winner</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash;End Counter Block&ndash;&gt;-->
+<!--                        &lt;!&ndash;Start Expert Block&ndash;&gt;-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-lg-4 col-md-6">-->
+<!--                                <div class="expert-box text-center">-->
+<!--                                    <img src="http://www.peis.in/templates/halman/images/aboutus/01.svg" class="img-fluid" alt="" />-->
+<!--                                    <h3>Photo Shooting</h3>-->
+<!--                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6">-->
+<!--                                <div class="expert-box text-center">-->
+<!--                                    <img src="http://www.peis.in/templates/halman/images/aboutus/02.svg" class="img-fluid" alt="" />-->
+<!--                                    <h3>Photo Editing</h3>-->
+<!--                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6">-->
+<!--                                <div class="expert-box text-center">-->
+<!--                                    <img src="http://www.peis.in/templates/halman/images/aboutus/03.svg" class="img-fluid" alt="" />-->
+<!--                                    <h3>Photo Exhibition</h3>-->
+<!--                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash;End Expert Block&ndash;&gt;-->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End About-Us -->
+
+
+
+        <!-- Start Contact -->
+        <section class="section" id="contact">
+            <div class="section-area">
+                <div class="section-content">
+                    <div class="container">
+                        <div class="title-block mx-auto">
+                            <div class="section_title mb-4 text-center">
+                                <h2><span>Contact Us</span></h2>
+                                <p class="section_subtitle mx-auto">Please contact us if you have any problems.<br><br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+<!--                            <div class="col-md-4">-->
+<!--                                <div class="contact-info text-center">-->
+<!--                                    <div class="icon">-->
+<!--                                        <i class="mdi mdi-cellphone"></i>-->
+<!--                                    </div>-->
+<!--                                    <div class="content">-->
+<!--                                        <h4 class="title font-weight-bold">Phone</h4>-->
+<!--                                        <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content</p>-->
+<!--                                        <a href="" class="h6 text-theme">+123 456-789-012</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="col-md-4">
+                                <div class="contact-info text-center">
+                                    <div class="icon">
+                                        <i class="mdi mdi-email"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title font-weight-bold">Email</h4>
+                                        <p class="text-muted">
+                                            Jianxin Xu (1014840)--jianxinx1@student.unimelb.edu.au <br>
+                                             Jianxin Xu (1014840)--jianxinx1@student.unimelb.edu.au <br>
+                                             Jianxin Xu (1014840)--jianxinx1@student.unimelb.edu.au <br>
+                                             Jianxin Xu (1014840)--jianxinx1@student.unimelb.edu.au <br>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+<!--                            <div class="col-md-4">-->
+<!--                                <div class="contact-info text-center">-->
+<!--                                    <div class="icon">-->
+<!--                                        <i class="mdi mdi-map-marker-radius-outline"></i>-->
+<!--                                    </div>-->
+<!--                                    <div class="content">-->
+<!--                                        <h4 class="title font-weight-bold">Location</h4>-->
+<!--                                        <p class="text-muted">C/54 Northwest Freeway,<br /> Near Northwest Street Road, <br>Houston, USA 485</p>-->
+<!--                                        <a href="https://www.google.com/maps" class="h6 text-theme">View on Google map</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+<!--                        <div class="row align-items-center">-->
+<!--                            <div class="col-md-6 order-2 order-md-1">-->
+<!--                                <div class="p-4 contact-box rounded form-box">-->
+<!--                                    <h4 class="m-0">Get In Touch !</h4>-->
+<!--                                    <div class="custom-form">-->
+<!--                                        <div id="message"></div>-->
+<!--                                        <form>-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-md-6">-->
+<!--                                                    <div class="form-group position-relative">-->
+<!--                                                        <label>Your Name <span class="text-danger">*</span></label>-->
+<!--                                                        <i class="mdi mdi-account ml-3 icons"></i>-->
+<!--                                                        <input name="name" id="name" type="text" class="form-control pl-5" placeholder="First Name :" required>-->
+<!--                                                    </div>-->
+<!--                                                </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                                                <div class="col-md-6">-->
+<!--                                                    <div class="form-group position-relative">-->
+<!--                                                        <label>Your Email <span class="text-danger">*</span></label>-->
+<!--                                                        <i class="mdi mdi-email ml-3 icons"></i>-->
+<!--                                                        <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Your email :" required>-->
+<!--                                                    </div>-->
+<!--                                                </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                                                <div class="col-md-12">-->
+<!--                                                    <div class="form-group position-relative">-->
+<!--                                                        <label>Subject</label>-->
+<!--                                                        <i class="mdi mdi-book ml-3 icons"></i>-->
+<!--                                                        <input name="subject" id="subject" type="text" class="form-control pl-5" placeholder="Subject">-->
+<!--                                                    </div>-->
+<!--                                                </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                                                <div class="col-md-12">-->
+<!--                                                    <div class="form-group position-relative">-->
+<!--                                                        <label>Comments</label>-->
+<!--                                                        <i class="mdi mdi-comment-text-outline ml-3 icons"></i>-->
+<!--                                                        <textarea name="comments" id="comments" rows="4" class="form-control pl-5" placeholder="Your Message :"></textarea>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>&lt;!&ndash;end row&ndash;&gt;-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-sm-12 text-center">-->
+<!--                                                    <input type="submit" name="send" class="btn btn-hover send-btn btn-block" value="Send Message">-->
+<!--                                                    <div id="simple-msg"></div>-->
+<!--                                                </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                                            </div>&lt;!&ndash;end row&ndash;&gt;-->
+<!--                                        </form>&lt;!&ndash;end form&ndash;&gt;-->
+<!--                                    </div>&lt;!&ndash;end custom-form&ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                            <div class="col-md-6 order-1 order-md-2">-->
+<!--                                <div class="contact-img">-->
+<!--                                    <img src="images/contact/contact-vector.png" class="img-fluid " alt="">-->
+<!--                                </div>-->
+<!--                            </div>&lt;!&ndash;end col&ndash;&gt;-->
+<!--                        </div>-->
+
+                        <div class="row">
+                            <div class="col-12 ">
+                                <p class="copy-right text-center">Author © Unimelb COMP90024 2020.Semester1 Team.5  <b></b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact -->
+    </div>
+
+    <!-- Javascript -->
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.easing.min.js"></script>
+    <script src="../static/js/jquery.waypoints.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/jquery.counterup.js"></script>
+    <script src="../static/js/isotope.pkgd.min.js"></script>
+    <script src="../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../static/js/particles.js"></script>
+    <script src="../static/js/typed.min.js"></script>
+    <!-- Main Js   -->
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
