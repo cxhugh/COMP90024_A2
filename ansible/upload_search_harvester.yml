@@ -16,10 +16,15 @@
         upgrade: yes
         update_cache: yes
 # apt-get upgrade; apt-get update
+    - name: Install mpich
+      become: yes
+      apt:
+        name: mpich
+        state: latest
 
     - name: install python libraries
       pip:
-        name: ['tweepy','couchdb','vaderSentiment']
+        name: ['tweepy','couchdb','vaderSentiment','mpi4py']
         state: latest
 
     - name: run search api

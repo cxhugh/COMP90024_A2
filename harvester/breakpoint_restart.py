@@ -26,11 +26,15 @@ def get_breakPoint(key_group='api-1'):
         with open(filename,'r') as f:
             state = json.load(f)
             user_list = state['user_list']   
-            topic_finish = state['topic_finish']          
-            if not topic_finish:
-                cur_topic_word = state['current_word']          
-            else:
-                cur_user = state['current_user']  
+            topic_finish = state['topic_finish']  
+            try:        
+                if not topic_finish:
+                    cur_topic_word = state['current_word']          
+                else:
+                    cur_user = state['current_user']  
+            except Exception as e:
+                print(e)
+                pass
         f.close()
     
     return cur_user, cur_topic_word, user_list, topic_finish
