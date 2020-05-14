@@ -10,7 +10,7 @@ from breakpoint_restart_new import save_searchpoint,save_userpoint
 TWEETSPREQUERY = 100 # max for search api
 USER_TIMELINE_MAXCOUNT = 200
 TOTAL_TWEET_PER_USER = 1000
-MAX_TWITTER_NUMS = 1000000
+MAX_TWITTER_NUMS = 2000000
 # db_server = 'http://lzy:woaideni@127.0.0.1:5984'
 db_server = 'http://admin:admin@172.26.129.233:5984'
 db_name = 'total_search'
@@ -48,7 +48,8 @@ def search_tweets(api,db,geocode,key_group):
     user_list = []
     count = 0
     max_id = -1
-    request_times = 0  
+    request_times = 0 
+    topic_words = get_topic_words() 
     while count<MAX_TWITTER_NUMS:
         try:
             if max_id <= 0:
@@ -76,7 +77,9 @@ def search_tweets(api,db,geocode,key_group):
                     coordinates = get_coordinates(tweet)
                     if coordinates is None or not coordinates:
                         coordinates = POINT
-                    
+                    alcohol_related = False
+                    if is_topic_match(tweet['text'],topic_words):
+                        alcohol_related = True
                     sentiment_score = sentiment_analyzer.polarity_scores(tweet['full_text'])
                     filter_tweet_info = {'_id':tweet['id_str'],
                         'text':tweet['full_text'],
@@ -97,6 +100,7 @@ def search_tweets_by_user(user_list,api,db,key_group):
     # 100,000 request per day per app 
     # max 3,200 for a single user
     # 1500 per 15 mins
+    topic_words = get_topic_words()
     for i,user in enumerate(user_list):
         t_count = 0
         max_id = -1
@@ -121,13 +125,17 @@ def search_tweets_by_user(user_list,api,db,key_group):
                     if tweet['id_str'] not in db:
                         coordinates = get_coordinates(tweet)
                         if coordinates: 
+                            alcohol_related = False
+                            if is_topic_match(tweet['text'],topic_words):
+                                alcohol_related = True
                             sentiment_score = sentiment_analyzer.polarity_scores(tweet['text'])
                             filter_tweet_info = {'_id':tweet['id_str'],
                                 'text':tweet['text'],
                                 'user_id':tweet['user']['id_str'],
                                 'user_name':tweet['user']['screen_name'],
                                 'sentiment':sentiment_score,
-                                'coordinates':coordinates}
+                                'coordinates':coordinates,
+                                'alcohol_related':alcohol_related}
                             db.save(filter_tweet_info)                         
         except Exception as e:
             print(e)
@@ -179,7 +187,7 @@ def register_database():
     
     return db
 
-def get_topic_words(for_timeline=False):
+def get_topic_words(for_timeline=True):
     topic_words = []
     with open("topic_words.txt",'r') as f:
         topic_words = f.read().split(',')

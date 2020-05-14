@@ -28,15 +28,14 @@ if __name__ == "__main__":
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
     size = comm.Get_size()
-    
+    db = twitter_search_new.register_database()
+    api = twitter_search_new.generate_api(key_group)
+    twitter_search_new.get_account_status(api)
+
     if rank == 0:
         print(" I m rank 0")
-        db = twitter_search_new.register_database()
-        api = twitter_search_new.generate_api(key_group)
-        twitter_search_new.get_account_status(api)
         with open("geocode.json",'r') as f:
             location_dict = json.load(f)
-        
         number_of_Apis = 3
         for i,geocode in enumerate(location_dict.values()):
             if i%number_of_Apis == (int(key_group[-1])-1):
@@ -45,9 +44,6 @@ if __name__ == "__main__":
     else:
         #search by user
         print(" I m rank 1") 
-        db = twitter_search_new.register_database()
-        api = twitter_search_new.generate_api(key_group)
-        twitter_search_new.get_account_status(api)
         while True:
             time.sleep(30)
             curr_user = breakpoint_restart_new.get_userpoint(key_group=key_group)
