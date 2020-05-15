@@ -10,7 +10,7 @@ from breakpoint_restart_new import save_searchpoint,save_userpoint
 TWEETSPREQUERY = 100 # max for search api
 USER_TIMELINE_MAXCOUNT = 200
 TOTAL_TWEET_PER_USER = 1000
-MAX_TWITTER_NUMS = 2000000
+MAX_TWITTER_NUMS = 500000
 # db_server = 'http://lzy:woaideni@127.0.0.1:5984'
 db_server = 'http://admin:admin@172.26.129.233:5984'
 db_name = 'total_search'
@@ -78,7 +78,7 @@ def search_tweets(api,db,geocode,key_group):
                     if coordinates is None or not coordinates:
                         coordinates = POINT
                     alcohol_related = False
-                    if is_topic_match(tweet['text'],topic_words):
+                    if is_topic_match(tweet['full_text'],topic_words):
                         alcohol_related = True
                     sentiment_score = sentiment_analyzer.polarity_scores(tweet['full_text'])
                     filter_tweet_info = {'_id':tweet['id_str'],

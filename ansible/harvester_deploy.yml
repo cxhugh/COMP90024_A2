@@ -1,3 +1,4 @@
+# . ./group05-openrc.sh; ansible-playbook -i ./inventory/hosts.ini -u ubuntu harvester_deploy.yml
 ---
 
 - hosts: harvester1

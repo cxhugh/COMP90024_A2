@@ -1,0 +1,48 @@
+# . ./group05-openrc.sh; ansible-playbook -i ./inventory/hosts.ini -u ubuntu webserver_deploy.yml
+---
+
+- hosts: webserver
+  tasks:
+    - name: copy python files to server
+      copy:
+        src: ../web
+        dest: /home/ubuntu
+        mode: 0644
+        owner: ubuntu
+        group: ubuntu
+        force: yes
+
+    - name: Update apt
+      become: yes
+      apt:
+        upgrade: yes
+        update_cache: yes
+# apt-get upgrade; apt-get update
+    - name: Install nginx
+      become: yes
+      apt:
+        name: nginx
+        state: latest
+    
+    - name: copy python files to server
+      copy:
+        src: config/nginx.conf
+        dest: /home/ubuntu/web/nginx.conf
+        mode: 0644
+        force: yes
+
+    - name: install python libraries
+      pip:
+        name: ['flask']
+        state: latest
+    
+    - name: start nginx
+      become: yes
+      shell: nginx -c /home/ubuntu/web/nginx.conf
+
+    - name: start web server
+      environment:
+        FLASK_APP: /home/ubuntu/web/webserver.py
+      shell: nohup flask run --host="172.26.131.14" > nohup.out 2>&1 &
+      args:
+        chdir: /home/ubuntu/web/
