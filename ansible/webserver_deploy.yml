@@ -24,10 +24,18 @@
         name: nginx
         state: latest
     
-    - name: copy python files to server
+    - name: copy config files to server
       copy:
         src: config/nginx.conf
         dest: /home/ubuntu/web/nginx.conf
+        mode: 0644
+        force: yes
+
+    - name: copy nginx setting to server
+      become: yes
+      copy:
+        src: config/default
+        dest: /etc/nginx/sites-available/default
         mode: 0644
         force: yes
 
