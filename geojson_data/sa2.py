@@ -5,34 +5,30 @@ from shapely.geometry import Point, shape
 with open("SA2_2016_AUST_GreaterMelb.json") as f:
     js = json.load(f)
 
-with open("STE_2016_AUST.json") as f1:
+with open("states.json") as f1:
     js1 = json.load(f1)
 
 def get_stateID_frm_coord(coordinate):
     point = Point(coordinate[1],coordinate[0])
-    state_id = -1
     state_name = "null"
     for item in js1['features']:
         if item['geometry'] != None:
             polygon = shape(item['geometry'])
             if polygon.contains(point):
-                # state_id = item['properties']['STE_MAIN16']
-                state_name = item['properties']['STE_NAME16']
+                state_name = item['properties']['STATE_NAME']
                 break
     return state_name
 
 
 def get_suburbID_frm_coord(point):
-    suburb_id = -1
     suburb_name = "null"
     for item in js['features']:
         if item['geometry'] != None:
             polygon = shape(item['geometry'])
             if polygon.contains(point):
-                suburb_id = item['properties']['SA2_MAIN16']
                 suburb_name = item['properties']['SA2_NAME16']
                 break
-    return suburb_id, suburb_name
+    return suburb_name
 
 # test
 coordinate = [-37.973,145.053]
@@ -41,7 +37,7 @@ point = Point(coordinate[1],coordinate[0])
 state_name = get_stateID_frm_coord(coordinate)
 print("state:",state_name)
 
-suburb_id, suburb_name = get_suburbID_frm_coord(point)
+suburb_name = get_suburbID_frm_coord(point)
 print(suburb_id, suburb_name)
 
 
