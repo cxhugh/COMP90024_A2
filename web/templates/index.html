@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <script src="../static/js/jquery-1.11.1.min.js"></script>
     <script src="../static/js/echarts.min.js"></script>
-          <script type="text/javascript"
+ <!--<script   type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfUzLtZNwN63aB4KiFNpmf50vWxsvLBQ&libraries=visualization&language=en">
-</script>
-            <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfUzLtZNwN63aB4KiFNpmf50vWxsvLBQ&callback=initMap&language=en">
-    </script>
+</script> -->
+
 
 <!--     Site Title-->
 
@@ -192,18 +190,39 @@
 <!--                            </div>-->
                             <div   class="col-md-6 col-sm-12">
                                 <div class="about-img-box">
+                                <div id="controls" class="nicebox">
+                                          <div>
+                                          <select id="census-variable">
+                                            <option value="test">Wine</option>
+                                            <option value="test1">Age</option>
+                                          </select>
+                                          </div>
+                                          <div id="legend">
+                                            <div id="census-min">min</div>
+                                            <div class="color-key"><span id="data-caret">&#x25c6;</span></div>
+                                            <div id="census-max">max</div>
+                                          </div>
+                                        </div>
+                              <div id="data-box" class="nicebox">
+                                  <label id="data-label" for="data-value"></label>
+                                  <span id="data-value"></span>
+                                </div>
                                     <div id="main-abcd" class="image" style="width: 700px;height: 500px">
 <!--                                        <img src="images/slider-img/123.png" class="img-fluid" alt="">-->
+
 
                                     </div>
 
                                 </div>
 
-                                    <script src = "../static/js/map1.js"> </script>
-
+                                    <script src = "../static/js/map3.js"> </script>
+                                        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfUzLtZNwN63aB4KiFNpmf50vWxsvLBQ&callback=initMap&language=en">
+    </script>
                             </div>
 
                         </div>
+
 
 <!--                        &lt;!&ndash;Start Counter Block&ndash;&gt;-->
 <!--                        <div class="row">-->

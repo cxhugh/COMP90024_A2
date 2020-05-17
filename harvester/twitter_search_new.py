@@ -75,8 +75,7 @@ def search_tweets(api,db,geocode,key_group):
             for t in tweets_list:               
                 tweet = t._json
                 if tweet['id_str'] not in db:                        
-                    # coordinates = [-37.813629,144.963058]
-                    coordinates = get_coordinates(tweet)
+                    sub_id, sub_name, coordinates = get_coordinates(tweet)
                     if coordinates is None or not coordinates:
                         coordinates = POINT
                     alcohol_related = 0
@@ -91,7 +90,7 @@ def search_tweets(api,db,geocode,key_group):
                         'compound':sentiment_score['compound'],
                         'coordinates':coordinates,
                         'location_tag':1,
-                        'state':get_stateID_frm_coord(coordinates)
+                        'state':get_stateID_frm_coord(coordinates),
                         'suburb':sub_id,
                         'related':alcohol_related}
                     db.save(filter_tweet_info)
@@ -144,7 +143,7 @@ def search_tweets_by_user(user_list,api,db,key_group):
                                 'compound':sentiment_score['compound'],
                                 'coordinates':coordinates,
                                 'location_tag':1,
-                                'state':get_stateID_frm_coord(coordinates)
+                                'state':get_stateID_frm_coord(coordinates),
                                 'suburb':sub_id,
                                 'related':alcohol_related}
                             db.save(filter_tweet_info)                         
@@ -170,7 +169,7 @@ def get_coordinates(tweet):
         coordinates = [latitude,longitude]
     
     if coordinates:
-        point = Point(coordinate[1],coordinate[0])
+        point = Point(coordinates[1],coordinates[0])
         suburb_id, suburb_name = get_suburbID_frm_coord(point)
     return suburb_id, suburb_name, coordinates
 
