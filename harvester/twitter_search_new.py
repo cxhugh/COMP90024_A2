@@ -5,6 +5,8 @@ import json
 import time
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from breakpoint_restart_new import save_searchpoint,save_userpoint
+from geojson_data.sa2 import get_suburbID_frm_coord, get_stateID_frm_coord
+from shapely.geometry import Point
 
 # CONSTANT
 TWEETSPREQUERY = 100 # max for search api
@@ -13,7 +15,7 @@ TOTAL_TWEET_PER_USER = 1000
 MAX_TWITTER_NUMS = 500000
 # db_server = 'http://lzy:woaideni@127.0.0.1:5984'
 db_server = 'http://admin:admin@172.26.129.233:5984'
-db_name = 'total_search'
+db_name = 'australia_tweets'
 sentiment_analyzer = SentimentIntensityAnalyzer()
 
 def generate_api(key_group):
@@ -63,7 +65,7 @@ def search_tweets(api,db,geocode,key_group):
             request_times += 1
             if request_times%10 == 0:
                 save_searchpoint(user_list=user_list,key_group=key_group,max_id=max_id)
-            print('send request ',request_times)
+                print('send request ',request_times)
 
             if not tweets_list:
                 print("no new twitter found")
@@ -77,16 +79,21 @@ def search_tweets(api,db,geocode,key_group):
                     coordinates = get_coordinates(tweet)
                     if coordinates is None or not coordinates:
                         coordinates = POINT
-                    alcohol_related = False
+                    alcohol_related = 0
                     if is_topic_match(tweet['full_text'],topic_words):
-                        alcohol_related = True
+                        alcohol_related = 1
                     sentiment_score = sentiment_analyzer.polarity_scores(tweet['full_text'])
                     filter_tweet_info = {'_id':tweet['id_str'],
                         'text':tweet['full_text'],
                         'user_id':tweet['user']['id_str'],
                         'user_name':tweet['user']['screen_name'],
-                        'sentiment':sentiment_score,
-                        'coordinates':coordinates}
+                        'sentiment':get_sentiment(sentiment_score),
+                        'compound':sentiment_score['compound'],
+                        'coordinates':coordinates,
+                        'location_tag':1,
+                        'state':get_stateID_frm_coord(coordinates)
+                        'suburb':sub_id,
+                        'related':alcohol_related}
                     db.save(filter_tweet_info)
                     count+=1
 
@@ -123,19 +130,23 @@ def search_tweets_by_user(user_list,api,db,key_group):
                 for t in tweets_list:               
                     tweet = t._json
                     if tweet['id_str'] not in db:
-                        coordinates = get_coordinates(tweet)
+                        sub_id, sub_name, coordinates = get_coordinates(tweet)
                         if coordinates: 
-                            alcohol_related = False
+                            alcohol_related = 0
                             if is_topic_match(tweet['text'],topic_words):
-                                alcohol_related = True
+                                alcohol_related = 1
                             sentiment_score = sentiment_analyzer.polarity_scores(tweet['text'])
                             filter_tweet_info = {'_id':tweet['id_str'],
                                 'text':tweet['text'],
                                 'user_id':tweet['user']['id_str'],
                                 'user_name':tweet['user']['screen_name'],
-                                'sentiment':sentiment_score,
+                                'sentiment':get_sentiment(sentiment_score),
+                                'compound':sentiment_score['compound'],
                                 'coordinates':coordinates,
-                                'alcohol_related':alcohol_related}
+                                'location_tag':1,
+                                'state':get_stateID_frm_coord(coordinates)
+                                'suburb':sub_id,
+                                'related':alcohol_related}
                             db.save(filter_tweet_info)                         
         except Exception as e:
             print(e)
@@ -143,6 +154,8 @@ def search_tweets_by_user(user_list,api,db,key_group):
 def get_coordinates(tweet):
     # tweet must be json format
     coordinates = None
+    suburb_id = -1
+    suburb_name = "null"
     if tweet['geo'] and 'coordinates'in tweet['geo'] and tweet['geo']['coordinates']:
         coordinates = tweet['geo']['coordinates']
     elif (tweet['coordinates'] and 'coordinates' in tweet['coordinates'] and 
@@ -156,7 +169,10 @@ def get_coordinates(tweet):
         longitude = (point[0][0] + point[2][0])/2
         coordinates = [latitude,longitude]
     
-    return coordinates
+    if coordinates:
+        point = Point(coordinate[1],coordinate[0])
+        suburb_id, suburb_name = get_suburbID_frm_coord(point)
+    return suburb_id, suburb_name, coordinates
 
 def is_topic_match(text,topic_words):
     for w in topic_words:
@@ -197,3 +213,13 @@ def get_topic_words(for_timeline=True):
         topic_words = [" "+w.lower() for w in topic_words]   
     
     return topic_words
+
+def get_sentiment(score):
+    # get the sentiment of tweets by vadar compound results
+    compound = score['compound']
+    if compound > 0.05:
+        return 'pos'
+    elif compound < 0.05:
+        return 'neg'
+    else:
+        return 'neu'

@@ -25,7 +25,7 @@
 
     - name: install python libraries
       pip:
-        name: ['tweepy','couchdb','vaderSentiment','mpi4py']
+        name: ['tweepy','couchdb','vaderSentiment','mpi4py','shapely']
         state: latest
 
     - name: run search api
