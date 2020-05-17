@@ -8,7 +8,7 @@ with open("SA2_2016_AUST_GreaterMelb.json") as f:
 
 def get_suburbID_frm_coord(point):
     suburb_id = -1
-    suburb_name = ""
+    suburb_name = "null"
     for item in js['features']:
         if item['geometry'] != None:
             polygon = shape(item['geometry'])
@@ -30,6 +30,7 @@ def get_suburbID_frm_place(place):
     place_polygon = shape(place['bounding_box'])
     max_area = 0
     max_area_sub_id = -1
+    sub_name = "null"
 
     for item in js['features']:
         if item['geometry'] != None:
@@ -38,8 +39,9 @@ def get_suburbID_frm_place(place):
                 area = place_polygon.intersection(suburb_polygon).area
                 if area > max_area:
                     max_area = area
-                    max_area_sub_id = item['properties']['STE_NAME16']
-    return max_area_sub_id
+                    max_area_sub_id = item['properties']['SA2_MAIN16']
+                    sub_name = item['properties']['SA2_NAME16']
+    return max_area_sub_id, sub_name
 
 # test
 place= {
@@ -77,4 +79,5 @@ place= {
     "name": "Cairns"
 }
 
-suburb_id = get_suburbID_frm_place(place)
+suburb_id, suburb_name = get_suburbID_frm_place(place)
+print(suburb_id,suburb_name)
