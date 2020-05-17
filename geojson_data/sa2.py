@@ -2,30 +2,28 @@ import json
 from shapely.geometry import Point, shape
 
 
-with open("SA2_2016_AUST_VIC.json") as f:
+with open("SA2_2016_AUST_GreaterMelb.json") as f:
     js = json.load(f)
-
-
-#print(json.dumps(data['features'][51], indent=4, sort_keys=True))
 
 
 def get_suburbID_frm_coord(point):
     suburb_id = -1
+    suburb_name = ""
     for item in js['features']:
         if item['geometry'] != None:
             polygon = shape(item['geometry'])
             if polygon.contains(point):
                 suburb_id = item['properties']['SA2_MAIN16']
+                suburb_name = item['properties']['SA2_NAME16']
                 break
-    return suburb_id
+    return suburb_id, suburb_name
 
-
-coordinate = [140.999474522999, -37.5050599967256]
-#coordinate = [115.617614368,-32.675715325]
-
-point = Point(coordinate[0],coordinate[1])
-suburb_id = get_suburbID_frm_coord(point)
-print(suburb_id)
+# test
+coordinate = [-37.973,145.053]
+# Point前面是经度，后面是维度
+point = Point(coordinate[1],coordinate[0])
+suburb_id, suburb_name = get_suburbID_frm_coord(point)
+print(suburb_id, suburb_name)
 
 
 def get_suburbID_frm_place(place):
@@ -40,9 +38,10 @@ def get_suburbID_frm_place(place):
                 area = place_polygon.intersection(suburb_polygon).area
                 if area > max_area:
                     max_area = area
-                    max_area_sub_id = item['properties']['SA2_MAIN16']
+                    max_area_sub_id = item['properties']['STE_NAME16']
     return max_area_sub_id
 
+# test
 place= {
     "url": "https://api.twitter.com/1.1/geo/id/00c262dc7a56fb4e.json",
     "place_type": "city",
@@ -79,4 +78,3 @@ place= {
 }
 
 suburb_id = get_suburbID_frm_place(place)
-print(suburb_id)
