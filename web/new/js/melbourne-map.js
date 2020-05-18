@@ -252,7 +252,8 @@ info_ed.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 info_ed.update = function (props) {
     this._div.innerHTML = '<h4>Education Level</h4>' +  (props ?
-        '<b>' + props.SA2_NAME16 + '</b><br />' + props.degree_diploma_certificate_percent + '% has doploma degree'
+        '<b>' + props.SA2_NAME16 + '</b><br />' + props.degree_diploma_certificate_percent + '% has doploma degree' +
+        '<br/>average sentiment score ' + props.AREASQKM16 
         : 'Greater Melbourne');
 };
 
@@ -371,9 +372,56 @@ mymap.on('baselayerchange', function (eventLayer) {
     }
 })
 
+var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [20, 20],
+        iconAnchor:   [22, 22],
+        popupAnchor:  [-3, -76]
+    }
+});
 
+var posIcon = new LeafIcon({iconUrl: './img/pos.png'}),
+    negIcon = new LeafIcon({iconUrl: './img/neg.png'}),
+    neuIcon = new LeafIcon({iconUrl: './img/neu.png'});
 
-
+draw_sentiment_icon()
+function draw_sentiment_icon() {
+    $.ajax({
+        url:'http://172.26.129.233:5984/view_results(australia_tweets)/sa2_sentiment_with_point',
+        dataType:'json',
+        async : true,
+        xhrFields:{withCredentials:true},
+        headers: {"Authorization": "Basic " + auth},
+        crossDomain:true,
+        success:function(data){    
+            for (var key in data){
+                if (key == "_rev"){continue;}
+                var mel_suburb = data[key];
+                if (mel_suburb == "sa2_sentiment_with_point"){
+                    continue;
+                }
+                console.log(mel_suburb)
+                add_sentiment_icon(mel_suburb['center'],mel_suburb['value'])
+            }
+            // add_sentiment_icon()
+        },
+        error:function(data){
+            console.log('request sentiment failed')
+        }
+    });
+}
+// L.marker([-38.2801944770129,145.00338449053152], {icon: posIcon}).addTo(mymap);
+function add_sentiment_icon(point,value){
+    if (value > 0.05){
+        L.marker(point, {icon: posIcon}).addTo(mymap);
+    }
+    else if (value < 0.05){
+        L.marker(point, {icon: negIcon}).addTo(mymap);
+    }
+    else{
+        L.marker(point, {icon: neuIcon}).addTo(mymap);
+    }
+}
 
   
 
