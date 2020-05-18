@@ -4,8 +4,19 @@ from shapely.geometry import Point, shape
 with open("./geojson_data/SA2_2016_AUST_GreaterMelb.json") as f:
     js = json.load(f)
 
-with open("./geojson_data/STE_2016_AUST.json") as f1:
+with open("./geojson_data/states.json") as f1:
     js1 = json.load(f1)
+
+def get_stateID_frm_coord(coordinate):
+    point = Point(coordinate[1],coordinate[0])
+    state_name = "null"
+    for item in js1['features']:
+        if item['geometry'] != None:
+            polygon = shape(item['geometry'])
+            if polygon.contains(point):
+                state_name = item['properties']['STATE_NAME']
+                break
+    return state_name
 
 def get_stateID_frm_coord(coordinate):
     point = Point(float(coordinate[1]),float(coordinate[0]))
@@ -15,11 +26,10 @@ def get_stateID_frm_coord(coordinate):
         if item['geometry'] != None:
             polygon = shape(item['geometry'])
             if polygon.contains(point):
-                # state_id = item['properties']['STE_MAIN16']
-                state_name = item['properties']['STE_NAME16']
+                # state_name = item['properties']['STE_NAME16']
+                state_name = item['properties']['STATE_NAME']
                 break
     return state_name
-
 
 def get_suburbID_frm_coord(point):
     suburb_id = -1

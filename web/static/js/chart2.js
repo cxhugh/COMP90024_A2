@@ -30,7 +30,7 @@ for (i=0; i<lii.length; i++) {
     i += 2;
 }
 
-var ectest = echarts.init(document.getElementById("main-abcde"));
+var ectest = echarts.init(document.getElementById("main-abcde2"));
 option = {
         title: {
         text: 'The sentiment of city',
