@@ -101,7 +101,7 @@ series: [
     {
         name: 'Neg',
         type: 'bar',
-        stack: '总量',
+        stack: 'percent',
         label: {
             show: true,
             position: 'right',
@@ -112,7 +112,7 @@ series: [
     {
         name: 'Neu',
         type: 'bar',
-        stack: '总量',
+        stack: 'percent',
         label: {
             show: true,
             position: 'insideRight',
@@ -124,7 +124,7 @@ series: [
         {
             name: 'Pos',
             type: 'bar',
-            stack: '总量',
+            stack: 'percent',
             label: {
                 show: true,
                 position: 'insideRight',

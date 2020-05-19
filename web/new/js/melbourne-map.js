@@ -129,7 +129,7 @@ function style(feature) {
 
 function style_income(feature) {
     return {
-        fillColor: getColor_income(feature.properties.equivalised_household_income_median),
+        fillColor: getColor_income(feature.properties.median_total_household_income_weekly),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -189,6 +189,7 @@ function highlightFeature(e) {
     }
 }
 
+// reset when mouse on hover out 
 function resetHighlight(e) {
     if (currentLayer == "Population"){
         population.resetStyle(e.target);
@@ -207,10 +208,6 @@ function resetHighlight(e) {
         info_ep.update();
     }
 }
-
-// function zoomToFeature(e) {
-//     mymap.fitBounds(e.target.getBounds());
-// }
 
 function onEachFeature(feature, layer) {
     layer.on({
@@ -244,7 +241,7 @@ info_ic.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 info_ic.update = function (props) {
     this._div.innerHTML = '<h4>Average Income</h4>' +  (props ?
-        '<b>' + props.SA2_NAME16 + '</b><br />' + props.equivalised_household_income_median + ' dollars / week' +
+        '<b>' + props.SA2_NAME16 + '</b><br />' + props.median_total_household_income_weekly + ' dollars / week' +
         '<br/>Num of alcohol tweets ' + props.alcohol_count +
         '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
         : 'Greater Melbourne');
@@ -279,7 +276,7 @@ info_ep.update = function (props) {
         : 'Greater Melbourne');
 };
 
-// legeng
+// legends
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (mymap) {
     var div = L.DomUtil.create('div', 'info legend'),
@@ -347,6 +344,7 @@ currentLayer = "Population";
 currentLegend = legend;
 currentInfo = info;
 
+// change legend and info board when switch layer 
 mymap.on('baselayerchange', function (eventLayer) {
     if (eventLayer.name == 'Income') {
         mymap.removeControl(currentLegend);
@@ -394,6 +392,7 @@ var LeafIcon = L.Icon.extend({
     }
 });
 
+// add icon of sentiment
 var posIcon = new LeafIcon({iconUrl: './img/pos.png'}),
     negIcon = new LeafIcon({iconUrl: './img/neg.png'}),
     neuIcon = new LeafIcon({iconUrl: './img/neu.png'});
@@ -414,7 +413,7 @@ function draw_sentiment_icon() {
                 if (mel_suburb == "sa2_sentiment_with_point"){
                     continue;
                 }
-                console.log(mel_suburb)
+                // console.log(mel_suburb)
                 add_sentiment_icon(mel_suburb['center'],mel_suburb['value'])
             }
             // add_sentiment_icon()
@@ -424,7 +423,7 @@ function draw_sentiment_icon() {
         }
     });
 }
-// L.marker([-38.2801944770129,145.00338449053152], {icon: posIcon}).addTo(mymap);
+
 function add_sentiment_icon(point,value){
     if (value > 0.05){
         L.marker(point, {icon: posIcon}).addTo(mymap);

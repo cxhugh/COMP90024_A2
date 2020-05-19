@@ -1,103 +1,164 @@
-var auth = btoa('admin:admin');
-function getPageTotalAndDataTotal() {
-    var pageTotal = [];
-    $.ajax({
-        url:'http://172.26.129.233:5984/view_results(total_search)/city_sentiment_percent(total_search)',
-        dataType:'json',
-        async : false,
-        xhrFields:{withCredentials:true},
-        headers: {"Authorization": "Basic " + auth},
-        crossDomain:true,
-        success:function(data){
-            pageTotal = data.rows;
-            // console.log( pageTotal)
-        },
-        error:function(data){
-            console.log('request failed')
-        }
-    });
-    return pageTotal;
-}
-var heatmapData = [];
-var heatmapData1 = [];
-var heatmapData2 = [];
-var lii = getPageTotalAndDataTotal();
+// // var auth = btoa('admin:admin');
+// // function getPageTotalAndDataTotal() {
+// //     var pageTotal = [];
+// //     $.ajax({
+// //         url:'http://172.26.129.233:5984/view_results(australia_tweets)/sa2_alcohol_senti_count',
+// //         dataType:'json',
+// //         async : false,
+// //         xhrFields:{withCredentials:true},
+// //         headers: {"Authorization": "Basic " + auth},
+// //         crossDomain:true,
+// //         success:function(data){
+// //             pageTotal = data.rows;
+// //         },
+// //         error:function(data){
+// //             console.log('request failed')
+// //         }
+// //     });
+// //     return pageTotal;
+// // }
 
-for (i=0; i<lii.length; i++) {
-    heatmapData.push((lii[i].value * 100).toFixed(2));
-    heatmapData1.push((lii[i + 1].value * 100).toFixed(2));
-    heatmapData2.push((lii[i + 2].value * 100).toFixed(2));
-    i += 2;
-}
+// // function getSuburbInfo() {
+// //     var DBdata = [];
+// //     $.ajax({
+// //         url:'http://172.26.129.233:5984/view_results(australia_tweets)/suburb_info',
+// //         dataType:'json',
+// //         async : false,
+// //         xhrFields:{withCredentials:true},
+// //         headers: {"Authorization": "Basic " + auth},
+// //         crossDomain:true,
+// //         success:function(data){
+// //             DBdata = data;
+// //         },
+// //         error:function(data){
+// //             console.log('request failed')
+// //         }
+// //     });
+// //     return DBdata;
+// // }
 
-var ectest = echarts.init(document.getElementById("main-abcde2"));
+// // function getIncomeInfo() {
+// //     var DBdata = new Array();
+// //     $.ajax({
+// //         url:'http://172.26.129.233:5984/aurin_result/sa2_map_twitter',
+// //         dataType:'json',
+// //         async : false,
+// //         xhrFields:{withCredentials:true},
+// //         headers: {"Authorization": "Basic " + auth},
+// //         crossDomain:true,
+// //         success:function(data){
+// //             for (var item in data.features){
+// //                 var income_value = data.features[item]['properties']['median_total_household_income_weekly'];
+// //                 var educate_level = data.features[item]['properties']['degree_diploma_certificate_percent']
+// //                 DBdata[data.features[item]['properties']['SA2_MAIN16']] = [income_value,educate_level];
+// //             }
+// //             // DBdata = data.features;
+// //             // console.log(DBdata)
+// //         },
+// //         error:function(data){
+// //             console.log('request failed');
+// //         }
+// //     });
+// //     return DBdata;
+// // }
+
+var yXisdata=["Brunswick", "Brunswick East", "Thornbury", "Melbourne", "Southbank", "St Kilda", "Fitzroy", "Braeside", "Yarra Glen"];
+var avgIncome = [1723, 1719, 1536, 964, 1855, 1616, 1708, 949, 1273];
+var diploma_rate = [19.7183, 21.5613, 16.9811, 19.4444, 29.2683, 25.9112, 28.4314, 21.6867, 16.6667];
+// // var suburb_info = getSuburbInfo();
+// // var incomeInfo = getIncomeInfo();
+// // var lii = getPageTotalAndDataTotal();
+
+// // for (i=0; (i+2)<lii.length; i++) {
+// //     if (lii[i].key[0] == lii[i + 2].key[0]){
+// //         var total = lii[i].value+lii[i+1].value+lii[i+2].value;
+// //         if (total>60){
+// //             tweetCount.push(total)
+// //             for (var key in suburb_info){
+// //                 if (key == lii[i].key[0]){
+// //                     yXisdata.push(suburb_info[key]);
+// //                     avgIncome.push(incomeInfo[key][0]);
+// //                     diploma_rate.push(incomeInfo[key][1])
+// //                     break;
+// //                 }
+// //             } 
+// //         }
+// //         i += 2;
+// //     }
+// // }
+// // console.log(yXisdata);
+// // // console.log(tweetCount);
+// // console.log(avgIncome);
+// // console.log(diploma_rate)
+
+var ectest = echarts.init(document.getElementById("sentiment2"));
+
 option = {
-        title: {
-        text: 'The sentiment of city',
+    title: {
+        text: 'Income versus Diploma rate of suburb',
         left: 'center'
     },
-tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-        type: 'shadow'     // 默认为直线，可选为：'line' | 'shadow'   // 坐标轴指示器，坐标轴触发有效  　
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
     },
-    formatter: '{b}<br />{a0}: {c0}%<br />{a1}: {c1}%<br />{a2}: {c2}%'
-},
-legend: {
-    x:'center',      //可设定图例在左、右、居中
-    y:'bottom',     //可设定图例在上、下、居中
-    padding:[0,5,5,0],
-    data: ['Neg', 'Neu', 'Pos']
-},
-grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true
-},
-xAxis: {
-    type: 'value',
-    show: false
-},
-yAxis: {
-    type: 'category',
-    data: ['Australian Capital Territory', 'Greater Adelaide', 'Greater Brisbane', 'Greater Darwin', 'Greater Hobart', 'Greater Melbourne', 'Greater Perth']
-},
-series: [
-    {
-        name: 'Neg',
-        type: 'bar',
-        stack: '总量',
-        label: {
-            show: true,
-            position: 'insideRight',
-            formatter: '{c}%'
-        },
-        data: heatmapData
+    legend: {
+        data: ['income', 'diploma_rate'],
+        y:'bottom',
+        padding:[0,5,5,0]
     },
-    {
-        name: 'Neu',
-        type: 'bar',
-        stack: '总量',
-        label: {
-            show: true,
-            position: 'insideRight',
+    xAxis: [
+        {
+            type: 'category',
+            data: yXisdata,
+            axisPointer: {
+                type: 'shadow'
+            },
+            axisLabel: {
+                interval:0,
+                rotate: -30
+            }
 
-                formatter: '{c}%'
-        },
-        data: heatmapData1
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: 'income',
+            min: 800,
+            max: 2000,
+            interval: 300,
+            axisLabel: {
+                formatter: '{value} $'
+            }
         },
         {
-            name: 'Pos',
+            type: 'value',
+            name: 'diploma',
+            min: 10,
+            max: 30,
+            interval: 5,
+            axisLabel: {
+                formatter: '{value} %'
+            }
+        }
+    ],
+    series: [
+        {
+            name: 'income',
             type: 'bar',
-            stack: '总量',
-            label: {
-                show: true,
-                position: 'insideRight',
-
-                    formatter: '{c}%'
-            },
-            data: heatmapData2
+            data: avgIncome
+        },
+        {
+            name: 'diploma_rate',
+            type: 'bar',
+            yAxisIndex: 1,
+            data: diploma_rate
         }
     ]
 };
