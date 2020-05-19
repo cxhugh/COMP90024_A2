@@ -1,30 +1,33 @@
 import requests
-import json
 import couchdb
-from couchdb import Session
+import json
+from create_view import *
+
+server = "http://admin:admin@172.26.129.233:5984/"
+couch = couchdb.Server(server)
 
 
-auth = Session()
-auth.name = "admin"
-auth.password = "admin"
+view_results_australia_tweet = "view_results(australia_tweets)"
+australia_tweet = "australia_tweets"
 
-#server = "http//172.26.130.151:5984/"
-local = "http://127.0.0.1:5984/"
+db_australia_tweet = couch[australia_tweet]
 
-#couch = couchdb.Server(server,session=auth)
-couch = couchdb.Server(local)
-
-#database_name = "test_db"
-database_name = "aurin_school_db2"
-db = couch[database_name]
+try:
+    db_results_australia_tweet = couch[view_results_australia_tweet]
+except couchdb.http.ResourceNotFound:
+    db_results_australia_tweet = couch.create(view_results_australia_tweet)
 
 
-def request(server, db_name, design_name, view_name):
-    url = server + db_name + "/_design/" + design_name + "/_view/" + view_name + "?group_level=1"
+def request(server, db_name, design_name, view_name, group_level):
+    url = server + db_name + "/_design/" + design_name  +"/_view/" + view_name + "?group_level=" + str(group_level)
+
     response = requests.get(url)
     content = None
     if response.status_code == 200:
         content = response.json()
+    elif response.status_code == 404:
+        print("%s does not exist." % (view_name))
+        return "404"
     return content
 
 
@@ -43,14 +46,115 @@ def save_toJSON(file_name, response):
         json.dump(response, f, indent=4)
 
 
+def request_and_save(server,viewdb_name,design_name, view_name, group_level,view_db,map_func, reduce_func,save_db,id):
+    while True:
+        response = request(server,viewdb_name,design_name,view_name,group_level)
+        if response == "404":
+            create_view(view_db,design_name,view_name,map_func,reduce_func)
+            print("created the view.")
+        elif response != None:
+            save_toDB(save_db,id,response)
+            print("saved %s to db."%(id))
+            #save_toJSON("%s.json"%(id),response)
+            break
+
 if __name__ == "__main__":
-    schoolCount_response = request(local, database_name, "state", "schoolCount")
-    ttEnrolment_response = request(local, database_name, "state", "ttEnrolment")
-    schoolSector_response = request(local, database_name, "state", "schoolSector")
 
-    save_toDB(db,"state_school_count",schoolCount_response)
-    save_toDB(db, "state_ttEnrolment_count", ttEnrolment_response)
-    save_toDB(db, "state_schoolSector", schoolSector_response)
+    # australia tweet
+    # state, all topic, count
 
-    save_toJSON("viewResults/state_school_count.json", schoolCount_response)
+    request_and_save(server, australia_tweet, "state", "alltopic_count", 1, db_australia_tweet,
+                     map_function_alltopic_state_count,
+                     reduce_function_count, db_results_australia_tweet, "state_alltopic_count")
+
+    # state, alcohol, count
+    request_and_save(server, australia_tweet, "state", "alcohol_count", 1, db_australia_tweet,
+                     map_function_alcohol_state_count,
+                     reduce_function_count, db_results_australia_tweet, "state_alcohol_count")
+
+
+    # city, all topic, count
+    request_and_save(server, australia_tweet, "city", "alltopic_count", 1, db_australia_tweet,
+                     map_function_alltopic_city_count,
+                     reduce_function_count, db_results_australia_tweet, "city_alltopic_count")
+
+    # city, alcohol, count
+    request_and_save(server, australia_tweet, "city", "alcohol_count", 1, db_australia_tweet,
+                     map_function_alcohol_city_count,
+                     reduce_function_count, db_results_australia_tweet, "city_alcohol_count")
+
+
+    # sa2, all topic, count
+
+    request_and_save(server, australia_tweet, "sa2", "alltopic_count",1, db_australia_tweet,
+                     map_function_alltopic_sa2_count,
+                     reduce_function_count, db_results_australia_tweet, "sa2_alltopic_count")
+
+    # sa2, alcohol, count
+    request_and_save(server, australia_tweet, "sa2", "alcohol_count",1, db_australia_tweet,
+                     map_function_alcohol_sa2_count,
+                     reduce_function_count, db_results_australia_tweet, "sa2_alcohol_count")
+
+
+    # state, all topic, sentiment avg
+
+    request_and_save(server, australia_tweet, "state", "alltopic_senti_avg",1, db_australia_tweet,
+                     map_function_alltopic_state_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "state_alltopic_senti_avg")
+
+    # state, alcohol, sentiment avg
+    request_and_save(server, australia_tweet, "state", "alcohol_senti_avg", 1, db_australia_tweet,
+                     map_function_alcohol_state_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "state_alcohol_senti_avg")
+
+    # city, all topic, sentiment avg
+
+    request_and_save(server, australia_tweet, "city", "alltopic_senti_avg",1 , db_australia_tweet,
+                     map_function_alltopic_city_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "city_alltopic_senti_avg")
+
+    # city, alcohol, sentiment avg
+    request_and_save(server, australia_tweet, "city", "alcohol_senti_avg", 1, db_australia_tweet,
+                     map_function_alcohol_city_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "city_alcohol_senti_avg")
+
+    # sa2, all topic, sentiment avg
+    request_and_save(server, australia_tweet, "sa2", "alltopic_senti_avg",1 , db_australia_tweet,
+                     map_function_alltopic_sa2_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "sa2_alltopic_senti_avg")
+
+    # sa2, alcohol, sentiment avg
+    request_and_save(server, australia_tweet, "sa2", "alcohol_senti_avg",1, db_australia_tweet,
+                     map_function_alcohol_sa2_senti_avg,
+                     reduce_function_avg, db_results_australia_tweet, "sa2_alcohol_senti_avg")
+
+
+
+    # state, alcohol, sentiment count
+    request_and_save(server, australia_tweet, "state", "alcohol_senti_count", 2, db_australia_tweet,
+                     map_function_alcohol_state_senti_count,
+                     reduce_function_count, db_results_australia_tweet, "state_alcohol_senti_count")
+
+
+    # city, alcohol, sentiment count
+    request_and_save(server, australia_tweet, "city", "alcohol_senti_count",2, db_australia_tweet,
+                     map_function_alcohol_city_senti_count,
+                     reduce_function_count, db_results_australia_tweet, "city_alcohol_senti_count")
+
+
+    # sa2, alcohol, sentiment count
+    request_and_save(server, australia_tweet, "sa2", "alcohol_senti_count",2, db_australia_tweet,
+                     map_function_alcohol_sa2_senti_count,
+                     reduce_function_count, db_results_australia_tweet, "sa2_alcohol_senti_count")
+
+    # australia, alcohol,sentiment count
+    request_and_save(server, australia_tweet, "australia", "alcohol_senti_count",1, db_australia_tweet,
+                     map_function_alcohol_australia_senti_count,
+                     reduce_function_count, db_results_australia_tweet, "australia_alcohol_senti_count")
+
+
+
+
+
+
 
