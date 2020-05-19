@@ -27,7 +27,7 @@ var currentLayer;
 function getMapSuburbTotal() {
     var suburb = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/sa2_map_aurin_data',
+        url:'http://172.26.129.233:5984/aurin_result/sa2_map_twitter',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},
@@ -226,7 +226,9 @@ info.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = '<h4>Population Density</h4>' +  (props ?
-        '<b>' + props.SA2_NAME16 + '</b><br />' + props.population_density + ' people / km<sup>2</sup>'
+        '<b>' + props.SA2_NAME16 + '</b><br/>' + props.population_density + ' people / km<sup>2</sup>' +
+        '<br/>Num of alcohol tweets ' + props.alcohol_count +
+        '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
         : 'Greater Melbourne');
 };
 
@@ -239,7 +241,9 @@ info_ic.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 info_ic.update = function (props) {
     this._div.innerHTML = '<h4>Average Income</h4>' +  (props ?
-        '<b>' + props.SA2_NAME16 + '</b><br />' + props.equivalised_household_income_median + ' dollars / week'
+        '<b>' + props.SA2_NAME16 + '</b><br />' + props.equivalised_household_income_median + ' dollars / week' +
+        '<br/>Num of alcohol tweets ' + props.alcohol_count +
+        '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
         : 'Greater Melbourne');
 };
 
@@ -253,7 +257,8 @@ info_ed.onAdd = function (mymap) {
 info_ed.update = function (props) {
     this._div.innerHTML = '<h4>Education Level</h4>' +  (props ?
         '<b>' + props.SA2_NAME16 + '</b><br />' + props.degree_diploma_certificate_percent + '% has doploma degree' +
-        '<br/>average sentiment score ' + props.AREASQKM16 
+        '<br/>Num of alcohol tweets ' + props.alcohol_count +
+        '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
         : 'Greater Melbourne');
 };
 
@@ -265,7 +270,9 @@ info_ep.onAdd = function (mymap) {
 };
 info_ep.update = function (props) {
     this._div.innerHTML = '<h4>Unemployed rate</h4>' +  (props ?
-        '<b>' + props.SA2_NAME16 + '</b><br />' + props.unemployed_percent + '%'
+        '<b>' + props.SA2_NAME16 + '</b><br />' + props.unemployed_percent + '%' +
+        '<br/>Num of alcohol tweets ' + props.alcohol_count +
+        '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
         : 'Greater Melbourne');
 };
 
@@ -415,7 +422,7 @@ function add_sentiment_icon(point,value){
     if (value > 0.05){
         L.marker(point, {icon: posIcon}).addTo(mymap);
     }
-    else if (value < 0.05){
+    else if (value < -0.05){
         L.marker(point, {icon: negIcon}).addTo(mymap);
     }
     else{
