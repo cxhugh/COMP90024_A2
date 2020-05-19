@@ -10,7 +10,7 @@ function getPageTotalAndDataTotal() {
         crossDomain:true,
         success:function(data){
             pageTotal = data.rows;
-            console.log( pageTotal)
+            // console.log( pageTotal)
         },
         error:function(data){
             console.log('request failed')

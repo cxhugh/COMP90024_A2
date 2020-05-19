@@ -1,8 +1,9 @@
 var auth = btoa('admin:admin');
+var yXisdata=[];
 function getPageTotalAndDataTotal() {
     var pageTotal = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/view_results(total_search)/city_sentiment_percent(total_search)',
+        url:'http://172.26.129.233:5984/view_results(australia_tweets)/sa2_alcohol_senti_count',
         dataType:'json',
         async : false,
         xhrFields:{withCredentials:true},
@@ -10,7 +11,7 @@ function getPageTotalAndDataTotal() {
         crossDomain:true,
         success:function(data){
             pageTotal = data.rows;
-            console.log( pageTotal)
+            // console.log( pageTotal)
         },
         error:function(data){
             console.log('request failed')
@@ -18,34 +19,67 @@ function getPageTotalAndDataTotal() {
     });
     return pageTotal;
 }
+
+function getSuburbInfo() {
+    var DBdata = [];
+    $.ajax({
+        url:'http://172.26.129.233:5984/view_results(australia_tweets)/suburb_info',
+        dataType:'json',
+        async : false,
+        xhrFields:{withCredentials:true},
+        headers: {"Authorization": "Basic " + auth},
+        crossDomain:true,
+        success:function(data){
+            DBdata = data;
+            // console.log(DBdata)
+        },
+        error:function(data){
+            console.log('request failed')
+        }
+    });
+    return DBdata;
+}
+
 var heatmapData = [];
 var heatmapData1 = [];
 var heatmapData2 = [];
+var suburb_info = getSuburbInfo();
 var lii = getPageTotalAndDataTotal();
 
-for (i=0; i<lii.length; i++) {
-    heatmapData.push((lii[i].value * 100).toFixed(2));
-    heatmapData1.push((lii[i + 1].value * 100).toFixed(2));
-    heatmapData2.push((lii[i + 2].value * 100).toFixed(2));
-    i += 2;
+for (i=0; (i+2)<lii.length; i++) {
+    if (lii[i].key[0] == lii[i + 2].key[0]){
+        var total = lii[i].value+lii[i+1].value+lii[i+2].value;
+        if (total>60){
+            heatmapData.push(((lii[i].value)/total * 100).toFixed(2));
+            heatmapData1.push(((lii[i + 1].value)/total * 100).toFixed(2));
+            heatmapData2.push(((lii[i + 2].value)/total * 100).toFixed(2));
+            for (var key in suburb_info){
+                if (key == lii[i].key[0]){
+                    yXisdata.push(suburb_info[key]);
+                    break;
+                }
+            } 
+        }
+        i += 2;
+    }
 }
 
-var ectest = echarts.init(document.getElementById("main-abcde"));
+var ectest = echarts.init(document.getElementById("sentiment1"));
 option = {
         title: {
-        text: 'The sentiment of city',
+        text: 'The alcohol tweets sentiment of suburb',
         left: 'center'
     },
 tooltip: {
     trigger: 'axis',
     axisPointer: {
-        type: 'shadow'     // 默认为直线，可选为：'line' | 'shadow'   // 坐标轴指示器，坐标轴触发有效  　
+        type: 'shadow'     //'line' | 'shadow'   　
     },
     formatter: '{b}<br />{a0}: {c0}%<br />{a1}: {c1}%<br />{a2}: {c2}%'
 },
 legend: {
-    x:'center',      //可设定图例在左、右、居中
-    y:'bottom',     //可设定图例在上、下、居中
+    x:'center',      //left bottom center
+    y:'bottom',     //left bottom center
     padding:[0,5,5,0],
     data: ['Neg', 'Neu', 'Pos']
 },
@@ -61,7 +95,7 @@ xAxis: {
 },
 yAxis: {
     type: 'category',
-    data: ['Australian Capital Territory', 'Greater Adelaide', 'Greater Brisbane', 'Greater Darwin', 'Greater Hobart', 'Greater Melbourne', 'Greater Perth']
+    data: yXisdata
 },
 series: [
     {
@@ -70,7 +104,7 @@ series: [
         stack: '总量',
         label: {
             show: true,
-            position: 'insideRight',
+            position: 'right',
             formatter: '{c}%'
         },
         data: heatmapData

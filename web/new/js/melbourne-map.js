@@ -190,17 +190,20 @@ function highlightFeature(e) {
 }
 
 function resetHighlight(e) {
-    population.resetStyle(e.target);
     if (currentLayer == "Population"){
+        population.resetStyle(e.target);
         info.update();
     }
     else if (currentLayer == "Income"){
+        income.resetStyle(e.target);
         info_ic.update();
     }
     else if (currentLayer == "Education"){
+        education.resetStyle(e.target);
         info_ed.update();
     }
     else if (currentLayer == "Unemployed"){
+        unemployed.resetStyle(e.target);
         info_ep.update();
     }
 }

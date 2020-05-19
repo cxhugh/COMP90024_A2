@@ -59,12 +59,7 @@ def get_centerpoint(lis):
 
 # This is the a function used to save formated center point of each Melbourne suburb and cooresponding
 # tweets sentiment to couchdb for leaflet map view 
-
-if __name__ == "__main__":
-    point_sent = {}
-    file = open("./geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding='utf8').read()
-    geojson = json.loads(file)
-    
+def main(geojson,point_sent):
     data = db['sa2_alcohol_senti_avg']
     for i in data['rows']:
         # print(i)
@@ -83,6 +78,22 @@ if __name__ == "__main__":
                     pass
                 break
             
-        
     point_sent['_id'] = "sa2_sentiment_with_point" 
-    db.save(point_sent)  
+    db.save(point_sent) 
+
+if __name__ == "__main__":
+    point_sent = {}
+    suburb_info = {}
+    file = open("./geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding='utf8').read()
+    geojson = json.loads(file)
+    suburb_info['_id'] = "suburb_info"
+    for item in geojson['features']:
+        suburb_info[item['properties']['SA2_MAIN16']] = item['properties']['SA2_NAME16']
+    db.save(suburb_info)
+        # if i['key'] == item['properties']['SA2_MAIN16']:
+    # main(geojson,point_sent)
+
+
+    
+   
+     
