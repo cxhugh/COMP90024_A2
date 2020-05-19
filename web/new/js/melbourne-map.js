@@ -281,8 +281,9 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (mymap) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 300, 500, 1000, 2000, 4000, 5000, 7000],
-        labels = [];
+        labels = ['<strong>people/km<sup>2<sup/><strong/>'];
     // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += labels + '<br/>' 
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
@@ -295,8 +296,9 @@ var income_legend =  L.control({position: 'bottomright'});
 income_legend.onAdd = function (mymap) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 500, 700, 900, 1100, 1300, 1500, 1800],
-        labels = [];
+        labels = ['<strong>$/week<strong/>'];
     // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += labels + '<br/>' 
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor_income(grades[i] + 1) + '"></i> ' +
@@ -309,8 +311,9 @@ var edu_legend =  L.control({position: 'bottomright'});
 edu_legend.onAdd = function (mymap) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 5, 10, 15, 20, 25, 30, 35],
-        labels = [];
+        labels = ['<strong>percent<strong/>'];
     // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += labels + '<br/>' 
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor_edu(grades[i] + 1) + '"></i> ' +
@@ -323,8 +326,9 @@ var emply_legend =  L.control({position: 'bottomright'});
 emply_legend.onAdd = function (mymap) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 2, 4, 6, 8, 10, 15, 20],
-        labels = [];
+        labels = ['<strong>percent<strong/>'];
     // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += labels + '<br/>' 
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor_eply(grades[i] + 1) + '"></i> ' +
