@@ -22,20 +22,20 @@
         }
     });
 
-var Data1 = ['0~14 years'];
-     var Data2 = ['15~24 years'];
-     var Data3 = ['25~49 years'];
-     var Data4 = ['50~74 years'];
-     var Data5 = ['75~ years'];
+var Data11 = ['0~14 years'];
+     var Data22 = ['15~24 years'];
+     var Data33 = ['25~49 years'];
+     var Data44 = ['50~74 years'];
+     var Data55 = ['75~ years'];
 
 
 
 for (i=0; i<pageTotal.length; i++) {
-    Data1.push(pageTotal[i].age['0 to 14'] );
-    Data2.push(pageTotal[i].age['15 to 24']  );
-    Data3.push(pageTotal[i].age['25 to 49']  );
-    Data4.push(pageTotal[i].age['50 to 74']  );
-    Data5.push(pageTotal[i].age['75 and over']  );
+    Data11.push(pageTotal[i].age['0 to 14'] );
+    Data22.push(pageTotal[i].age['15 to 24']  );
+    Data33.push(pageTotal[i].age['25 to 49']  );
+    Data44.push(pageTotal[i].age['50 to 74']  );
+    Data55.push(pageTotal[i].age['75 and over']  );
 }
 
 
@@ -59,11 +59,11 @@ setTimeout(function () {
         dataset: {
             source: [
                 ['product', 'NSW', 'VIC', 'QLD', 'SA', 'WA', 'TAS','NT','ACT'],
-                Data1,
-                Data2,
-                Data3,
-                Data4,
-                Data5
+                Data11,
+                Data22,
+                Data33,
+                Data44,
+                Data55
             ]
         },
         xAxis: {type: 'category'},

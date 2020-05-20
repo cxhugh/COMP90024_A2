@@ -17,13 +17,13 @@ def contact():
 def melbourne():
     return render_template("melbourne.html")
 
-@app.route('/big-cites.html')
+@app.route('/big-cities.html')
 def big_cites():
     return render_template("big-cities.html")
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('index.html')
+    return render_template('404.html')
 
 if __name__ == '__main__':
     app.run(port=5000)

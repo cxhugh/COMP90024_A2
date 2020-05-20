@@ -23,15 +23,15 @@
     });
     return pageTotal;
 }
-var heatmapData = [];
-     var heatmapData1 = [];
-     var heatmapData2 = [];
-    var lii = getPageTotalAndDataTotal();
+var heatmapData1 = [];
+     var heatmapData11 = [];
+     var heatmapData21 = [];
+    var lii1 = getPageTotalAndDataTotal();
 
-for (i=0; i<lii.length; i++) {
-    heatmapData.push((lii[i].value * 100).toFixed(2));
-    heatmapData1.push((lii[i + 1].value * 100).toFixed(2));
-    heatmapData2.push((lii[i + 2].value * 100).toFixed(2));
+for (i=0; i<lii1.length; i++) {
+    heatmapData1.push((lii1[i].value * 100).toFixed(2));
+    heatmapData11.push((lii1[i + 1].value * 100).toFixed(2));
+    heatmapData21.push((lii1[i + 2].value * 100).toFixed(2));
     i += 2;
 
 }
@@ -85,7 +85,7 @@ option = {
 
                  formatter: '{c}%'
             },
-            data: heatmapData
+            data: heatmapData1
 
         },
         {
@@ -98,7 +98,7 @@ option = {
 
                     formatter: '{c}%'
             },
-            data: heatmapData1
+            data: heatmapData11
         },
         {
             name: 'Pos',
@@ -110,7 +110,7 @@ option = {
 
                     formatter: '{c}%'
             },
-            data: heatmapData2
+            data: heatmapData21
         }
     ]
 };
