@@ -11,9 +11,128 @@
 
 //	var geojson = L.geoJson(statesData).addTo(mymap);
 
+
+
+
+
+
+
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [20, 20],
+        iconAnchor:   [22, 22],
+        popupAnchor:  [-3, -76]
+    }
+});
+
+// add icon of sentiment
+var posIcon = new LeafIcon({iconUrl: '../static/img/pos.png'}),
+    negIcon = new LeafIcon({iconUrl: '../static/img/neg.png'}),
+    neuIcon = new LeafIcon({iconUrl: '../static/img/neu.png'});
+
+
+    	var cities = L.layerGroup();
+       var cities1 = L.layerGroup();
+
+
+var auth = btoa('admin:admin');
+    $.ajax({
+        url:'http://172.26.129.233:5984/aurin_result/alcohol_sentiment',
+        dataType:'json',
+        async : true,
+        xhrFields:{withCredentials:true},
+        headers: {"Authorization": "Basic " + auth},
+        crossDomain:true,
+        success:function(data){
+            data1=data.data;
+              console.log(data);
+            for (var key in data1){
+
+                var state_alcohol = data1[key];
+
+                // console.log(mel_suburb)
+              add_sentiment_icon(state_alcohol['center'],state_alcohol['value'])
+           }
+            // add_sentiment_icon()
+        },
+        error:function(data){
+            console.log('request sentiment failed')
+        }
+    });
+    $.ajax({
+        url:'http://172.26.129.233:5984/aurin_result/alltopic_sentiment',
+        dataType:'json',
+        async : true,
+        xhrFields:{withCredentials:true},
+        headers: {"Authorization": "Basic " + auth},
+        crossDomain:true,
+        success:function(data){
+            data1=data.data;
+               console.log(data);
+            for (var key in data1){
+
+                var state_topic = data1[key];
+
+                // console.log(mel_suburb)
+              add_sentiment_icon1(state_topic['center'],state_topic['value'])
+           }
+            // add_sentiment_icon()
+        },
+        error:function(data){
+            console.log('request sentiment failed')
+        }
+    });
+
+function add_sentiment_icon(point,value){
+    if (value > 0.05){
+        L.marker(point, {icon: posIcon}).addTo(cities);
+    }
+    else if (value < -0.05){
+        L.marker(point, {icon: negIcon}).addTo(cities);
+    }
+    else{
+        L.marker(point, {icon: neuIcon}).addTo(cities);
+    }
+}
+
+function add_sentiment_icon1(point,value){
+    if (value > 0.05){
+        L.marker(point, {icon: posIcon}).addTo(cities1);
+    }
+    else if (value < -0.05){
+        L.marker(point, {icon: negIcon}).addTo(cities1);
+    }
+    else{
+        L.marker(point, {icon: neuIcon}).addTo(cities1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var population;
 var baseMaps;
-var overlayMaps = {};
+var overlayMaps = {	"Alcohol Average Sentiment": cities,
+       "Topic Average Sentiment": cities1,};
 var currentLegend;
 var currentLayer;
 var currentInfo;

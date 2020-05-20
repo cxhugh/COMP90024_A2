@@ -1,5 +1,5 @@
       var auth = btoa('admin:admin');
-     function getPageTotalAndDataTotal() {
+
     var pageTotal = [];
             $.ajax({
         url:'http://172.26.129.233:5984/aurin_result/age_number',
@@ -21,23 +21,21 @@
             console.log('request failed')
         }
     });
-    return pageTotal;
-}
+
 var Data1 = ['0~14 years'];
      var Data2 = ['15~24 years'];
      var Data3 = ['25~49 years'];
      var Data4 = ['50~74 years'];
      var Data5 = ['75~ years'];
 
-    var lii = getPageTotalAndDataTotal();
 
 
-for (i=0; i<lii.length; i++) {
-    Data1.push(lii[i].age['0 to 14'] );
-    Data2.push(lii[i].age['15 to 24']  );
-    Data3.push(lii[i].age['25 to 49']  );
-    Data4.push(lii[i].age['50 to 74']  );
-    Data5.push(lii[i].age['75 and over']  );
+for (i=0; i<pageTotal.length; i++) {
+    Data1.push(pageTotal[i].age['0 to 14'] );
+    Data2.push(pageTotal[i].age['15 to 24']  );
+    Data3.push(pageTotal[i].age['25 to 49']  );
+    Data4.push(pageTotal[i].age['50 to 74']  );
+    Data5.push(pageTotal[i].age['75 and over']  );
 }
 
 

@@ -66,7 +66,7 @@ for (i=0; (i+2)<lii.length; i++) {
 
 
 option = {
-        title: {
+title: {
         text: 'The alcohol tweets sentiment of suburb',
         left: 'center'
     },
@@ -91,7 +91,8 @@ tooltip: {
 },
 legend: {
     x:'center',      //left bottom center
-    y:'bottom',     //left bottom center
+    y:'top',     //left bottom center
+    top: '7%',
     padding:[0,5,5,0],
     data: ['Neg', 'Neu', 'Pos']
 },
@@ -103,7 +104,7 @@ grid: {
 },
 xAxis: {
     type: 'value',
-    show: true,
+    show: false,
     min: 0,
     max: 100
 },

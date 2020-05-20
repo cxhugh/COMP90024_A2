@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
+    
     <link rel="shortcut icon" type="image/x-icon" href="../static/img/core-img/favicon.ico" />
 
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -28,7 +29,6 @@
 
     <script src="../static/js1/jquery/jquery-2.2.4.min.js"></script>
     <script src="../static/js/echarts.min.js"></script>
-
 
 </head>
 
@@ -100,7 +100,6 @@
                         <div class="logo-area">
                             <a href="index.html">Australia</a>
                         </div>
-
                         <div class="menu-content-area d-flex align-items-center">
                             <!-- Header Social Area -->
                             <div class="header-social-area d-flex align-items-center">
@@ -119,7 +118,7 @@
     <!-- ***** Hero Area Start ***** -->
     <div class="hero-area d-flex align-items-center">
         <!-- Hero Thumbnail -->
-        <div class="hero-thumbnail equalize bg-img" style="background-image: url(../static/img/bg-img/elements.jpg);"></div>
+        <div class="hero-thumbnail equalize bg-img" style="background-image: url(../static/img/australia_flag_map.png);"></div>
         
         <!-- Hero Content -->
         <div class="hero-content equalize">
@@ -129,7 +128,7 @@
                         <div class="line"></div>
                         <h2>Australia</h2>
                         <p>This is about visualization of Australia.</p>
-                        <a href="#start1" class="btn sonar-btn white-btn">Let's start</a>
+                        <a href="#start" class="btn sonar-btn white-btn">Let's start</a>
                     </div>
                 </div>
             </div>
@@ -138,12 +137,11 @@
     <!-- ***** Hero Area End ***** -->
 
     <!-- ***** Elements Area Start ***** -->
-    <section id="start1" class="elements-area section-padding-100-0">
-        <div class="container">
+    <section class="elements-area section-padding-100-0">
+        <div id="start" class="container">
             <!-- ***** Buttons ***** -->
             <div class="row mb-100">
-                <div class="col-12" id="map1" style="height: 600px;width: 800px">
-                </div>
+                <div class="col-12" id="map1" style="height: 600px;width: 800px"></div>
             </div>
             <!-- ***** Progress Bars & Accordions ***** -->
             <div class="row">
@@ -151,9 +149,7 @@
                     <div class="elements-title">
                         <h2>Sentiment</h2>
                     </div>
-                    <div class="row" id="charts1"  style="height: 600px;width: 1150px">
-                    </div>
-                                 
+                    <div class="row" id="charts1"  style="height: 600px;width: 1150px"></div>              
                 </div>
             </div>
 
@@ -164,8 +160,7 @@
                         <h2>Age</h2>
                     </div>
                     <div class="our-skills-area text-center">
-                        <div class="row"  id="charts2"  style="height: 600px;width: 1200px">
-                        </div>
+                        <div class="row"  id="charts2"  style="height: 600px;width: 1200px"></div>
                     </div>
                 </div>
             </div>
@@ -177,10 +172,22 @@
                         <h2>Gender</h2>
                     </div>
                 </div>
+                <!-- chart3 -->
+                <div class="col-112 col-sm-16 col-lg-13" id="charts3"  style="height: 600px;width: 1450px"></div>
+            </div>
 
-                <!-- Single Cool Fact-->
-                <div class="col-112 col-sm-16 col-lg-13" id="charts3"  style="height: 600px;width: 1450px">
+            <!-- ***** Icon Boxes ***** -->
+            <div class="row mb-50">
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Hashtag</h2>
+                    </div>
                 </div>
+
+                <!-- chart4  -->
+                <div class="col-121 col-md-41" id="charts4"  style="height: 600px;width: 550px"></div>
+                <!-- chart5 -->
+                <div class="col-121 col-md-41" id="charts5"  style="height: 600px;width: 550px"></div>
             </div>
         </div>
     </section>
@@ -228,6 +235,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Unime
     <script src="../static/js/big-city-chart1.js"></script>
     <script src="../static/js/big-city-chart2.js"></script>
     <script src="../static/js/big-city-chart3.js"></script>
+    <script src="../static/js/big-city-chart4.js"></script>
+    <script src="../static/js/big-city-chart5.js"></script>
 
 </body>
 </html>
