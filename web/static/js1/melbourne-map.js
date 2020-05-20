@@ -219,7 +219,7 @@ info.update = function (props) {
         '<b>' + props.SA2_NAME16 + '</b><br/>' + props.population_density + ' people / km<sup>2</sup>' +
         '<br/>Num of alcohol tweets ' + props.alcohol_count +
         '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
-        : 'Greater Melbourne');
+        : 'Greater Melbourne, no data');
 };
 
 var info_ic = L.control();
@@ -234,7 +234,7 @@ info_ic.update = function (props) {
         '<b>' + props.SA2_NAME16 + '</b><br />' + props.median_total_household_income_weekly + ' dollars / week' +
         '<br/>Num of alcohol tweets ' + props.alcohol_count +
         '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
-        : 'Greater Melbourne');
+        : 'Greater Melbourne, no data');
 };
 
 var info_ed = L.control();
@@ -249,7 +249,7 @@ info_ed.update = function (props) {
         '<b>' + props.SA2_NAME16 + '</b><br />' + props.degree_diploma_certificate_percent + '% has doploma degree' +
         '<br/>Num of alcohol tweets ' + props.alcohol_count +
         '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
-        : 'Greater Melbourne');
+        : 'Greater Melbourne, no data');
 };
 
 var info_ep = L.control();
@@ -263,7 +263,7 @@ info_ep.update = function (props) {
         '<b>' + props.SA2_NAME16 + '</b><br />' + props.unemployed_percent + '%' +
         '<br/>Num of alcohol tweets ' + props.alcohol_count +
         '<br/>Avg sentiment ' + props.alcohol_sentiment_avg.toFixed(3)
-        : 'Greater Melbourne');
+        : 'Greater Melbourne, no data');
 };
 
 // legends

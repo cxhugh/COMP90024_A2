@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Greater Melbourne analysis</title>
+    <title>COMP90024 Team-5</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="../static/img/core-img/favicon.ico">
@@ -17,16 +17,18 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="../static/style.css">
 
-    <!-- Leaflet's CSS and JS package -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" 
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" 
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" 
+    <link rel="shortcut icon" type="image/x-icon" href="../static/img/core-img/favicon.ico" />
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
 
-    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js1/jquery/jquery-2.2.4.min.js"></script>
     <script src="../static/js/echarts.min.js"></script>
+
 
 </head>
 
@@ -50,7 +52,7 @@
         <div class="grid7"></div>
         <div class="grid8"></div>
         <div class="grid9"></div>
-    </div> 
+    </div>
 
     <!-- ***** Main Menu Area Start ***** -->
     <div class="mainMenu d-flex align-items-center justify-content-between">
@@ -96,8 +98,7 @@
                     <div class="menu-area d-flex justify-content-between">
                         <!-- Logo Area  -->
                         <div class="logo-area">
-                            <a href="#">Greater Melbourne</a>
-                            <!-- <p>Great Melbourne</p> -->
+                            <a href="index.html">Australia</a>
                         </div>
 
                         <div class="menu-content-area d-flex align-items-center">
@@ -117,20 +118,18 @@
 
     <!-- ***** Hero Area Start ***** -->
     <div class="hero-area d-flex align-items-center">
-
         <!-- Hero Thumbnail -->
-        <div class="hero-thumbnail equalize bg-img" style="background-image: url(../static/img/bg-img/m3.jpg);"></div>
+        <div class="hero-thumbnail equalize bg-img" style="background-image: url(../static/img/bg-img/elements.jpg);"></div>
         
         <!-- Hero Content -->
         <div class="hero-content equalize">
             <div class="container-fluid h-100">
-                <!-- <div class="row h-100 align-items-center justify-content-center"> -->
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-12 col-md-8">
                         <div class="line"></div>
-                        <h2><b>Alcohol vs Tweets</b></h2>
-                        <p>We focus on Tweets from each Melbourne suburb and corresponding education, income, population density and unemployment rate factors.</p>
-                        <a href="#start" class="btn sonar-btn white-btn">Let's start</a>
+                        <h2>Australia</h2>
+                        <p>This is about visualization of Australia.</p>
+                        <a href="#start1" class="btn sonar-btn white-btn">Let's start</a>
                     </div>
                 </div>
             </div>
@@ -138,73 +137,70 @@
     </div>
     <!-- ***** Hero Area End ***** -->
 
-    <!-- ***** Call to Action Area Start ***** -->
-    <div id="start" class="container">          
-        <div class="col-12">
-            <br/>
-            <h3 style="font-family:Georgia, 'Times New Roman', Times, serif;text-align: center;">
-                Interact with the map below to see area informtion.</h3>
-            <br/>
-        </div>
-        
-        <div class="sonar-call-to-action-area bg-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="call-to-action-content">
-                            <div id="mapid" style="width: 1080px; height: 700px;"></div>
+    <!-- ***** Elements Area Start ***** -->
+    <section id="start1" class="elements-area section-padding-100-0">
+        <div class="container">
+            <!-- ***** Buttons ***** -->
+            <div class="row mb-100">
+                <div class="col-12" id="map1" style="height: 600px;width: 800px">
+                </div>
+            </div>
+            <!-- ***** Progress Bars & Accordions ***** -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Sentiment</h2>
+                    </div>
+                    <div class="row" id="charts1"  style="height: 600px;width: 1150px">
+                    </div>
+                                 
+                </div>
+            </div>
+
+            <!-- ***** Loaders ***** -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Age</h2>
+                    </div>
+                    <div class="our-skills-area text-center">
+                        <div class="row"  id="charts2"  style="height: 600px;width: 1200px">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ***** Call to Action Area End ***** -->
-    
-    <!-- ***** Services Area Start ***** -->
-    <div class="section-padding-100-50-0-50">
-        <div class="container-fluid">
-            <div class="col-12">
-                <h3 style="font-family:Georgia, 'Times New Roman', Times, serif;text-align: center;">
-                    Some more amazing DATA.</h3>
-                <br/>   
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-sm-12">
-                    <div id="sentiment1" class="image" style="width: 630px;height: 400px"></div>
-                </div>
-                <!-- Single Services Area -->
-                <div class="col-12 col-md-6 col-sm-12">      
-                    <div id="sentiment2" class="image" style="width: 600px;height: 400px"></div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- ***** Services Area End ***** -->
 
-    <!-- big chart area start
-    <div class="container section-padding-70-50">
-        <div class="col-12 col-md-6 col-sm-12">
-            <div id="chart3" class="image" style="width: 1080px;height: 600px"></div>
+            <!-- ***** Milestones ***** -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Gender</h2>
+                    </div>
+                </div>
+
+                <!-- Single Cool Fact-->
+                <div class="col-112 col-sm-16 col-lg-13" id="charts3"  style="height: 600px;width: 1450px">
+                </div>
+            </div>
         </div>
-    </div> -->
+    </section>
+    <!-- ***** Elements Area End ***** -->
 
     <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area bg-gray">
+    <footer class="footer-area">
         <!-- back end content -->
         <div class="backEnd-content">
             <img class="dots" src="../static/img/core-img/dots.png" alt="">
-            <h2>Dream</h2>
+
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Copywrite Text -->
                     <div class="copywrite-text">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This web is made by group5 with <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Unimelb COMP90024 2020.Semester1 Team.5
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                     </div>
@@ -225,14 +221,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="../static/js1/active.js"></script>
 
-    <!--charts-->
-    <script src = "../static/js/chart1.js"></script>
-    <script src = "../static/js/chart2.js"></script>
-    <!-- <script src = "../static/js/chart3.js"></script> -->
+    <!--Map-->
+    <script src="../static/js/leaflet-map.js"></script>
 
-    <!--map-->
-    <script src= "../static/js1/melbourne-map.js"></script>
+    <!--charts-->
+    <script src="../static/js/big-city-chart1.js"></script>
+    <script src="../static/js/big-city-chart2.js"></script>
+    <script src="../static/js/big-city-chart3.js"></script>
 
 </body>
-
 </html>

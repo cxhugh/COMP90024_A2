@@ -19,7 +19,7 @@ def melbourne():
 
 @app.route('/big-cites.html')
 def big_cites():
-    return render_template("big-cites.html")
+    return render_template("big-cities.html")
 
 @app.errorhandler(404)
 def page_not_found(error):

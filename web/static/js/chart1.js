@@ -49,7 +49,7 @@ var lii = getPageTotalAndDataTotal();
 for (i=0; (i+2)<lii.length; i++) {
     if (lii[i].key[0] == lii[i + 2].key[0]){
         var total = lii[i].value+lii[i+1].value+lii[i+2].value;
-        if (total>60){
+        if (total>10){
             heatmapData.push(((lii[i].value)/total * 100).toFixed(2));
             heatmapData1.push(((lii[i + 1].value)/total * 100).toFixed(2));
             heatmapData2.push(((lii[i + 2].value)/total * 100).toFixed(2));
@@ -64,12 +64,24 @@ for (i=0; (i+2)<lii.length; i++) {
     }
 }
 
-var ectest = echarts.init(document.getElementById("sentiment1"));
+
 option = {
         title: {
         text: 'The alcohol tweets sentiment of suburb',
         left: 'center'
     },
+dataZoom: [
+    {
+        type: 'slider',
+        show: true,
+        yAxisIndex: [0],
+        left: 'auto',
+        start: 100, 
+        end: 80,
+        minSpan: 10,
+        maxSpan: 40
+    }
+],
 tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -91,7 +103,9 @@ grid: {
 },
 xAxis: {
     type: 'value',
-    show: false
+    show: true,
+    min: 0,
+    max: 100
 },
 yAxis: {
     type: 'category',
@@ -101,7 +115,7 @@ series: [
     {
         name: 'Neg',
         type: 'bar',
-        stack: 'percent',
+        stack: true,
         label: {
             show: true,
             position: 'right',
@@ -112,28 +126,26 @@ series: [
     {
         name: 'Neu',
         type: 'bar',
-        stack: 'percent',
+        stack: true,
+        label: {
+            show: true,
+            position: 'insideRight',
+            formatter: '{c}%'
+        },
+        data: heatmapData1
+    },
+    {
+        name: 'Pos',
+        type: 'bar',
+        stack: true,
         label: {
             show: true,
             position: 'insideRight',
 
                 formatter: '{c}%'
         },
-        data: heatmapData1
-        },
-        {
-            name: 'Pos',
-            type: 'bar',
-            stack: 'percent',
-            label: {
-                show: true,
-                position: 'insideRight',
-
-                    formatter: '{c}%'
-            },
-            data: heatmapData2
-        }
-    ]
+        data: heatmapData2
+    }]
 };
-
+var ectest = echarts.init(document.getElementById("sentiment1"));
 ectest.setOption(option);

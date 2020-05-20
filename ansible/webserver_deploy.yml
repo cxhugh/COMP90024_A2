@@ -50,7 +50,7 @@
 
     - name: start web server
       environment:
-        FLASK_APP: /home/ubuntu/web/Hello.py
+        FLASK_APP: /home/ubuntu/web/webserver.py
       shell: nohup flask run --host="172.26.131.14" > nohup.out 2>&1 &
       args:
         chdir: /home/ubuntu/web/
