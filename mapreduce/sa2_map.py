@@ -34,7 +34,8 @@ for item in geojson['features']:
         if d['SA2_NAME16'] == name:
             item['properties']['unemployed_percent'] = d['unemployed_percent']
             item['properties']['population_density'] = d['population_density']
-            item['properties']['equivalised_household_income_median'] = d['equivalised_household_income_median']
+            #item['properties']['equivalised_household_income_median'] = d['equivalised_household_income_median']
+            item['properties']['median_total_household_income_weekly'] = d['median_tot_hhd_inc_weekly']
             item['properties']['degree_diploma_certificate_percent'] = d['degree_diploma_certificate_percent']
             #print(item['properties'])
             break

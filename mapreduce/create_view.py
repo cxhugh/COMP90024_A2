@@ -261,13 +261,38 @@ map_function_alcohol_australia_senti_count = """function(doc){
     }
 }"""
 
+
+# alltopic australia hashtag count
+map_function_alltopic_australia_hashtag_count = """function(doc){
+    text = doc.text;
+    text.split(" ").forEach(function(x) {
+        if(x.indexOf("#") != -1){
+            emit(x);
+        }
+    });
+
+}"""
+
+# alcohol australia hashtag count
+map_function_alcohol_australia_hashtag_count = """function(doc){
+    if(doc.related == 1){
+        text = doc.text;
+        text.split(" ").forEach(function(x) {
+            if(x.indexOf("#") != -1){
+                emit(x);
+            }
+        });
+    }
+
+}"""
+
 # _sum, _count, _stats
 reduce_function_sum = '_sum'
 
 reduce_function_count = '_count'
 
 reduce_function_avg = """function (key, values, rereduce) {
-return sum(values)/values.length;
+    return sum(values)/values.length;
 }"""
 
 

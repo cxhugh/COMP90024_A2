@@ -1,0 +1,51 @@
+[
+  {
+    "city": "Greater Sydney",
+    "gender":{
+    "male percentage": 0.4972,
+    "female percentage": 0.5028
+    }
+  },
+  {
+    "city": "Greater Melbourne",
+    "gender":{"male percentage": 0.4947,
+    "female percentage": 0.5053
+}
+  },
+  {
+    "city": "Greater Brisbane",
+    "gender":{"male percentage": 0.4944,
+    "female percentage": 0.5056
+}
+  },
+  {
+    "city": "Greater Adelaide",
+    "gender":{"male percentage": 0.4916,
+    "female percentage": 0.5084
+}
+  },
+  {
+    "city": "Greater Perth",
+    "gender":{"male percentage": 0.4972,
+    "female percentage": 0.5028
+}
+  },
+  {
+    "city": "Greater Hobart",
+    "gender":{"male percentage": 0.4977,
+    "female percentage": 0.5023
+}
+  },
+  {
+    "city": "Greater Darwin",
+    "gender":{"male percentage": 0.5258,
+    "female percentage": 0.4742
+}
+  },
+  {
+    "city": "Australian Capital Territory",
+    "gender":{"male percentage": 0.4949,
+    "female percentage": 0.5051
+}
+  }
+]

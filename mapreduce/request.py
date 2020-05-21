@@ -58,11 +58,34 @@ def request_and_save(server,viewdb_name,design_name, view_name, group_level,view
             #save_toJSON("%s.json"%(id),response)
             break
 
+def request_and_save_top(server,viewdb_name,design_name, view_name, group_level,view_db,map_func, reduce_func,save_db,id):
+    while True:
+        response = request(server,viewdb_name,design_name,view_name,group_level)
+        if response == "404":
+            create_view(view_db,design_name,view_name,map_func,reduce_func)
+            print("created the view.")
+        elif response != None:
+            # sorting (sort by value)
+            rows = response['rows']
+            rows.sort(key=lambda x: x['value'], reverse=True)
+            ans = rows[:20]
+            #print(ans)
+            item = {
+                "_id": id,
+                "rows": ans
+            }
+            if id in save_db:
+                del save_db[id]
+            save_db.save(item)
+            print("saved %s to db."%(id))
+            #save_toJSON("%s.json"%(id),item)
+            break
+
+
 if __name__ == "__main__":
 
     # australia tweet
     # state, all topic, count
-
     request_and_save(server, australia_tweet, "state", "alltopic_count", 1, db_australia_tweet,
                      map_function_alltopic_state_count,
                      reduce_function_count, db_results_australia_tweet, "state_alltopic_count")
@@ -85,7 +108,6 @@ if __name__ == "__main__":
 
 
     # sa2, all topic, count
-
     request_and_save(server, australia_tweet, "sa2", "alltopic_count",1, db_australia_tweet,
                      map_function_alltopic_sa2_count,
                      reduce_function_count, db_results_australia_tweet, "sa2_alltopic_count")
@@ -97,7 +119,6 @@ if __name__ == "__main__":
 
 
     # state, all topic, sentiment avg
-
     request_and_save(server, australia_tweet, "state", "alltopic_senti_avg",1, db_australia_tweet,
                      map_function_alltopic_state_senti_avg,
                      reduce_function_avg, db_results_australia_tweet, "state_alltopic_senti_avg")
@@ -108,7 +129,6 @@ if __name__ == "__main__":
                      reduce_function_avg, db_results_australia_tweet, "state_alcohol_senti_avg")
 
     # city, all topic, sentiment avg
-
     request_and_save(server, australia_tweet, "city", "alltopic_senti_avg",1 , db_australia_tweet,
                      map_function_alltopic_city_senti_avg,
                      reduce_function_avg, db_results_australia_tweet, "city_alltopic_senti_avg")
@@ -153,7 +173,14 @@ if __name__ == "__main__":
                      reduce_function_count, db_results_australia_tweet, "australia_alcohol_senti_count")
 
 
+    request_and_save_top(server, australia_tweet, "australia", "alltopic_hashtag_count", 1, db_australia_tweet,
+                         map_function_alltopic_australia_hashtag_count,
+                         reduce_function_count, db_results_australia_tweet, "australia_hashtag_count")
 
+
+    request_and_save_top(server, australia_tweet, "australia", "alcohol_hashtag_count", 1, db_australia_tweet,
+                     map_function_alcohol_australia_hashtag_count,
+                     reduce_function_count, db_results_australia_tweet, "australia_alcohol_hashtag_count")
 
 
 

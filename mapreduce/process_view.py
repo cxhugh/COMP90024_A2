@@ -51,7 +51,7 @@ print("saved state_alcohol_senti_percent to db")
 #####
 
 
-# 全澳sentiment -> percent (australia_tweets)
+# australia sentiment -> percent (australia_tweets)
 
 aus_senti = db_results_australia_tweet['australia_alcohol_senti_count']['rows']
 count = 0
