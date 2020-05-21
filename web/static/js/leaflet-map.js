@@ -1,7 +1,6 @@
 
      var mymap = L.map('map1').setView([-30,135], 4);
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiamlhbnhpbnh1IiwiYSI6ImNrYWM2OGtmcDAxeG4zMHA2bmdjYXNscmkifQ.tyW3dKaenLGHgXAHRPvWvg ', {
-
 	     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
 		id: 'mapbox/streets-v11',
@@ -18,7 +17,7 @@
 
 
 
-var LeafIcon = L.Icon.extend({
+            var LeafIcon = L.Icon.extend({
     options: {
         iconSize:     [20, 20],
         iconAnchor:   [22, 22],
@@ -27,9 +26,9 @@ var LeafIcon = L.Icon.extend({
 });
 
 // add icon of sentiment
-var posIcon = new LeafIcon({iconUrl: '../static/img/pos.png'}),
-    negIcon = new LeafIcon({iconUrl: '../static/img/neg.png'}),
-    neuIcon = new LeafIcon({iconUrl: '../static/img/neu.png'});
+var posIcon = new LeafIcon({iconUrl: 'img/pos.png'}),
+    negIcon = new LeafIcon({iconUrl: 'img/neg.png'}),
+    neuIcon = new LeafIcon({iconUrl: 'img/neu.png'});
 
 
     	var cities = L.layerGroup();
@@ -46,7 +45,7 @@ var auth = btoa('admin:admin');
         crossDomain:true,
         success:function(data){
             data1=data.data;
-              console.log(data);
+        //      console.log(data);
             for (var key in data1){
 
                 var state_alcohol = data1[key];
@@ -69,7 +68,7 @@ var auth = btoa('admin:admin');
         crossDomain:true,
         success:function(data){
             data1=data.data;
-               console.log(data);
+        //       console.log(data);
             for (var key in data1){
 
                 var state_topic = data1[key];
@@ -136,7 +135,7 @@ var overlayMaps = {	"Alcohol Average Sentiment": cities,
 var currentLegend;
 var currentLayer;
 var currentInfo;
-var auth = btoa('admin:admin');
+
 
 function getMapAusTotal() {
     var aus = [];
@@ -338,8 +337,8 @@ infoT.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 infoT.update = function (props) {
     this._div.innerHTML = '<h2>All topics in twitter</h2>' +  (props ?
-        '<b><h3>' + props.STATE_NAME + '</h3></b><b>' + props.alltopic_count +'</b> in Totel'+
-         '<br/>Average sentiment of all topics ' + ' is <b>'+props.alltopic_sentiment_avg.toFixed(3) +'</b> %'+
+        '<b><h3>' + props.STATE_NAME + '</h3></b><b>' + props.alltopic_count +'</b> in Total'+
+         '<br/>Average sentiment of all topics ' + ' is <b>'+props.alltopic_sentiment_avg.toFixed(3) +'</b>'+
         '<br/>The Population of ' +props.STATE_NAME+' is <b>'+ props.state_population+'</b>'
         : 'Hover over a state');
 };
@@ -353,8 +352,8 @@ infoA.onAdd = function (mymap) {
 // method that we will use to update the control based on feature properties passed
 infoA.update = function (props) {
     this._div.innerHTML = '<h2>The number of alcohol</h2>' +  (props ?
-        '<b><h3>' + props.STATE_NAME + '</h3></b><b>' + props.alcohol_count + '</b>  in Totel'+
-           '<br/>Average sentiment of people to alcohol ' +' is <b>' +props.alcohol_sentiment_avg.toFixed(3) +'</b> %'+
+        '<b><h3>' + props.STATE_NAME + '</h3></b><b>' + props.alcohol_count + '</b>  in Total'+
+           '<br/>Average sentiment of people to alcohol ' +' is <b>' +props.alcohol_sentiment_avg.toFixed(3) +'</b>'+
         '<br/>The Population of ' +props.STATE_NAME+' is <b>'+ props.state_population+'</b>'
         : 'Hover over a state');
 };

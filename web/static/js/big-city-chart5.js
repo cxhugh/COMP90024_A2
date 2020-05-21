@@ -1,6 +1,6 @@
                  var auth = btoa('admin:admin');
 
-    var pageTotal = [];
+    var char5 = [];
             $.ajax({
         url:'http://172.26.129.233:5984/view_results(australia_tweets)/australia_alcohol_hashtag_count',
         dataType:'json',
@@ -14,7 +14,7 @@
             crossDomain:true,
 
         success:function(data){
-        pageTotal = data.rows;
+        char5 = data.rows;
      //  console.log( pageTotal)
         },
         error:function(data){
@@ -22,14 +22,14 @@
         }
     });
 
-var Data1 = [];
-var Data2 = [];
+var char5Data1 = [];
+var char5Data2 = [];
 
 
 
-for (i=0; i<pageTotal.length; i++) {
-    Data1.push(pageTotal[i].key.toLowerCase());
-    Data2.push({'name':pageTotal[i].key.toLowerCase(),'value':pageTotal[i].value});
+for (i=0; i<char5.length; i++) {
+    char5Data1.push(char5[i].key.toLowerCase());
+    char5Data2.push({'name':char5[i].key.toLowerCase(),'value':char5[i].value});
 
 
 }
@@ -65,7 +65,7 @@ for (i=0; i<pageTotal.length; i++) {
     //     right: 10,
     //     top: 20,
     //     bottom: 20,
-    //     data: Data1,
+    //     data: char5Data1,
     //
     //     //selected: data.selected
     // },
@@ -75,7 +75,7 @@ for (i=0; i<pageTotal.length; i++) {
             type: 'pie',
             radius: '40%',
             center: ['50%', '50%'],
-            data:  Data2,
+            data:  char5Data2,
             emphasis: {
                 itemStyle: {
                     shadowBlur: 10,

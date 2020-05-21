@@ -86,8 +86,8 @@ for (i=0; (i+2)<lii.length; i++) {
         i += 2;
     }
 }
-console.log(avgIncome)
-console.log(diploma_rate)
+// console.log(avgIncome)
+// console.log(diploma_rate)
 var ectest = echarts.init(document.getElementById("sentiment2"));
 
 option = {

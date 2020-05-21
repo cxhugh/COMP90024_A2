@@ -1,6 +1,6 @@
                  var auth = btoa('admin:admin');
 
-    var pageTotal = [];
+    var char4 = [];
             $.ajax({
         url:'http://172.26.129.233:5984/view_results(australia_tweets)/australia_hashtag_count',
         dataType:'json',
@@ -14,7 +14,7 @@
             crossDomain:true,
 
         success:function(data){
-        pageTotal = data.rows;
+        char4 = data.rows;
      //  console.log( pageTotal)
         },
         error:function(data){
@@ -22,14 +22,14 @@
         }
     });
 
-var Data1 = [];
-var Data2 = [];
+var char4Data1 = [];
+var char4Data2 = [];
 
 
 
-for (i=0; i<pageTotal.length; i++) {
-    Data1.push(pageTotal[i].key.toLowerCase());
-    Data2.push({'name':pageTotal[i].key.toLowerCase(),'value':pageTotal[i].value});
+for (i=0; i<char4.length; i++) {
+    char4Data1.push(char4[i].key.toLowerCase());
+    char4Data2.push({'name':char4[i].key.toLowerCase(),'value':char4[i].value});
 
 
 }
@@ -65,7 +65,7 @@ for (i=0; i<pageTotal.length; i++) {
     //     right: 10,
     //     top: 20,
     //     bottom: 20,
-    //     data: Data1,
+    //     data: char4Data1,
     //
     //     //selected: data.selected
     // },
@@ -75,7 +75,7 @@ for (i=0; i<pageTotal.length; i++) {
             type: 'pie',
             radius: '45%',
             center: ['50%', '50%'],
-            data:  Data2,
+            data:  char4Data2,
             emphasis: {
                 itemStyle: {
                     shadowBlur: 10,

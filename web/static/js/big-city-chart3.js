@@ -1,7 +1,7 @@
 
       var auth = btoa('admin:admin');
 
-    var pageTotal = [];
+    var char3 = [];
             $.ajax({
         url:'http://172.26.129.233:5984/aurin_result/gender',
         dataType:'json',
@@ -15,7 +15,7 @@
             crossDomain:true,
 
         success:function(data){
-        pageTotal = data.data;
+        char3 = data.data;
           //  console.log( pageTotal)
         },
         error:function(data){
@@ -23,18 +23,18 @@
         }
     });
 
-var Data1 = [];
-     var Data2 = [];
-     var Data3 = [];
+var char3Data1 = [];
+var char3Data2 = [];
+var char3Data3 = [];
 
 
 
 
 
-for (i=0; i<pageTotal.length; i++) {
-    Data1.push(pageTotal[i].population);
-    Data2.push((pageTotal[i].gender['female percentage']*100).toFixed(2));
-    Data3.push((pageTotal[i].gender['male percentage']*100).toFixed(2));
+for (i=0; i<char3.length; i++) {
+    char3Data1.push(char3[i].population);
+    char3Data2.push((char3[i].gender['female percentage']*100).toFixed(2));
+    char3Data3.push((char3[i].gender['male percentage']*100).toFixed(2));
 }
 
 
@@ -55,7 +55,7 @@ for (i=0; i<pageTotal.length; i++) {
 
 
 
-    var mychart1 = echarts.init(document.getElementById("charts3"));
+var mychart1 = echarts.init(document.getElementById("charts3"));
 
 var colors = ['#5793f3', '#d14a61', '#675bba'];
 
@@ -71,13 +71,7 @@ option = {
     grid: {
         right: '20%'
     },
-    // toolbox: {
-    //     feature: {
-    //         dataView: {show: true, readOnly: false},
-    //         restore: {show: true},
-    //         saveAsImage: {show: true}
-    //     }
-    // },
+
     legend: {
         data: ['Male', 'Female', 'Total Number']
     },
@@ -142,19 +136,19 @@ option = {
         {
             name: 'Male',
             type: 'bar',
-            data: Data3
+            data: char3Data3
         },
         {
             name: 'Female',
             type: 'bar',
             yAxisIndex: 1,
-            data: Data2
+            data: char3Data2
         },
         {
             name: 'Total Population',
             type: 'line',
             yAxisIndex: 2,
-            data: Data1
+            data: char3Data1
         }
     ]
 };

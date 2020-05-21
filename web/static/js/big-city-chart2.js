@@ -1,6 +1,6 @@
       var auth = btoa('admin:admin');
 
-    var pageTotal = [];
+    var char2 = [];
             $.ajax({
         url:'http://172.26.129.233:5984/aurin_result/age_number',
         dataType:'json',
@@ -14,7 +14,7 @@
             crossDomain:true,
 
         success:function(data){
-        pageTotal = data.data;
+        char2 = data.data;
           //  console.log( pageTotal)
         },
         error:function(data){
@@ -22,20 +22,20 @@
         }
     });
 
-var Data11 = ['0~14 years'];
-     var Data22 = ['15~24 years'];
-     var Data33 = ['25~49 years'];
-     var Data44 = ['50~74 years'];
-     var Data55 = ['75~ years'];
+var char2Data11 = ['0~14 years'];
+     var char2Data22 = ['15~24 years'];
+     var char2Data33 = ['25~49 years'];
+     var char2Data44 = ['50~74 years'];
+     var char2Data55 = ['75~ years'];
 
 
 
-for (i=0; i<pageTotal.length; i++) {
-    Data11.push(pageTotal[i].age['0 to 14'] );
-    Data22.push(pageTotal[i].age['15 to 24']  );
-    Data33.push(pageTotal[i].age['25 to 49']  );
-    Data44.push(pageTotal[i].age['50 to 74']  );
-    Data55.push(pageTotal[i].age['75 and over']  );
+for (i=0; i<char2.length; i++) {
+    char2Data11.push(char2[i].age['0 to 14'] );
+    char2Data22.push(char2[i].age['15 to 24']  );
+    char2Data33.push(char2[i].age['25 to 49']  );
+    char2Data44.push(char2[i].age['50 to 74']  );
+    char2Data55.push(char2[i].age['75 and over']  );
 }
 
 
@@ -59,11 +59,11 @@ setTimeout(function () {
         dataset: {
             source: [
                 ['product', 'NSW', 'VIC', 'QLD', 'SA', 'WA', 'TAS','NT','ACT'],
-                Data11,
-                Data22,
-                Data33,
-                Data44,
-                Data55
+                char2Data11,
+                char2Data22,
+                char2Data33,
+                char2Data44,
+                char2Data55
             ]
         },
         xAxis: {type: 'category'},

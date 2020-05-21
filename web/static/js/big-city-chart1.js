@@ -1,52 +1,48 @@
-                 var auth = btoa('admin:admin');
-     function getPageTotalAndDataTotal() {
-    var pageTotal = [];
-            $.ajax({
+var auth = btoa('admin:admin');
+
+var char1 = [];
+$.ajax({
         url:'http://172.26.129.233:5984/view_results(total_search)/city_sentiment_percent(total_search)',
         dataType:'json',
-       async : false,
-                xhrFields:{
-      withCredentials:true
-            },
-       headers: {
-        "Authorization": "Basic " + auth
-    },
+        async : false,
+        xhrFields:{
+            withCredentials:true
+        },
+        headers: {
+                "Authorization": "Basic " + auth
+        },
             crossDomain:true,
-
         success:function(data){
-        pageTotal = data.rows;
-//console.log( pageTotal)
+                 char1 = data.rows;
+            //console.log( pageTotal)
         },
         error:function(data){
             console.log('request failed')
         }
-    });
-    return pageTotal;
-}
-var heatmapData1 = [];
-     var heatmapData11 = [];
-     var heatmapData21 = [];
-    var lii1 = getPageTotalAndDataTotal();
+});
 
-for (i=0; i<lii1.length; i++) {
-    heatmapData1.push((lii1[i].value * 100).toFixed(2));
-    heatmapData11.push((lii1[i + 1].value * 100).toFixed(2));
-    heatmapData21.push((lii1[i + 2].value * 100).toFixed(2));
+var char1Data1 = [];
+var char1Data11 = [];
+var char1Data21 = [];
+
+
+for (i=0; i<char1.length; i++) {
+    char1Data1.push((char1[i].value * 100).toFixed(2));
+    char1Data11.push((char1[i + 1].value * 100).toFixed(2));
+    char1Data21.push((char1[i + 2].value * 100).toFixed(2));
     i += 2;
-
 }
 
-         var ectest = echarts.init(document.getElementById("charts1"));
+var ectest = echarts.init(document.getElementById("charts1"));
 option = {
             title: {
             text: 'The sentiment of city',
-
              left: 'center'
-        },
+              },
     tooltip: {
         trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'     // 默认为直线，可选为：'line' | 'shadow'
+        axisPointer: {
+            type: 'shadow'
           　
         },
 
@@ -55,10 +51,10 @@ option = {
     },
     legend: {
 
-                        x:'right',      //可设定图例在左、右、居中
-        y:'bottom',     //可设定图例在上、下、居中
+           x:'right',
+        y:'bottom',
         padding:[0,5,5,0],
-        data: ['Neg', 'Neu', 'Pos']
+        data: ['Negative', 'Neutral', 'Positive']
     },
     grid: {
         left: '3%',
@@ -76,41 +72,41 @@ option = {
     },
     series: [
         {
-            name: 'Neg',
+            name: 'Negative',
             type: 'bar',
-            stack: '总量',
+            stack: 'total',
             label: {
                 show: true,
                 position: 'insideRight',
 
                  formatter: '{c}%'
             },
-            data: heatmapData1
+            data: char1Data1
 
         },
         {
-            name: 'Neu',
+            name: 'Neutral',
             type: 'bar',
-            stack: '总量',
+            stack: 'total',
             label: {
                 show: true,
                 position: 'insideRight',
 
                     formatter: '{c}%'
             },
-            data: heatmapData11
+            data: char1Data11
         },
         {
-            name: 'Pos',
+            name: 'Positive',
             type: 'bar',
-            stack: '总量',
+            stack: 'total',
             label: {
                 show: true,
                 position: 'insideRight',
 
                     formatter: '{c}%'
             },
-            data: heatmapData21
+            data: char1Data21
         }
     ]
 };

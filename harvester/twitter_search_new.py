@@ -63,8 +63,9 @@ def search_tweets(api,db,geocode,key_group):
                 tweets_list = api.search(geocode=geocode,count=TWEETSPREQUERY,
                     tweet_mode="extended",max_id=str(max_id-1))
             request_times += 1
-            if request_times%10 == 0:
+            if request_times%10 == 0 and request_times<3000:
                 save_searchpoint(user_list=user_list,key_group=key_group,max_id=max_id)
+
                 print('send request ',request_times)
 
             if not tweets_list:
