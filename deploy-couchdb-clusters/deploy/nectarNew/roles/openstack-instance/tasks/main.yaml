@@ -1,0 +1,64 @@
+---
+# Create an instance on NeCTAR
+- name: Create an instance
+  os_server:
+    name: '{{ item.name }}'
+    image: '{{ instance_image }}'
+    key_name: '{{ instance_key_name }}'
+    flavor: '{{ instance_flavor }}'
+    availability_zone: '{{ availability_zone }}'
+    security_groups: '{{ sg_names }}'
+    volumes: '{{ item.volumes }}'
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+  loop: '{{ instances }}'
+  register: os_instance
+
+- debug:
+    msg: "Instance {{ item.openstack.name }} has been created. IP address is {{ item.openstack.public_v4 }}"
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+
+- name: output the ip address into {{ local_couchdb_hosts_dir }}
+  shell: echo "[{{ item.openstack.name }}]\n {{ item.openstack.public_v4 }} ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'\n" >> {{ local_couchdb_hosts_dir }}
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined and  item.openstack.name != 'webServer'
+  
+- name: comment out server info in {{ local_couchdb_vars_dir }}
+  lineinfile:
+    path: "{{ local_couchdb_vars_dir }}"
+    regexp: '(^{{ item.openstack.name }}: .*)'
+    line: '# \1'
+    backrefs: yes
+    state: present
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+- name: Add server info in {{ local_couchdb_vars_dir }}
+  lineinfile:
+    path: "{{ local_couchdb_vars_dir }}"
+    insertbefore: '# {{ item.openstack.name }}: .*'
+    line: "{{ item.openstack.name }}: {{ item.openstack.public_v4 }}"
+    state: present  
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+- name: Wait for connection
+  wait_for:
+    host: "{{ item.openstack.public_v4 }}"
+    port: 22
+    timeout: 120
+    search_regex: OpenSSH
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+# Add hosts to Ansible in-memory inventory
+- name: Add host
+  add_host:
+    name: '{{ item.openstack.public_v4 }}'
+    groups: COMP90024
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
