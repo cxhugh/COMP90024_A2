@@ -1,7 +1,7 @@
 ---
-- name: Pause for 60 seconds waiting couchDB running up
+- name: Pause for 300 seconds waiting couchDB running up
   tags: 'couchdb-cluster'
-  pause: minutes=1
+  pause: minutes=5
 
 - name:  enable cluster
   tags: 'couchdb-cluster'

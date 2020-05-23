@@ -18,7 +18,6 @@ volumes:
   - vol_name: webServer-vol-1
     vol_size: 10
   
-  
 # Security group
 security_groups:
 - name: COMP90024-grp05
@@ -41,3 +40,22 @@ instances:
 instance_image: 45225edb-66d8-4fd0-bf41-132a31a18166
 instance_key_name: db3
 instance_flavor: uom.mse.2c9g
+
+local_generic_conf_dir: ../config/generic.yaml
+local_couchdb_vars_dir: ../deploy-couchdb-clusters/host_vars/vars.yml
+local_couchdb_hosts_dir: ../deploy-couchdb-clusters/inventory/hosts.ini
+
+
+# test
+varables:
+  - name: dbServer
+    ip: 127.0.12.0
+    
+  - name: harverster1
+    ip: 127.0.12.1
+    
+  - name: harverster2
+    ip: 127.0.12.2
+    
+  - name: webServer
+    ip: 127.0.12.3

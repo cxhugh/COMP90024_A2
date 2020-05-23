@@ -72,8 +72,24 @@
     port_range_max: 9200
     remote_ip_prefix: 0.0.0.0/0
     state: present
+    
+    
+- name: grp05_cluster port 53
+  os_security_group_rule:
+      security_group: COMP90024-grp05
+      protocol: tcp
+      port_range_min: 53
+      port_range_max: 53
+      remote_ip_prefix: 0.0.0.0/0
+      state: present
 
 
+- name: Create security group rules for icmp
+  os_security_group_rule:
+    security_group: COMP90024-grp05
+    protocol: icmp
+    remote_ip_prefix: 0.0.0.0/0
+    state: present
 
 
 

@@ -46,6 +46,26 @@
   loop: '{{ os_instance.results }}'
   when: item.openstack is defined
 
+# store server ip addresses, to be used by other installation scripts  
+- name: comment out server info in {{ local_generic_conf_dir }}
+  lineinfile:
+    path: "{{ local_generic_conf_dir }}"
+    regexp: '(^{{ item.openstack.name }}: .*)'
+    line: '# \1'
+    backrefs: yes
+    state: present
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined  
+  
+- name: Add server info in {{ local_generic_conf_dir }}
+  lineinfile:
+    path: "{{ local_generic_conf_dir }}"
+    insertbefore: '# {{ item.openstack.name }}: .*'
+    line: "{{ item.openstack.name }}: {{ item.openstack.public_v4 }}"
+    state: present  
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+  
 - name: Wait for connection
   wait_for:
     host: "{{ item.openstack.public_v4 }}"
