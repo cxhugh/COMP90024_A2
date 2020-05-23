@@ -12,7 +12,7 @@ from shapely.geometry import Point, shape
 
 #全球主题相关，不限制坐标
 
-server = "http://admin:admin@172.26.129.233:5984"
+#server = "http://admin:admin@172.26.129.233:5984"
 local = 'http://admin:admin@localhost:5984'
 
 analyzer = SentimentIntensityAnalyzer()
@@ -96,9 +96,7 @@ class StdOutListener(StreamListener):
                         suburb = get_suburbID_frm_coord(point)
                     else:
                         suburb = None
-                    if data['id_str'] not in db:
-                        db.save({
-                            '_id': data['id_str'],
+                    data = {'_id': data['id_str'],
                             'text':data['text'],
                             'user_id': data['user']['id_str'],
                             'user_name': data['user']['screen_name'],
@@ -109,11 +107,9 @@ class StdOutListener(StreamListener):
                             'state':state,
                             'suburb':suburb,
                             'related':1
-                        })
+                        }
                 else:
-                    if data['id_str'] not in db:
-                        db.save({
-                            '_id': data['id_str'],
+                    data = {'_id': data['id_str'],
                             'text':data['text'],
                             'user_id': data['user']['id_str'],
                             'user_name': data['user']['screen_name'],
@@ -124,9 +120,15 @@ class StdOutListener(StreamListener):
                             'state': None,
                             'suburb': None,
                             'related': 1
-                        })
+                        }
+                with open('test4.json', 'a') as tf:
+                    json.dump(data, tf)
+                    tf.write('\n')
             else:
                 pass
+            
+            #if data['_id'] not in db:
+            #    db.save(data)
         except http_incompleteRead as e:
             print("http.client Incomplete Read error: %s" % str(e))
             print("~~~ Restarting stream search in 5 seconds... ~~~")
@@ -165,14 +167,16 @@ if __name__ == '__main__':
                   'yering station', 'Houghton', 'clonakilla', 'moss wood', 'tapanappa']
     locationlist = [[-44.11,111.87],[-10.64,156.79]] #bottom-left，top-right
     location_list = [111.87,-44.11,156.79,-10.64]
-
-    couch = couchdb.Server(server)
+    '''
+    couch = couchdb.Server(local)
     dbname = "australia_tweets"
 
     if dbname not in couch:
         db = couch.create(dbname)
     else:
         db = couch[dbname]
+    '''
+
     with open("SA2_2016_AUST_GreaterMelb.json") as f:
         js = json.load(f)
     with open("states.json") as f:
