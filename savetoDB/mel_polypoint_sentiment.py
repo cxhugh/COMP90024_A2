@@ -2,7 +2,7 @@ import couchdb
 import json
 from math import cos, sin, atan2, sqrt, pi ,radians, degrees
 
-server = "http://admin:admin@172.26.129.233:5984/"
+server = "http://admin:admin@172.26.134.56:5984/"
 #local = "http://127.0.0.1:5984/"
 
 couch = couchdb.Server(server)
@@ -84,7 +84,7 @@ def main(geojson,point_sent):
 if __name__ == "__main__":
     point_sent = {}
     suburb_info = {}
-    file = open("./geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding='utf8').read()
+    file = open("../geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding='utf8').read()
     geojson = json.loads(file)
     suburb_info['_id'] = "suburb_info"
     for item in geojson['features']:
