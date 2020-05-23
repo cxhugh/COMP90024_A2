@@ -1,0 +1,11 @@
+[dbserver]
+172.26.129.233 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+[harvester1]
+172.26.131.90 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+[harvester2]
+172.26.129.158 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+[webserver]
+172.26.131.14 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
