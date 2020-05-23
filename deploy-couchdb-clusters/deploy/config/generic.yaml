@@ -1,0 +1,5 @@
+# Server IP Addresses
+dbServer: 172.26.133.11
+harverster1: 172.26.131.71
+harverster2: 172.26.133.69
+webServer: 172.26.131.14
