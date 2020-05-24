@@ -1,11 +1,16 @@
 import json
 import couchdb
 from tqdm import tqdm
+# from mpi4py import MPI
+import sys
+sys.path.append("../")
+from harvester.get_ips import get_dbserver_ip
+
 
 class Cold_dataloader():
     
     def __init__(self):
-        self.server = "http://admin:admin@172.26.134.56:5984/"
+        self.server = db_server = 'http://admin:admin@' + get_dbserver_ip() + ':5984'
         # self.server = "http://lzy:woaideni@127.0.0.1:5984/"
         self.couch = couchdb.Server(self.server)
         self.database_name = "australia_tweets"
@@ -20,25 +25,31 @@ class Cold_dataloader():
     def save_cold_data_to_db(self):
         print('start')
         with open('/Users/lizhengyang/Downloads/db.json','r') as f:
-            data = json.load(f)
-        f.close()
-        count = 0
-        for i in tqdm(data['rows']):
-            if i['doc']['_id'] not in self.db:
-                # tweet = i['doc']
-                i['doc'].pop('_rev')
-                if count == 0:
-                    print(i['doc'])
-                    print(tweet)
-                    count +=1
+            for i, line in tqdm(enumerate(f)):
+                # if i % processes == rank:
                 try:
-                    self.db.save(i['doc'])     
+                    line = line[:-2]
+                    line = json.loads(line)
+                except json.decoder.JSONDecodeError:
+                    print("Malformed JSON. Cannot read the line.")
+                    continue
                 except Exception as e:
                     print(e)
-                    pass
 
+                if line['doc']['_id'] not in self.db:
+                    line['doc'].pop('_rev')
+                    try:
+                        self.db.save(line['doc']) 
+                    except Exception as e:
+                        print(e)
+                        pass
+        f.close()
+ 
 
 if __name__ == "__main__":
+    # comm = MPI.COMM_WORLD
+    # rank = comm.Get_rank()
+    # size = comm.Get_size()
     loader = Cold_dataloader()
     loader.get_db()
     loader.save_cold_data_to_db()

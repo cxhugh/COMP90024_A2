@@ -1,8 +1,11 @@
 import couchdb
 import json
 from math import cos, sin, atan2, sqrt, pi ,radians, degrees
+import sys
+sys.path.append("../")
+from harvester.get_ips import get_dbserver_ip
 
-server = "http://admin:admin@172.26.134.56:5984/"
+server =  'http://admin:admin@' + get_dbserver_ip() + ':5984'
 #local = "http://127.0.0.1:5984/"
 
 couch = couchdb.Server(server)
