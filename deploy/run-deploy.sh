@@ -15,3 +15,9 @@ sleep 30
 cd ../deploy-couchdb-clusters
 chmod go-wrx ./keys/*.pem
 ansible-playbook -i ./inventory/hosts.ini -u ubuntu couchdb.yml
+
+# install harvester, webserver, analyser
+cd ../deploy-harvester-webserver-analyser
+ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu harvester_deploy.yml
+ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu webserver_deploy.yml
+ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu analyzer_deploy.yml
