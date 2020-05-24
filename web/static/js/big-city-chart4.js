@@ -1,4 +1,4 @@
-                 var auth = btoa('admin:admin');
+var auth = btoa('admin:admin');
 
     var char4 = [];
             $.ajax({
@@ -34,21 +34,10 @@ for (i=0; i<char4.length; i++) {
 
 }
 
-   //    console.log(Data1);
+// console.log(Data1);
 // console.log(Data2);
 
-
-
-
-
-
-
-
-
-
-
-
-     var ectest = echarts.init(document.getElementById("charts4"));
+var ectest = echarts.init(document.getElementById("charts4"));
     option = {
     title: {
         text: 'All topic hashtags in Australia',
@@ -59,16 +48,6 @@ for (i=0; i<char4.length; i++) {
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c} ({d}%)'
     },
-    // legend: {
-    //     type: 'scroll',
-    //     orient: 'vertical',
-    //     right: 10,
-    //     top: 20,
-    //     bottom: 20,
-    //     data: char4Data1,
-    //
-    //     //selected: data.selected
-    // },
     series: [
         {
             name: 'hashtag',

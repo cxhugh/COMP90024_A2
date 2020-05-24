@@ -1,11 +1,11 @@
-# . ./group05-openrc.sh; ansible-playbook -i ./inventory/hosts.ini -u ubuntu webserver_deploy.yml
+# . ./openrc.sh; ansible-playbook -i ./inventory/hosts.ini -u ubuntu webserver_deploy.yml
 ---
 
-- hosts: webserver
+- hosts: webServer
   tasks:
     - name: copy python files to server
       copy:
-        src: ../web
+        src: ../../web
         dest: /home/ubuntu
         mode: 0644
         owner: ubuntu
@@ -26,7 +26,7 @@
     
     - name: copy config files to server
       copy:
-        src: config/nginx.conf
+        src: ../config/nginx.conf
         dest: /home/ubuntu/web/nginx.conf
         mode: 0644
         force: yes
@@ -34,7 +34,7 @@
     - name: copy nginx setting to server
       become: yes
       copy:
-        src: config/default
+        src: ../config/default
         dest: /etc/nginx/sites-available/default
         mode: 0644
         force: yes
@@ -51,6 +51,6 @@
     - name: start web server
       environment:
         FLASK_APP: /home/ubuntu/web/webserver.py
-      shell: nohup flask run --host="172.26.131.14" > nohup.out 2>&1 &
+      shell: nohup flask run --host="{{ webServer }}" > nohup.out 2>&1 &
       args:
         chdir: /home/ubuntu/web/

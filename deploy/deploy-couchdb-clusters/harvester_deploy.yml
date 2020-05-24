@@ -1,11 +1,11 @@
 # . ./group05-openrc.sh; ansible-playbook -i ./inventory/hosts.ini -u ubuntu harvester_deploy.yml
 ---
 
-- hosts: harvester1
+- hosts: harverster1
   tasks:
     - name: copy python files to server
       copy:
-        src: ../harvester
+        src: ../../harvester
         dest: /home/ubuntu
         mode: 0755
         owner: ubuntu

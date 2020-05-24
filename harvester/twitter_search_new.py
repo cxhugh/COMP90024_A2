@@ -13,8 +13,8 @@ TWEETSPREQUERY = 100 # max for search api
 USER_TIMELINE_MAXCOUNT = 200
 TOTAL_TWEET_PER_USER = 1000
 MAX_TWITTER_NUMS = 200000
-db_server = 'http://lzy:woaideni@127.0.0.1:5984'
-# db_server = 'http://admin:admin@172.26.129.233:5984'
+# db_server = 'http://lzy:woaideni@127.0.0.1:5984'
+db_server = 'http://admin:admin@172.26.134.56:5984'
 db_name = 'australia_tweets'
 sentiment_analyzer = SentimentIntensityAnalyzer()
 

@@ -25,14 +25,14 @@ class Cold_dataloader():
         count = 0
         for i in tqdm(data['rows']):
             if i['doc']['_id'] not in self.db:
-                tweet = i['doc']
-                tweet.pop('_rev')
+                # tweet = i['doc']
+                i['doc'].pop('_rev')
                 if count == 0:
                     print(i['doc'])
                     print(tweet)
                     count +=1
                 try:
-                    self.db.save(tweet)     
+                    self.db.save(i['doc'])     
                 except Exception as e:
                     print(e)
                     pass
