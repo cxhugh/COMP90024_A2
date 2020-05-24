@@ -2,7 +2,7 @@ var auth = btoa('admin:admin');
 
     var char4 = [];
             $.ajax({
-        url:'http://172.26.129.233:5984/view_results(australia_tweets)/australia_hashtag_count',
+        url:'http://172.26.134.56:5984/view_results(australia_tweets)/australia_hashtag_count',
         dataType:'json',
        async : false,
                 xhrFields:{

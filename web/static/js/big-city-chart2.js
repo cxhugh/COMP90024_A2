@@ -2,7 +2,7 @@
 
     var char2 = [];
             $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/age_number',
+        url:'http://172.26.134.56:5984/aurin_result/age_number',
         dataType:'json',
        async : false,
                 xhrFields:{

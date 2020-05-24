@@ -3,7 +3,7 @@
 
     var char3 = [];
             $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/gender',
+        url:'http://172.26.134.56:5984/aurin_result/gender',
         dataType:'json',
        async : false,
                 xhrFields:{

@@ -26,9 +26,9 @@
 });
 
 // add icon of sentiment
-var posIcon = new LeafIcon({iconUrl: 'img/pos.png'}),
-    negIcon = new LeafIcon({iconUrl: 'img/neg.png'}),
-    neuIcon = new LeafIcon({iconUrl: 'img/neu.png'});
+var posIcon = new LeafIcon({iconUrl: '../static/img/pos.png'}),
+    negIcon = new LeafIcon({iconUrl: '../static/img/neg.png'}),
+    neuIcon = new LeafIcon({iconUrl: '../static/img/neu.png'});
 
 
     	var cities = L.layerGroup();
@@ -37,7 +37,7 @@ var posIcon = new LeafIcon({iconUrl: 'img/pos.png'}),
 
 var auth = btoa('admin:admin');
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/alcohol_sentiment',
+        url:'http://172.26.134.56:5984/aurin_result/alcohol_sentiment',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},
@@ -60,7 +60,7 @@ var auth = btoa('admin:admin');
         }
     });
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/alltopic_sentiment',
+        url:'http://172.26.134.56:5984/aurin_result/alltopic_sentiment',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},
@@ -140,7 +140,7 @@ var currentInfo;
 function getMapAusTotal() {
     var aus = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/state_map_twitter_data',
+        url:'http://172.26.134.56:5984/aurin_result/state_map_twitter_data',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},

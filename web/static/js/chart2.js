@@ -2,7 +2,7 @@ var auth = btoa('admin:admin');
 function getPageTotalAndDataTotal() {
     var pageTotal = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/view_results(australia_tweets)/sa2_alcohol_senti_count',
+        url:'http://172.26.134.56:5984/view_results(australia_tweets)/sa2_alcohol_senti_count',
         dataType:'json',
         async : false,
         xhrFields:{withCredentials:true},
@@ -21,7 +21,7 @@ function getPageTotalAndDataTotal() {
 function getSuburbInfo() {
     var DBdata = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/view_results(australia_tweets)/suburb_info',
+        url:'http://172.26.134.56:5984/view_results(australia_tweets)/suburb_info',
         dataType:'json',
         async : false,
         xhrFields:{withCredentials:true},
@@ -40,7 +40,7 @@ function getSuburbInfo() {
 function getIncomeInfo() {
     var DBdata = new Array();
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/sa2_map_twitter',
+        url:'http://172.26.134.56:5984/aurin_result/sa2_map_twitter',
         dataType:'json',
         async : false,
         xhrFields:{withCredentials:true},

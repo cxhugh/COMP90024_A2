@@ -8,6 +8,27 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZnJhbmtsaTE5OTYiLCJhIjoiY2thYzljNm5xMDFsYTJwcnh1Njh5YXE2MiJ9.94jkwz8al_az0YHfcEerNw'
 }).addTo(mymap);
 
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {   
+        console.log(rawFile.readyState)
+        if(rawFile.readyState === 4)
+        {
+            console.log(rawFile.status)
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+}
+readTextFile('test.txt')
+// readTextFile('../../../deploy/config/generic.yaml')
+
 var population;
 var baseMaps;
 var overlayMaps = {};
@@ -17,7 +38,7 @@ var currentLayer;
 function getMapSuburbTotal() {
     var suburb = [];
     $.ajax({
-        url:'http://172.26.129.233:5984/aurin_result/sa2_map_twitter',
+        url:'http://172.26.134.56:5984/aurin_result/sa2_map_twitter',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},
@@ -390,7 +411,7 @@ var posIcon = new LeafIcon({iconUrl: '../static/img/pos.png'}),
 draw_sentiment_icon()
 function draw_sentiment_icon() {
     $.ajax({
-        url:'http://172.26.129.233:5984/view_results(australia_tweets)/sa2_sentiment_with_point',
+        url:'http://172.26.134.56:5984/view_results(australia_tweets)/sa2_sentiment_with_point',
         dataType:'json',
         async : true,
         xhrFields:{withCredentials:true},

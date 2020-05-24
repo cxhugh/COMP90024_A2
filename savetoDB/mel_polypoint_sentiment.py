@@ -92,9 +92,10 @@ if __name__ == "__main__":
     suburb_info['_id'] = "suburb_info"
     for item in geojson['features']:
         suburb_info[item['properties']['SA2_MAIN16']] = item['properties']['SA2_NAME16']
-    db.save(suburb_info)
+    # db.save(suburb_info)
+    
         # if i['key'] == item['properties']['SA2_MAIN16']:
-    # main(geojson,point_sent)
+    main(geojson,point_sent)
 
 
     
