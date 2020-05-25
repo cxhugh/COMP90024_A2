@@ -2,6 +2,7 @@
   {
     "SA2_NAME16": "Abbotsford",
     "unemployed_percent": null,
+    "unemployment_rate": 5.43376,
     "equivalised_household_income_median": 1235.71,
     "median_tot_hhd_inc_weekly": 1991,
     "degree_diploma_certificate_percent": 9.72222,
@@ -10,6 +11,7 @@
   {
     "SA2_NAME16": "Airport West",
     "unemployed_percent": null,
+    "unemployment_rate": 4.93894,
     "equivalised_household_income_median": 855.187,
     "median_tot_hhd_inc_weekly": 1374,
     "degree_diploma_certificate_percent": null,
@@ -18,6 +20,7 @@
   {
     "SA2_NAME16": "Albert Park",
     "unemployed_percent": null,
+    "unemployment_rate": 5.10204,
     "equivalised_household_income_median": 1385.63,
     "median_tot_hhd_inc_weekly": 2188,
     "degree_diploma_certificate_percent": 9.70874,
@@ -26,6 +29,7 @@
   {
     "SA2_NAME16": "Alphington - Fairfield",
     "unemployed_percent": 12.1212,
+    "unemployment_rate": 5.37868,
     "equivalised_household_income_median": 1094.49,
     "median_tot_hhd_inc_weekly": 1813,
     "degree_diploma_certificate_percent": 41.0526,
@@ -34,6 +38,7 @@
   {
     "SA2_NAME16": "Altona",
     "unemployed_percent": 9.43396,
+    "unemployment_rate": 5.97015,
     "equivalised_household_income_median": 903.52,
     "median_tot_hhd_inc_weekly": 1439,
     "degree_diploma_certificate_percent": 8.3612,
@@ -42,6 +47,7 @@
   {
     "SA2_NAME16": "Altona Meadows",
     "unemployed_percent": 8.79121,
+    "unemployment_rate": 8.07203,
     "equivalised_household_income_median": 781.726,
     "median_tot_hhd_inc_weekly": 1369,
     "degree_diploma_certificate_percent": 19.8529,
@@ -50,6 +56,7 @@
   {
     "SA2_NAME16": "Altona North",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.678,
     "equivalised_household_income_median": 714.257,
     "median_tot_hhd_inc_weekly": 1271,
     "degree_diploma_certificate_percent": 8.73786,
@@ -58,6 +65,7 @@
   {
     "SA2_NAME16": "Ardeer - Albion",
     "unemployed_percent": 0,
+    "unemployment_rate": 13.3774,
     "equivalised_household_income_median": 670.528,
     "median_tot_hhd_inc_weekly": 1068,
     "degree_diploma_certificate_percent": 16.9231,
@@ -66,6 +74,7 @@
   {
     "SA2_NAME16": "Armadale",
     "unemployed_percent": null,
+    "unemployment_rate": 4.93644,
     "equivalised_household_income_median": 1255.85,
     "median_tot_hhd_inc_weekly": 2007,
     "degree_diploma_certificate_percent": 35.1852,
@@ -74,6 +83,7 @@
   {
     "SA2_NAME16": "Ascot Vale",
     "unemployed_percent": 9.09091,
+    "unemployment_rate": 6.47609,
     "equivalised_household_income_median": 1025.21,
     "median_tot_hhd_inc_weekly": 1747,
     "degree_diploma_certificate_percent": 32.3887,
@@ -82,6 +92,7 @@
   {
     "SA2_NAME16": "Ashburton (Vic.)",
     "unemployed_percent": null,
+    "unemployment_rate": 5.5929,
     "equivalised_household_income_median": 1163.95,
     "median_tot_hhd_inc_weekly": 2247,
     "degree_diploma_certificate_percent": 12.9032,
@@ -90,6 +101,7 @@
   {
     "SA2_NAME16": "Ashwood - Chadstone",
     "unemployed_percent": 6.66667,
+    "unemployment_rate": 7.47211,
     "equivalised_household_income_median": 884.561,
     "median_tot_hhd_inc_weekly": 1550,
     "degree_diploma_certificate_percent": 8.77863,
@@ -98,6 +110,7 @@
   {
     "SA2_NAME16": "Aspendale Gardens - Waterways",
     "unemployed_percent": null,
+    "unemployment_rate": 4.56927,
     "equivalised_household_income_median": 972.607,
     "median_tot_hhd_inc_weekly": 2041,
     "degree_diploma_certificate_percent": null,
@@ -106,6 +119,7 @@
   {
     "SA2_NAME16": "Bacchus Marsh",
     "unemployed_percent": 7.59494,
+    "unemployment_rate": 6.19127,
     "equivalised_household_income_median": 790.792,
     "median_tot_hhd_inc_weekly": 1423,
     "degree_diploma_certificate_percent": 12.8205,
@@ -114,6 +128,7 @@
   {
     "SA2_NAME16": "Balwyn",
     "unemployed_percent": null,
+    "unemployment_rate": 6.52887,
     "equivalised_household_income_median": 1066.19,
     "median_tot_hhd_inc_weekly": 1732,
     "degree_diploma_certificate_percent": 37.2093,
@@ -122,6 +137,7 @@
   {
     "SA2_NAME16": "Balwyn North",
     "unemployed_percent": null,
+    "unemployment_rate": 6.34,
     "equivalised_household_income_median": 1028.91,
     "median_tot_hhd_inc_weekly": 1992,
     "degree_diploma_certificate_percent": 20.3125,
@@ -130,6 +146,7 @@
   {
     "SA2_NAME16": "Bayswater",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.32826,
     "equivalised_household_income_median": 796.461,
     "median_tot_hhd_inc_weekly": 1298,
     "degree_diploma_certificate_percent": null,
@@ -138,6 +155,7 @@
   {
     "SA2_NAME16": "Bayswater North",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.15152,
     "equivalised_household_income_median": 871.089,
     "median_tot_hhd_inc_weekly": 1518,
     "degree_diploma_certificate_percent": 7.66871,
@@ -146,6 +164,7 @@
   {
     "SA2_NAME16": "Beaconsfield - Officer",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.76455,
     "equivalised_household_income_median": 942.74,
     "median_tot_hhd_inc_weekly": 1874,
     "degree_diploma_certificate_percent": 16.2281,
@@ -154,6 +173,7 @@
   {
     "SA2_NAME16": "Beaumaris",
     "unemployed_percent": null,
+    "unemployment_rate": 4.52068,
     "equivalised_household_income_median": 1220.75,
     "median_tot_hhd_inc_weekly": 2210,
     "degree_diploma_certificate_percent": 10.1064,
@@ -162,6 +182,7 @@
   {
     "SA2_NAME16": "Belgrave - Selby",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.70835,
     "equivalised_household_income_median": 914.28,
     "median_tot_hhd_inc_weekly": 1744,
     "degree_diploma_certificate_percent": 29.8851,
@@ -170,6 +191,7 @@
   {
     "SA2_NAME16": "Bentleigh - McKinnon",
     "unemployed_percent": null,
+    "unemployment_rate": 6.30966,
     "equivalised_household_income_median": 1015.35,
     "median_tot_hhd_inc_weekly": 1825,
     "degree_diploma_certificate_percent": null,
@@ -178,6 +200,7 @@
   {
     "SA2_NAME16": "Bentleigh East (North)",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.21064,
     "equivalised_household_income_median": 968.064,
     "median_tot_hhd_inc_weekly": 1760,
     "degree_diploma_certificate_percent": 8.52713,
@@ -186,6 +209,7 @@
   {
     "SA2_NAME16": "Bentleigh East (South)",
     "unemployed_percent": null,
+    "unemployment_rate": 5.63116,
     "equivalised_household_income_median": 936.238,
     "median_tot_hhd_inc_weekly": 1699,
     "degree_diploma_certificate_percent": 34.2697,
@@ -194,6 +218,7 @@
   {
     "SA2_NAME16": "Berwick - North",
     "unemployed_percent": 9.61539,
+    "unemployment_rate": 5.27209,
     "equivalised_household_income_median": 884.605,
     "median_tot_hhd_inc_weekly": 1555,
     "degree_diploma_certificate_percent": 27.1739,
@@ -202,6 +227,7 @@
   {
     "SA2_NAME16": "Berwick - South",
     "unemployed_percent": 14.5161,
+    "unemployment_rate": 6.40502,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 1899,
     "degree_diploma_certificate_percent": 35.8108,
@@ -210,6 +236,7 @@
   {
     "SA2_NAME16": "Blackburn",
     "unemployed_percent": 12.5,
+    "unemployment_rate": 6.47879,
     "equivalised_household_income_median": 955.463,
     "median_tot_hhd_inc_weekly": 1688,
     "degree_diploma_certificate_percent": 18.3908,
@@ -218,6 +245,7 @@
   {
     "SA2_NAME16": "Blackburn South",
     "unemployed_percent": null,
+    "unemployment_rate": 5.78738,
     "equivalised_household_income_median": 885.994,
     "median_tot_hhd_inc_weekly": 1508,
     "degree_diploma_certificate_percent": 20.614,
@@ -226,6 +254,7 @@
   {
     "SA2_NAME16": "Boronia",
     "unemployed_percent": 8.92857,
+    "unemployment_rate": 5.7995,
     "equivalised_household_income_median": 796.3,
     "median_tot_hhd_inc_weekly": 1309,
     "degree_diploma_certificate_percent": 26.8293,
@@ -234,6 +263,7 @@
   {
     "SA2_NAME16": "Box Hill",
     "unemployed_percent": null,
+    "unemployment_rate": 9.10435,
     "equivalised_household_income_median": 810.94,
     "median_tot_hhd_inc_weekly": 1196,
     "degree_diploma_certificate_percent": 10.6667,
@@ -242,6 +272,7 @@
   {
     "SA2_NAME16": "Box Hill North",
     "unemployed_percent": null,
+    "unemployment_rate": 6.98251,
     "equivalised_household_income_median": 894.387,
     "median_tot_hhd_inc_weekly": 1543,
     "degree_diploma_certificate_percent": 10.8108,
@@ -250,6 +281,7 @@
   {
     "SA2_NAME16": "Braeside",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 949,
     "degree_diploma_certificate_percent": 21.6867,
@@ -258,6 +290,7 @@
   {
     "SA2_NAME16": "Braybrook",
     "unemployed_percent": 17.6471,
+    "unemployment_rate": 11.6642,
     "equivalised_household_income_median": 676.613,
     "median_tot_hhd_inc_weekly": 1231,
     "degree_diploma_certificate_percent": 20.202,
@@ -266,6 +299,7 @@
   {
     "SA2_NAME16": "Brighton (Vic.)",
     "unemployed_percent": null,
+    "unemployment_rate": 4.6286,
     "equivalised_household_income_median": 1371.18,
     "median_tot_hhd_inc_weekly": 2397,
     "degree_diploma_certificate_percent": 21.6495,
@@ -274,6 +308,7 @@
   {
     "SA2_NAME16": "Brighton East",
     "unemployed_percent": null,
+    "unemployment_rate": 5.53936,
     "equivalised_household_income_median": 1200.23,
     "median_tot_hhd_inc_weekly": 2175,
     "degree_diploma_certificate_percent": 26.9663,
@@ -282,6 +317,7 @@
   {
     "SA2_NAME16": "Broadmeadows",
     "unemployed_percent": 17.3469,
+    "unemployment_rate": 15.9741,
     "equivalised_household_income_median": 521.079,
     "median_tot_hhd_inc_weekly": 912,
     "degree_diploma_certificate_percent": 18.8406,
@@ -290,6 +326,7 @@
   {
     "SA2_NAME16": "Brunswick",
     "unemployed_percent": 9.7561,
+    "unemployment_rate": 5.94656,
     "equivalised_household_income_median": 1018.05,
     "median_tot_hhd_inc_weekly": 1723,
     "degree_diploma_certificate_percent": 19.7183,
@@ -298,6 +335,7 @@
   {
     "SA2_NAME16": "Brunswick East",
     "unemployed_percent": 8.51064,
+    "unemployment_rate": 5.68625,
     "equivalised_household_income_median": 1040.12,
     "median_tot_hhd_inc_weekly": 1719,
     "degree_diploma_certificate_percent": 21.5613,
@@ -306,6 +344,7 @@
   {
     "SA2_NAME16": "Brunswick West",
     "unemployed_percent": 5.35714,
+    "unemployment_rate": 6.56906,
     "equivalised_household_income_median": 921.067,
     "median_tot_hhd_inc_weekly": 1415,
     "degree_diploma_certificate_percent": 35.3535,
@@ -314,6 +353,7 @@
   {
     "SA2_NAME16": "Bulleen",
     "unemployed_percent": null,
+    "unemployment_rate": 6.39758,
     "equivalised_household_income_median": 892.58,
     "median_tot_hhd_inc_weekly": 1502,
     "degree_diploma_certificate_percent": 24.4604,
@@ -322,6 +362,7 @@
   {
     "SA2_NAME16": "Bundoora - East",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.07965,
     "equivalised_household_income_median": 781.726,
     "median_tot_hhd_inc_weekly": 1361,
     "degree_diploma_certificate_percent": 17.2589,
@@ -330,6 +371,7 @@
   {
     "SA2_NAME16": "Bundoora - North",
     "unemployed_percent": null,
+    "unemployment_rate": 9.16324,
     "equivalised_household_income_median": 810.94,
     "median_tot_hhd_inc_weekly": 1424,
     "degree_diploma_certificate_percent": 5.51302,
@@ -338,6 +380,7 @@
   {
     "SA2_NAME16": "Bundoora - West",
     "unemployed_percent": 0,
+    "unemployment_rate": 9.33522,
     "equivalised_household_income_median": 713.107,
     "median_tot_hhd_inc_weekly": 1154,
     "degree_diploma_certificate_percent": null,
@@ -346,6 +389,7 @@
   {
     "SA2_NAME16": "Bunyip - Garfield",
     "unemployed_percent": 0,
+    "unemployment_rate": 3.69103,
     "equivalised_household_income_median": 821.06,
     "median_tot_hhd_inc_weekly": 1496,
     "degree_diploma_certificate_percent": 45,
@@ -354,6 +398,7 @@
   {
     "SA2_NAME16": "Burnside",
     "unemployed_percent": null,
+    "unemployment_rate": 8.58586,
     "equivalised_household_income_median": 730.748,
     "median_tot_hhd_inc_weekly": 1415,
     "degree_diploma_certificate_percent": 3.003,
@@ -362,6 +407,7 @@
   {
     "SA2_NAME16": "Burnside Heights",
     "unemployed_percent": null,
+    "unemployment_rate": 7.42134,
     "equivalised_household_income_median": 800.531,
     "median_tot_hhd_inc_weekly": 1840,
     "degree_diploma_certificate_percent": 15.0838,
@@ -370,6 +416,7 @@
   {
     "SA2_NAME16": "Burwood",
     "unemployed_percent": 13.5135,
+    "unemployment_rate": 13.5627,
     "equivalised_household_income_median": 759.66,
     "median_tot_hhd_inc_weekly": 1127,
     "degree_diploma_certificate_percent": 15.2174,
@@ -378,6 +425,7 @@
   {
     "SA2_NAME16": "Burwood East",
     "unemployed_percent": null,
+    "unemployment_rate": 8.37099,
     "equivalised_household_income_median": 801.695,
     "median_tot_hhd_inc_weekly": 1368,
     "degree_diploma_certificate_percent": 4.31655,
@@ -386,6 +434,7 @@
   {
     "SA2_NAME16": "Cairnlea",
     "unemployed_percent": null,
+    "unemployment_rate": 8.06072,
     "equivalised_household_income_median": 763.41,
     "median_tot_hhd_inc_weekly": 1747,
     "degree_diploma_certificate_percent": 3.09278,
@@ -394,6 +443,7 @@
   {
     "SA2_NAME16": "Camberwell",
     "unemployed_percent": null,
+    "unemployment_rate": 5.54505,
     "equivalised_household_income_median": 1249.99,
     "median_tot_hhd_inc_weekly": 2208,
     "degree_diploma_certificate_percent": 19.3878,
@@ -402,6 +452,7 @@
   {
     "SA2_NAME16": "Campbellfield - Coolaroo",
     "unemployed_percent": 7.5,
+    "unemployment_rate": 14.8225,
     "equivalised_household_income_median": 521.079,
     "median_tot_hhd_inc_weekly": 928,
     "degree_diploma_certificate_percent": 4,
@@ -410,6 +461,7 @@
   {
     "SA2_NAME16": "Carlton",
     "unemployed_percent": 6.66667,
+    "unemployment_rate": 19.696,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 562,
     "degree_diploma_certificate_percent": null,
@@ -418,6 +470,7 @@
   {
     "SA2_NAME16": "Carlton North - Princes Hill",
     "unemployed_percent": null,
+    "unemployment_rate": 4.69156,
     "equivalised_household_income_median": 1134.67,
     "median_tot_hhd_inc_weekly": 1983,
     "degree_diploma_certificate_percent": 15.2709,
@@ -426,6 +479,7 @@
   {
     "SA2_NAME16": "Carnegie",
     "unemployed_percent": null,
+    "unemployment_rate": 7.30313,
     "equivalised_household_income_median": 955.463,
     "median_tot_hhd_inc_weekly": 1475,
     "degree_diploma_certificate_percent": 4.24242,
@@ -434,6 +488,7 @@
   {
     "SA2_NAME16": "Caroline Springs",
     "unemployed_percent": 12.8205,
+    "unemployment_rate": 7.14717,
     "equivalised_household_income_median": 878.081,
     "median_tot_hhd_inc_weekly": 1816,
     "degree_diploma_certificate_percent": 11.3208,
@@ -442,6 +497,7 @@
   {
     "SA2_NAME16": "Carrum - Patterson Lakes",
     "unemployed_percent": 7.5,
+    "unemployment_rate": 4.83008,
     "equivalised_household_income_median": 919.997,
     "median_tot_hhd_inc_weekly": 1543,
     "degree_diploma_certificate_percent": 16.0714,
@@ -450,6 +506,7 @@
   {
     "SA2_NAME16": "Carrum Downs",
     "unemployed_percent": 7.48299,
+    "unemployment_rate": 6.51986,
     "equivalised_household_income_median": 773.354,
     "median_tot_hhd_inc_weekly": 1336,
     "degree_diploma_certificate_percent": 10.3448,
@@ -458,6 +515,7 @@
   {
     "SA2_NAME16": "Caulfield - North",
     "unemployed_percent": 18.75,
+    "unemployment_rate": 5.81712,
     "equivalised_household_income_median": 1092.13,
     "median_tot_hhd_inc_weekly": 1916,
     "degree_diploma_certificate_percent": 11.3208,
@@ -466,6 +524,7 @@
   {
     "SA2_NAME16": "Caulfield - South",
     "unemployed_percent": null,
+    "unemployment_rate": 4.9022,
     "equivalised_household_income_median": 1094.49,
     "median_tot_hhd_inc_weekly": 1908,
     "degree_diploma_certificate_percent": 31.7073,
@@ -474,6 +533,7 @@
   {
     "SA2_NAME16": "Chelsea - Bonbeach",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.03753,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 1372,
     "degree_diploma_certificate_percent": 4.57516,
@@ -482,6 +542,7 @@
   {
     "SA2_NAME16": "Chelsea Heights",
     "unemployed_percent": null,
+    "unemployment_rate": 5.35104,
     "equivalised_household_income_median": 855.187,
     "median_tot_hhd_inc_weekly": 1514,
     "degree_diploma_certificate_percent": null,
@@ -490,6 +551,7 @@
   {
     "SA2_NAME16": "Cheltenham - Highett (East)",
     "unemployed_percent": 8.47458,
+    "unemployment_rate": 5.35795,
     "equivalised_household_income_median": 897.033,
     "median_tot_hhd_inc_weekly": 1462,
     "degree_diploma_certificate_percent": 4.43548,
@@ -498,6 +560,7 @@
   {
     "SA2_NAME16": "Cheltenham - Highett (West)",
     "unemployed_percent": null,
+    "unemployment_rate": 4.76451,
     "equivalised_household_income_median": 1015.35,
     "median_tot_hhd_inc_weekly": 1724,
     "degree_diploma_certificate_percent": 31.0734,
@@ -506,6 +569,7 @@
   {
     "SA2_NAME16": "Chirnside Park",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.36349,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1725,
     "degree_diploma_certificate_percent": 20,
@@ -514,6 +578,7 @@
   {
     "SA2_NAME16": "Clarinda - Oakleigh South",
     "unemployed_percent": null,
+    "unemployment_rate": 6.53931,
     "equivalised_household_income_median": 788.587,
     "median_tot_hhd_inc_weekly": 1415,
     "degree_diploma_certificate_percent": 38.3333,
@@ -522,6 +587,7 @@
   {
     "SA2_NAME16": "Clayton",
     "unemployed_percent": 18.1818,
+    "unemployment_rate": 16.7311,
     "equivalised_household_income_median": 655,
     "median_tot_hhd_inc_weekly": 1068,
     "degree_diploma_certificate_percent": 31.746,
@@ -530,6 +596,7 @@
   {
     "SA2_NAME16": "Clayton South",
     "unemployed_percent": null,
+    "unemployment_rate": 9.6276,
     "equivalised_household_income_median": 710.68,
     "median_tot_hhd_inc_weekly": 1254,
     "degree_diploma_certificate_percent": 36.5079,
@@ -538,6 +605,7 @@
   {
     "SA2_NAME16": "Coburg",
     "unemployed_percent": 10.1124,
+    "unemployment_rate": 7.0952,
     "equivalised_household_income_median": 897.033,
     "median_tot_hhd_inc_weekly": 1634,
     "degree_diploma_certificate_percent": 15.7895,
@@ -546,6 +614,7 @@
   {
     "SA2_NAME16": "Coburg North",
     "unemployed_percent": 8.10811,
+    "unemployment_rate": 6.78378,
     "equivalised_household_income_median": 865.067,
     "median_tot_hhd_inc_weekly": 1491,
     "degree_diploma_certificate_percent": 30.2857,
@@ -554,6 +623,7 @@
   {
     "SA2_NAME16": "Collingwood",
     "unemployed_percent": 8.47458,
+    "unemployment_rate": 7.15287,
     "equivalised_household_income_median": 1051.17,
     "median_tot_hhd_inc_weekly": 1694,
     "degree_diploma_certificate_percent": 0,
@@ -562,6 +632,7 @@
   {
     "SA2_NAME16": "Craigieburn - Central",
     "unemployed_percent": 9.45946,
+    "unemployment_rate": 10.4847,
     "equivalised_household_income_median": 673.515,
     "median_tot_hhd_inc_weekly": 1348,
     "degree_diploma_certificate_percent": 11.7978,
@@ -570,6 +641,7 @@
   {
     "SA2_NAME16": "Craigieburn - North",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.86517,
     "equivalised_household_income_median": 773.014,
     "median_tot_hhd_inc_weekly": 1668,
     "degree_diploma_certificate_percent": 2.28571,
@@ -578,6 +650,7 @@
   {
     "SA2_NAME16": "Craigieburn - South",
     "unemployed_percent": 3.75,
+    "unemployment_rate": 8.87045,
     "equivalised_household_income_median": 692.908,
     "median_tot_hhd_inc_weekly": 1489,
     "degree_diploma_certificate_percent": 18.6441,
@@ -586,6 +659,7 @@
   {
     "SA2_NAME16": "Craigieburn - West",
     "unemployed_percent": 7.5,
+    "unemployment_rate": 8.51589,
     "equivalised_household_income_median": 714.257,
     "median_tot_hhd_inc_weekly": 1507,
     "degree_diploma_certificate_percent": null,
@@ -594,6 +668,7 @@
   {
     "SA2_NAME16": "Cranbourne",
     "unemployed_percent": 15.8333,
+    "unemployment_rate": 8.44809,
     "equivalised_household_income_median": 681.252,
     "median_tot_hhd_inc_weekly": 1245,
     "degree_diploma_certificate_percent": 35.9375,
@@ -602,6 +677,7 @@
   {
     "SA2_NAME16": "Cranbourne East",
     "unemployed_percent": 3.7037,
+    "unemployment_rate": 6.19462,
     "equivalised_household_income_median": 800.531,
     "median_tot_hhd_inc_weekly": 1709,
     "degree_diploma_certificate_percent": 12.5541,
@@ -610,6 +686,7 @@
   {
     "SA2_NAME16": "Cranbourne North",
     "unemployed_percent": 11.5942,
+    "unemployment_rate": 7.61493,
     "equivalised_household_income_median": 776.196,
     "median_tot_hhd_inc_weekly": 1589,
     "degree_diploma_certificate_percent": 4.96454,
@@ -618,6 +695,7 @@
   {
     "SA2_NAME16": "Cranbourne South",
     "unemployed_percent": 6.12245,
+    "unemployment_rate": 4.09383,
     "equivalised_household_income_median": 936.712,
     "median_tot_hhd_inc_weekly": 1861,
     "degree_diploma_certificate_percent": 38.4615,
@@ -626,6 +704,7 @@
   {
     "SA2_NAME16": "Cranbourne West",
     "unemployed_percent": 9.375,
+    "unemployment_rate": 6.52939,
     "equivalised_household_income_median": 773.014,
     "median_tot_hhd_inc_weekly": 1561,
     "degree_diploma_certificate_percent": 28.8889,
@@ -634,6 +713,7 @@
   {
     "SA2_NAME16": "Croydon - East",
     "unemployed_percent": 4.41176,
+    "unemployment_rate": 5.58772,
     "equivalised_household_income_median": 801.983,
     "median_tot_hhd_inc_weekly": 1311,
     "degree_diploma_certificate_percent": 25.6098,
@@ -642,6 +722,7 @@
   {
     "SA2_NAME16": "Croydon - West",
     "unemployed_percent": 5.35714,
+    "unemployment_rate": 5.44753,
     "equivalised_household_income_median": 837.72,
     "median_tot_hhd_inc_weekly": 1385,
     "degree_diploma_certificate_percent": 9.16667,
@@ -650,6 +731,7 @@
   {
     "SA2_NAME16": "Croydon Hills - Warranwood",
     "unemployed_percent": 7.69231,
+    "unemployment_rate": 4.36584,
     "equivalised_household_income_median": 981.024,
     "median_tot_hhd_inc_weekly": 2017,
     "degree_diploma_certificate_percent": 13.5593,
@@ -658,6 +740,7 @@
   {
     "SA2_NAME16": "Croydon South",
     "unemployed_percent": null,
+    "unemployment_rate": 5.29462,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 1584,
     "degree_diploma_certificate_percent": null,
@@ -666,6 +749,7 @@
   {
     "SA2_NAME16": "Dandenong",
     "unemployed_percent": 9,
+    "unemployment_rate": 13.3256,
     "equivalised_household_income_median": 645.061,
     "median_tot_hhd_inc_weekly": 993,
     "degree_diploma_certificate_percent": 35.2273,
@@ -674,6 +758,7 @@
   {
     "SA2_NAME16": "Dandenong North",
     "unemployed_percent": 9.63855,
+    "unemployment_rate": 9.74402,
     "equivalised_household_income_median": 668.94,
     "median_tot_hhd_inc_weekly": 1183,
     "degree_diploma_certificate_percent": 18.4211,
@@ -682,6 +767,7 @@
   {
     "SA2_NAME16": "Deer Park - Derrimut",
     "unemployed_percent": 4.49438,
+    "unemployment_rate": 9.52462,
     "equivalised_household_income_median": 710.08,
     "median_tot_hhd_inc_weekly": 1400,
     "degree_diploma_certificate_percent": 1.97368,
@@ -690,6 +776,7 @@
   {
     "SA2_NAME16": "Delahey",
     "unemployed_percent": null,
+    "unemployment_rate": 11.3208,
     "equivalised_household_income_median": 683.13,
     "median_tot_hhd_inc_weekly": 1289,
     "degree_diploma_certificate_percent": 0.319234,
@@ -698,6 +785,7 @@
   {
     "SA2_NAME16": "Dingley Village",
     "unemployed_percent": null,
+    "unemployment_rate": 4.43746,
     "equivalised_household_income_median": 903.52,
     "median_tot_hhd_inc_weekly": 1591,
     "degree_diploma_certificate_percent": 25.5411,
@@ -706,6 +794,7 @@
   {
     "SA2_NAME16": "Docklands",
     "unemployed_percent": null,
+    "unemployment_rate": 7.77294,
     "equivalised_household_income_median": 1111.01,
     "median_tot_hhd_inc_weekly": 1872,
     "degree_diploma_certificate_percent": 20.1835,
@@ -714,6 +803,7 @@
   {
     "SA2_NAME16": "Doncaster",
     "unemployed_percent": 17.6471,
+    "unemployment_rate": 7.85988,
     "equivalised_household_income_median": 825.82,
     "median_tot_hhd_inc_weekly": 1362,
     "degree_diploma_certificate_percent": 40.4255,
@@ -722,6 +812,7 @@
   {
     "SA2_NAME16": "Doncaster East (North)",
     "unemployed_percent": null,
+    "unemployment_rate": 6.69597,
     "equivalised_household_income_median": 900.8,
     "median_tot_hhd_inc_weekly": 1740,
     "degree_diploma_certificate_percent": 21.374,
@@ -730,6 +821,7 @@
   {
     "SA2_NAME16": "Doncaster East (South)",
     "unemployed_percent": null,
+    "unemployment_rate": 7.90812,
     "equivalised_household_income_median": 789.761,
     "median_tot_hhd_inc_weekly": 1315,
     "degree_diploma_certificate_percent": 9.05588,
@@ -738,6 +830,7 @@
   {
     "SA2_NAME16": "Donvale - Park Orchards",
     "unemployed_percent": null,
+    "unemployment_rate": 4.66791,
     "equivalised_household_income_median": 1018.05,
     "median_tot_hhd_inc_weekly": 1941,
     "degree_diploma_certificate_percent": 13.0769,
@@ -746,6 +839,7 @@
   {
     "SA2_NAME16": "Doreen",
     "unemployed_percent": 4.95868,
+    "unemployment_rate": 4.85256,
     "equivalised_household_income_median": 878.081,
     "median_tot_hhd_inc_weekly": 1808,
     "degree_diploma_certificate_percent": 12.6667,
@@ -754,6 +848,7 @@
   {
     "SA2_NAME16": "Doveton",
     "unemployed_percent": 11.1111,
+    "unemployment_rate": 13.3333,
     "equivalised_household_income_median": 591.933,
     "median_tot_hhd_inc_weekly": 973,
     "degree_diploma_certificate_percent": 35.5556,
@@ -762,6 +857,7 @@
   {
     "SA2_NAME16": "Dromana",
     "unemployed_percent": 9.61539,
+    "unemployment_rate": 5.19682,
     "equivalised_household_income_median": 762.174,
     "median_tot_hhd_inc_weekly": 1155,
     "degree_diploma_certificate_percent": 12.5654,
@@ -770,6 +866,7 @@
   {
     "SA2_NAME16": "East Melbourne",
     "unemployed_percent": null,
+    "unemployment_rate": 4.17385,
     "equivalised_household_income_median": 1490.85,
     "median_tot_hhd_inc_weekly": 2286,
     "degree_diploma_certificate_percent": 23.5714,
@@ -778,6 +875,7 @@
   {
     "SA2_NAME16": "Edithvale - Aspendale",
     "unemployed_percent": 5.45455,
+    "unemployment_rate": 4.82524,
     "equivalised_household_income_median": 976.541,
     "median_tot_hhd_inc_weekly": 1780,
     "degree_diploma_certificate_percent": 14.3731,
@@ -786,6 +884,7 @@
   {
     "SA2_NAME16": "Elsternwick",
     "unemployed_percent": null,
+    "unemployment_rate": 4.02309,
     "equivalised_household_income_median": 1163.95,
     "median_tot_hhd_inc_weekly": 1870,
     "degree_diploma_certificate_percent": 5.73248,
@@ -794,6 +893,7 @@
   {
     "SA2_NAME16": "Eltham",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.53636,
     "equivalised_household_income_median": 1063.47,
     "median_tot_hhd_inc_weekly": 2123,
     "degree_diploma_certificate_percent": 26.5823,
@@ -802,6 +902,7 @@
   {
     "SA2_NAME16": "Elwood",
     "unemployed_percent": 8,
+    "unemployment_rate": 4.54353,
     "equivalised_household_income_median": 1285.51,
     "median_tot_hhd_inc_weekly": 1888,
     "degree_diploma_certificate_percent": 0,
@@ -810,6 +911,7 @@
   {
     "SA2_NAME16": "Emerald - Cockatoo",
     "unemployed_percent": 6.32911,
+    "unemployment_rate": 4.30084,
     "equivalised_household_income_median": 885.796,
     "median_tot_hhd_inc_weekly": 1707,
     "degree_diploma_certificate_percent": 9.20245,
@@ -818,6 +920,7 @@
   {
     "SA2_NAME16": "Endeavour Hills - North",
     "unemployed_percent": null,
+    "unemployment_rate": 8.24543,
     "equivalised_household_income_median": 787.238,
     "median_tot_hhd_inc_weekly": 1483,
     "degree_diploma_certificate_percent": 37.7049,
@@ -826,6 +929,7 @@
   {
     "SA2_NAME16": "Endeavour Hills - South",
     "unemployed_percent": null,
+    "unemployment_rate": 7.49411,
     "equivalised_household_income_median": 774.519,
     "median_tot_hhd_inc_weekly": 1466,
     "degree_diploma_certificate_percent": 38.2353,
@@ -834,6 +938,7 @@
   {
     "SA2_NAME16": "Epping - East",
     "unemployed_percent": 11.1111,
+    "unemployment_rate": 8.07822,
     "equivalised_household_income_median": 720.065,
     "median_tot_hhd_inc_weekly": 1401,
     "degree_diploma_certificate_percent": 17.4603,
@@ -842,6 +947,7 @@
   {
     "SA2_NAME16": "Epping - South",
     "unemployed_percent": 4.22535,
+    "unemployment_rate": 9.41456,
     "equivalised_household_income_median": 676.364,
     "median_tot_hhd_inc_weekly": 1203,
     "degree_diploma_certificate_percent": 10.9005,
@@ -850,6 +956,7 @@
   {
     "SA2_NAME16": "Epping - West",
     "unemployed_percent": null,
+    "unemployment_rate": 7.40252,
     "equivalised_household_income_median": 788.587,
     "median_tot_hhd_inc_weekly": 1603,
     "degree_diploma_certificate_percent": 19.1781,
@@ -858,6 +965,7 @@
   {
     "SA2_NAME16": "Essendon - Aberfeldie",
     "unemployed_percent": 4.05405,
+    "unemployment_rate": 5.02988,
     "equivalised_household_income_median": 1057.5,
     "median_tot_hhd_inc_weekly": 1793,
     "degree_diploma_certificate_percent": 29.8824,
@@ -866,6 +974,7 @@
   {
     "SA2_NAME16": "Essendon Airport",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 0,
     "degree_diploma_certificate_percent": 10.5263,
@@ -874,6 +983,7 @@
   {
     "SA2_NAME16": "Fawkner",
     "unemployed_percent": null,
+    "unemployment_rate": 10.6479,
     "equivalised_household_income_median": 631.579,
     "median_tot_hhd_inc_weekly": 1087,
     "degree_diploma_certificate_percent": 9.62963,
@@ -882,6 +992,7 @@
   {
     "SA2_NAME16": "Ferntree Gully (North)",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.76331,
     "equivalised_household_income_median": 833.562,
     "median_tot_hhd_inc_weekly": 1353,
     "degree_diploma_certificate_percent": 11.7647,
@@ -890,6 +1001,7 @@
   {
     "SA2_NAME16": "Ferntree Gully (South) - Upper Ferntree Gully",
     "unemployed_percent": "#N/A",
+    "unemployment_rate": 5.65088,
     "equivalised_household_income_median": "#N/A",
     "median_tot_hhd_inc_weekly": 1569,
     "degree_diploma_certificate_percent": "#N/A",
@@ -898,6 +1010,7 @@
   {
     "SA2_NAME16": "Fitzroy",
     "unemployed_percent": 7.5,
+    "unemployment_rate": 7.57363,
     "equivalised_household_income_median": 1043.91,
     "median_tot_hhd_inc_weekly": 1708,
     "degree_diploma_certificate_percent": 28.4314,
@@ -906,6 +1019,7 @@
   {
     "SA2_NAME16": "Fitzroy North",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.8027,
     "equivalised_household_income_median": 1138.67,
     "median_tot_hhd_inc_weekly": 1914,
     "degree_diploma_certificate_percent": 12.2222,
@@ -914,6 +1028,7 @@
   {
     "SA2_NAME16": "Flemington",
     "unemployed_percent": 15.5556,
+    "unemployment_rate": 10.2331,
     "equivalised_household_income_median": 805.839,
     "median_tot_hhd_inc_weekly": 1264,
     "degree_diploma_certificate_percent": 48.5714,
@@ -922,6 +1037,7 @@
   {
     "SA2_NAME16": "Flemington Racecourse",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 1791,
     "degree_diploma_certificate_percent": 12.069,
@@ -930,6 +1046,7 @@
   {
     "SA2_NAME16": "Flinders",
     "unemployed_percent": null,
+    "unemployment_rate": 3.40349,
     "equivalised_household_income_median": 968.064,
     "median_tot_hhd_inc_weekly": 1712,
     "degree_diploma_certificate_percent": 26.0274,
@@ -938,6 +1055,7 @@
   {
     "SA2_NAME16": "Footscray",
     "unemployed_percent": 7.05882,
+    "unemployment_rate": 10.2785,
     "equivalised_household_income_median": 836.195,
     "median_tot_hhd_inc_weekly": 1301,
     "degree_diploma_certificate_percent": 4.4405,
@@ -946,6 +1064,7 @@
   {
     "SA2_NAME16": "Forest Hill",
     "unemployed_percent": null,
+    "unemployment_rate": 6.95012,
     "equivalised_household_income_median": 834.05,
     "median_tot_hhd_inc_weekly": 1342,
     "degree_diploma_certificate_percent": 15.1515,
@@ -954,6 +1073,7 @@
   {
     "SA2_NAME16": "Frankston",
     "unemployed_percent": 10.5882,
+    "unemployment_rate": 8.32857,
     "equivalised_household_income_median": 724.845,
     "median_tot_hhd_inc_weekly": 1095,
     "degree_diploma_certificate_percent": 0,
@@ -962,6 +1082,7 @@
   {
     "SA2_NAME16": "Frankston North",
     "unemployed_percent": 11.2903,
+    "unemployment_rate": 9.59545,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 1042,
     "degree_diploma_certificate_percent": 15.8537,
@@ -970,6 +1091,7 @@
   {
     "SA2_NAME16": "Frankston South",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.9617,
     "equivalised_household_income_median": 910.187,
     "median_tot_hhd_inc_weekly": 1611,
     "degree_diploma_certificate_percent": 15.4135,
@@ -978,6 +1100,7 @@
   {
     "SA2_NAME16": "Gisborne",
     "unemployed_percent": 7.69231,
+    "unemployment_rate": 4.52934,
     "equivalised_household_income_median": 964.371,
     "median_tot_hhd_inc_weekly": 1863,
     "degree_diploma_certificate_percent": 12.9921,
@@ -986,6 +1109,7 @@
   {
     "SA2_NAME16": "Gladstone Park - Westmeadows",
     "unemployed_percent": 9.52381,
+    "unemployment_rate": 7.01754,
     "equivalised_household_income_median": 781.726,
     "median_tot_hhd_inc_weekly": 1386,
     "degree_diploma_certificate_percent": 35.7143,
@@ -994,6 +1118,7 @@
   {
     "SA2_NAME16": "Glen Iris - East",
     "unemployed_percent": null,
+    "unemployment_rate": 4.89587,
     "equivalised_household_income_median": 1289.22,
     "median_tot_hhd_inc_weekly": 2436,
     "degree_diploma_certificate_percent": 38.2716,
@@ -1002,6 +1127,7 @@
   {
     "SA2_NAME16": "Glen Waverley - East",
     "unemployed_percent": null,
+    "unemployment_rate": 7.90535,
     "equivalised_household_income_median": 884.561,
     "median_tot_hhd_inc_weekly": 1561,
     "degree_diploma_certificate_percent": 13.0233,
@@ -1010,6 +1136,7 @@
   {
     "SA2_NAME16": "Glen Waverley - West",
     "unemployed_percent": null,
+    "unemployment_rate": 8.0852,
     "equivalised_household_income_median": 856.72,
     "median_tot_hhd_inc_weekly": 1537,
     "degree_diploma_certificate_percent": 8.20895,
@@ -1018,6 +1145,7 @@
   {
     "SA2_NAME16": "Glenroy",
     "unemployed_percent": 0,
+    "unemployment_rate": 9.07995,
     "equivalised_household_income_median": 711.885,
     "median_tot_hhd_inc_weekly": 1251,
     "degree_diploma_certificate_percent": 11.2245,
@@ -1026,6 +1154,7 @@
   {
     "SA2_NAME16": "Gowanbrae",
     "unemployed_percent": null,
+    "unemployment_rate": 3.78007,
     "equivalised_household_income_median": 923.6,
     "median_tot_hhd_inc_weekly": 1772,
     "degree_diploma_certificate_percent": 39.0533,
@@ -1034,6 +1163,7 @@
   {
     "SA2_NAME16": "Greensborough",
     "unemployed_percent": 7.46269,
+    "unemployment_rate": 4.65892,
     "equivalised_household_income_median": 942.74,
     "median_tot_hhd_inc_weekly": 1722,
     "degree_diploma_certificate_percent": 4.36681,
@@ -1042,6 +1172,7 @@
   {
     "SA2_NAME16": "Greenvale - Bulla",
     "unemployed_percent": 6.66667,
+    "unemployment_rate": 5.40444,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 2019,
     "degree_diploma_certificate_percent": 46,
@@ -1050,6 +1181,7 @@
   {
     "SA2_NAME16": "Hadfield",
     "unemployed_percent": null,
+    "unemployment_rate": 8.04087,
     "equivalised_household_income_median": 673.515,
     "median_tot_hhd_inc_weekly": 1128,
     "degree_diploma_certificate_percent": 30.303,
@@ -1058,6 +1190,7 @@
   {
     "SA2_NAME16": "Hallam",
     "unemployed_percent": 21.875,
+    "unemployment_rate": 9.30477,
     "equivalised_household_income_median": 676.613,
     "median_tot_hhd_inc_weekly": 1295,
     "degree_diploma_certificate_percent": 5.65217,
@@ -1066,6 +1199,7 @@
   {
     "SA2_NAME16": "Hampton",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.92311,
     "equivalised_household_income_median": 1153.04,
     "median_tot_hhd_inc_weekly": 2028,
     "degree_diploma_certificate_percent": 36.8421,
@@ -1074,6 +1208,7 @@
   {
     "SA2_NAME16": "Hampton Park - Lynbrook",
     "unemployed_percent": 3.7037,
+    "unemployment_rate": 9.76837,
     "equivalised_household_income_median": 666.63,
     "median_tot_hhd_inc_weekly": 1306,
     "degree_diploma_certificate_percent": 24.2105,
@@ -1082,6 +1217,7 @@
   {
     "SA2_NAME16": "Hastings - Somers",
     "unemployed_percent": 6.2963,
+    "unemployment_rate": 6.05695,
     "equivalised_household_income_median": 717.47,
     "median_tot_hhd_inc_weekly": 1176,
     "degree_diploma_certificate_percent": 17.7215,
@@ -1090,6 +1226,7 @@
   {
     "SA2_NAME16": "Hawthorn",
     "unemployed_percent": 6.52174,
+    "unemployment_rate": 6.82101,
     "equivalised_household_income_median": 1228.87,
     "median_tot_hhd_inc_weekly": 1813,
     "degree_diploma_certificate_percent": null,
@@ -1098,6 +1235,7 @@
   {
     "SA2_NAME16": "Hawthorn East",
     "unemployed_percent": null,
+    "unemployment_rate": 5.27349,
     "equivalised_household_income_median": 1249.74,
     "median_tot_hhd_inc_weekly": 1946,
     "degree_diploma_certificate_percent": 28.7234,
@@ -1106,6 +1244,7 @@
   {
     "SA2_NAME16": "Healesville - Yarra Glen",
     "unemployed_percent": 6.8,
+    "unemployment_rate": 4.53887,
     "equivalised_household_income_median": 784.95,
     "median_tot_hhd_inc_weekly": 1273,
     "degree_diploma_certificate_percent": 16.6667,
@@ -1114,6 +1253,7 @@
   {
     "SA2_NAME16": "Heidelberg - Rosanna",
     "unemployed_percent": 8.92857,
+    "unemployment_rate": 5.60526,
     "equivalised_household_income_median": 985.413,
     "median_tot_hhd_inc_weekly": 1723,
     "degree_diploma_certificate_percent": 8.69565,
@@ -1122,6 +1262,7 @@
   {
     "SA2_NAME16": "Heidelberg West",
     "unemployed_percent": 11.6788,
+    "unemployment_rate": 9.41512,
     "equivalised_household_income_median": 695.827,
     "median_tot_hhd_inc_weekly": 1190,
     "degree_diploma_certificate_percent": 15.9204,
@@ -1130,6 +1271,7 @@
   {
     "SA2_NAME16": "Hillside",
     "unemployed_percent": 8.69565,
+    "unemployment_rate": 6.43785,
     "equivalised_household_income_median": 880.867,
     "median_tot_hhd_inc_weekly": 1870,
     "degree_diploma_certificate_percent": 1.87166,
@@ -1138,6 +1280,7 @@
   {
     "SA2_NAME16": "Hoppers Crossing - North",
     "unemployed_percent": 11,
+    "unemployment_rate": 7.86792,
     "equivalised_household_income_median": 791.056,
     "median_tot_hhd_inc_weekly": 1492,
     "degree_diploma_certificate_percent": 19.084,
@@ -1146,6 +1289,7 @@
   {
     "SA2_NAME16": "Hoppers Crossing - South",
     "unemployed_percent": 11.0092,
+    "unemployment_rate": 10.0709,
     "equivalised_household_income_median": 708.662,
     "median_tot_hhd_inc_weekly": 1323,
     "degree_diploma_certificate_percent": 6.96517,
@@ -1154,6 +1298,7 @@
   {
     "SA2_NAME16": "Hughesdale",
     "unemployed_percent": null,
+    "unemployment_rate": 6.83308,
     "equivalised_household_income_median": 949.04,
     "median_tot_hhd_inc_weekly": 1686,
     "degree_diploma_certificate_percent": 35.5556,
@@ -1162,6 +1307,7 @@
   {
     "SA2_NAME16": "Hurstbridge",
     "unemployed_percent": null,
+    "unemployment_rate": 4.29815,
     "equivalised_household_income_median": 923.6,
     "median_tot_hhd_inc_weekly": 1801,
     "degree_diploma_certificate_percent": 29.2135,
@@ -1170,6 +1316,7 @@
   {
     "SA2_NAME16": "Ivanhoe",
     "unemployed_percent": null,
+    "unemployment_rate": 5.34377,
     "equivalised_household_income_median": 1122.72,
     "median_tot_hhd_inc_weekly": 1917,
     "degree_diploma_certificate_percent": 8.33333,
@@ -1178,6 +1325,7 @@
   {
     "SA2_NAME16": "Ivanhoe East - Eaglemont",
     "unemployed_percent": null,
+    "unemployment_rate": 5.00399,
     "equivalised_household_income_median": 1297.11,
     "median_tot_hhd_inc_weekly": 2407,
     "degree_diploma_certificate_percent": 11.2903,
@@ -1186,6 +1334,7 @@
   {
     "SA2_NAME16": "Keilor",
     "unemployed_percent": null,
+    "unemployment_rate": 5.42477,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 1523,
     "degree_diploma_certificate_percent": null,
@@ -1194,6 +1343,7 @@
   {
     "SA2_NAME16": "Keilor Downs",
     "unemployed_percent": 10.8696,
+    "unemployment_rate": 8.46253,
     "equivalised_household_income_median": 721.59,
     "median_tot_hhd_inc_weekly": 1379,
     "degree_diploma_certificate_percent": 1.36799,
@@ -1202,6 +1352,7 @@
   {
     "SA2_NAME16": "Keilor East",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.94259,
     "equivalised_household_income_median": 800.531,
     "median_tot_hhd_inc_weekly": 1410,
     "degree_diploma_certificate_percent": 41.3333,
@@ -1210,6 +1361,7 @@
   {
     "SA2_NAME16": "Kensington (Vic.)",
     "unemployed_percent": 8.33333,
+    "unemployment_rate": 4.6601,
     "equivalised_household_income_median": 1095.67,
     "median_tot_hhd_inc_weekly": 1949,
     "degree_diploma_certificate_percent": 43.6364,
@@ -1218,6 +1370,7 @@
   {
     "SA2_NAME16": "Kew",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.31084,
     "equivalised_household_income_median": 1261.75,
     "median_tot_hhd_inc_weekly": 2198,
     "degree_diploma_certificate_percent": 17.8571,
@@ -1226,6 +1379,7 @@
   {
     "SA2_NAME16": "Kew East",
     "unemployed_percent": null,
+    "unemployment_rate": 4.88746,
     "equivalised_household_income_median": 1120.05,
     "median_tot_hhd_inc_weekly": 2151,
     "degree_diploma_certificate_percent": 11.9658,
@@ -1234,6 +1388,7 @@
   {
     "SA2_NAME16": "Keysborough",
     "unemployed_percent": null,
+    "unemployment_rate": 7.93206,
     "equivalised_household_income_median": 788.587,
     "median_tot_hhd_inc_weekly": 1586,
     "degree_diploma_certificate_percent": 18.3673,
@@ -1242,6 +1397,7 @@
   {
     "SA2_NAME16": "Kilsyth",
     "unemployed_percent": 7.69231,
+    "unemployment_rate": 4.34884,
     "equivalised_household_income_median": 800.08,
     "median_tot_hhd_inc_weekly": 1340,
     "degree_diploma_certificate_percent": 25.4237,
@@ -1250,6 +1406,7 @@
   {
     "SA2_NAME16": "Kinglake",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.26036,
     "equivalised_household_income_median": 796.676,
     "median_tot_hhd_inc_weekly": 1429,
     "degree_diploma_certificate_percent": 10,
@@ -1258,6 +1415,7 @@
   {
     "SA2_NAME16": "Kings Park (Vic.)",
     "unemployed_percent": 9.7561,
+    "unemployment_rate": 12.8973,
     "equivalised_household_income_median": 603.939,
     "median_tot_hhd_inc_weekly": 1072,
     "degree_diploma_certificate_percent": 1.33136,
@@ -1266,6 +1424,7 @@
   {
     "SA2_NAME16": "Kingsbury",
     "unemployed_percent": 0,
+    "unemployment_rate": 13.1189,
     "equivalised_household_income_median": 801.838,
     "median_tot_hhd_inc_weekly": 1357,
     "degree_diploma_certificate_percent": 10.2804,
@@ -1274,6 +1433,7 @@
   {
     "SA2_NAME16": "Knoxfield - Scoresby",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.32928,
     "equivalised_household_income_median": 843.13,
     "median_tot_hhd_inc_weekly": 1586,
     "degree_diploma_certificate_percent": 3.58166,
@@ -1282,6 +1442,7 @@
   {
     "SA2_NAME16": "Koo Wee Rup",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.55865,
     "equivalised_household_income_median": 776.196,
     "median_tot_hhd_inc_weekly": 1335,
     "degree_diploma_certificate_percent": 18.9189,
@@ -1290,6 +1451,7 @@
   {
     "SA2_NAME16": "Lalor",
     "unemployed_percent": 12.3711,
+    "unemployment_rate": 9.83882,
     "equivalised_household_income_median": 637.173,
     "median_tot_hhd_inc_weekly": 1111,
     "degree_diploma_certificate_percent": 20.5882,
@@ -1298,6 +1460,7 @@
   {
     "SA2_NAME16": "Langwarrin",
     "unemployed_percent": 7.31707,
+    "unemployment_rate": 4.71867,
     "equivalised_household_income_median": 875.447,
     "median_tot_hhd_inc_weekly": 1593,
     "degree_diploma_certificate_percent": 11.0236,
@@ -1306,6 +1469,7 @@
   {
     "SA2_NAME16": "Laverton",
     "unemployed_percent": 0,
+    "unemployment_rate": 9.57306,
     "equivalised_household_income_median": 799.1,
     "median_tot_hhd_inc_weekly": 1585,
     "degree_diploma_certificate_percent": 19.1919,
@@ -1314,6 +1478,7 @@
   {
     "SA2_NAME16": "Lilydale - Coldstream",
     "unemployed_percent": 5,
+    "unemployment_rate": 4.55953,
     "equivalised_household_income_median": 818.706,
     "median_tot_hhd_inc_weekly": 1464,
     "degree_diploma_certificate_percent": 45.4545,
@@ -1322,6 +1487,7 @@
   {
     "SA2_NAME16": "Lynbrook - Lyndhurst",
     "unemployed_percent": null,
+    "unemployment_rate": 7.13535,
     "equivalised_household_income_median": 855.187,
     "median_tot_hhd_inc_weekly": 1947,
     "degree_diploma_certificate_percent": 18.8119,
@@ -1330,6 +1496,7 @@
   {
     "SA2_NAME16": "Lysterfield",
     "unemployed_percent": null,
+    "unemployment_rate": 4.00637,
     "equivalised_household_income_median": 1028.91,
     "median_tot_hhd_inc_weekly": 2332,
     "degree_diploma_certificate_percent": 10.3774,
@@ -1338,6 +1505,7 @@
   {
     "SA2_NAME16": "Macedon",
     "unemployed_percent": null,
+    "unemployment_rate": 5.20833,
     "equivalised_household_income_median": 1066.19,
     "median_tot_hhd_inc_weekly": 1931,
     "degree_diploma_certificate_percent": 17.7515,
@@ -1346,6 +1514,7 @@
   {
     "SA2_NAME16": "Malvern - Glen Iris",
     "unemployed_percent": null,
+    "unemployment_rate": 5.06542,
     "equivalised_household_income_median": 1289.22,
     "median_tot_hhd_inc_weekly": 2066,
     "degree_diploma_certificate_percent": 24.5283,
@@ -1354,6 +1523,7 @@
   {
     "SA2_NAME16": "Malvern East",
     "unemployed_percent": 9.7561,
+    "unemployment_rate": 6.96318,
     "equivalised_household_income_median": 1138.66,
     "median_tot_hhd_inc_weekly": 1932,
     "degree_diploma_certificate_percent": 22.2222,
@@ -1362,6 +1532,7 @@
   {
     "SA2_NAME16": "Maribyrnong",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.62944,
     "equivalised_household_income_median": 975.424,
     "median_tot_hhd_inc_weekly": 1757,
     "degree_diploma_certificate_percent": 2.57732,
@@ -1370,6 +1541,7 @@
   {
     "SA2_NAME16": "Meadow Heights",
     "unemployed_percent": 6.94444,
+    "unemployment_rate": 14.1643,
     "equivalised_household_income_median": 520.112,
     "median_tot_hhd_inc_weekly": 1043,
     "degree_diploma_certificate_percent": 5.88235,
@@ -1378,6 +1550,7 @@
   {
     "SA2_NAME16": "Melbourne",
     "unemployed_percent": 6.12245,
+    "unemployment_rate": 15.152,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 964,
     "degree_diploma_certificate_percent": 19.4444,
@@ -1386,6 +1559,7 @@
   {
     "SA2_NAME16": "Melbourne Airport",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 2250,
     "degree_diploma_certificate_percent": 11,
@@ -1394,6 +1568,7 @@
   {
     "SA2_NAME16": "Melton",
     "unemployed_percent": 12.093,
+    "unemployment_rate": 9.81114,
     "equivalised_household_income_median": 675.3,
     "median_tot_hhd_inc_weekly": 1178,
     "degree_diploma_certificate_percent": 2.63543,
@@ -1402,6 +1577,7 @@
   {
     "SA2_NAME16": "Melton South",
     "unemployed_percent": 9.67742,
+    "unemployment_rate": 9.13392,
     "equivalised_household_income_median": 704.8,
     "median_tot_hhd_inc_weekly": 1336,
     "degree_diploma_certificate_percent": 0.763359,
@@ -1410,6 +1586,7 @@
   {
     "SA2_NAME16": "Melton West",
     "unemployed_percent": 3.97727,
+    "unemployment_rate": 7.44641,
     "equivalised_household_income_median": 733.47,
     "median_tot_hhd_inc_weekly": 1424,
     "degree_diploma_certificate_percent": 23.7288,
@@ -1418,6 +1595,7 @@
   {
     "SA2_NAME16": "Mentone",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.29801,
     "equivalised_household_income_median": 969.838,
     "median_tot_hhd_inc_weekly": 1517,
     "degree_diploma_certificate_percent": 10.1911,
@@ -1426,6 +1604,7 @@
   {
     "SA2_NAME16": "Mernda",
     "unemployed_percent": 4.38596,
+    "unemployment_rate": 5.82242,
     "equivalised_household_income_median": 837.412,
     "median_tot_hhd_inc_weekly": 1656,
     "degree_diploma_certificate_percent": 15.7895,
@@ -1434,6 +1613,7 @@
   {
     "SA2_NAME16": "Mickleham - Yuroke",
     "unemployed_percent": null,
+    "unemployment_rate": 5.04767,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1810,
     "degree_diploma_certificate_percent": 6.1674,
@@ -1442,6 +1622,7 @@
   {
     "SA2_NAME16": "Mill Park - North",
     "unemployed_percent": 8,
+    "unemployment_rate": 6.40833,
     "equivalised_household_income_median": 821.188,
     "median_tot_hhd_inc_weekly": 1527,
     "degree_diploma_certificate_percent": null,
@@ -1450,6 +1631,7 @@
   {
     "SA2_NAME16": "Mill Park - South",
     "unemployed_percent": 6.06061,
+    "unemployment_rate": 7.77741,
     "equivalised_household_income_median": 781.726,
     "median_tot_hhd_inc_weekly": 1466,
     "degree_diploma_certificate_percent": 52.1739,
@@ -1458,6 +1640,7 @@
   {
     "SA2_NAME16": "Mitcham (Vic.)",
     "unemployed_percent": 16.6667,
+    "unemployment_rate": 5.60154,
     "equivalised_household_income_median": 933.425,
     "median_tot_hhd_inc_weekly": 1645,
     "degree_diploma_certificate_percent": 21.7391,
@@ -1466,6 +1649,7 @@
   {
     "SA2_NAME16": "Monbulk - Silvan",
     "unemployed_percent": 0,
+    "unemployment_rate": 3.62637,
     "equivalised_household_income_median": 841.865,
     "median_tot_hhd_inc_weekly": 1502,
     "degree_diploma_certificate_percent": 8.88889,
@@ -1474,6 +1658,7 @@
   {
     "SA2_NAME16": "Montmorency - Briar Hill",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.27607,
     "equivalised_household_income_median": 969.838,
     "median_tot_hhd_inc_weekly": 1729,
     "degree_diploma_certificate_percent": null,
@@ -1482,6 +1667,7 @@
   {
     "SA2_NAME16": "Montrose",
     "unemployed_percent": null,
+    "unemployment_rate": 4.25216,
     "equivalised_household_income_median": 897.227,
     "median_tot_hhd_inc_weekly": 1707,
     "degree_diploma_certificate_percent": 26.2295,
@@ -1490,6 +1676,7 @@
   {
     "SA2_NAME16": "Moonee Ponds",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.2801,
     "equivalised_household_income_median": 1084,
     "median_tot_hhd_inc_weekly": 1856,
     "degree_diploma_certificate_percent": 37.3494,
@@ -1498,6 +1685,7 @@
   {
     "SA2_NAME16": "Moorabbin - Heatherton",
     "unemployed_percent": null,
+    "unemployment_rate": 6.27605,
     "equivalised_household_income_median": 899.95,
     "median_tot_hhd_inc_weekly": 1563,
     "degree_diploma_certificate_percent": 2.22222,
@@ -1506,6 +1694,7 @@
   {
     "SA2_NAME16": "Moorabbin Airport",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 0,
     "degree_diploma_certificate_percent": 4.32099,
@@ -1514,6 +1703,7 @@
   {
     "SA2_NAME16": "Mooroolbark",
     "unemployed_percent": 8.98876,
+    "unemployment_rate": 5.22605,
     "equivalised_household_income_median": 840.844,
     "median_tot_hhd_inc_weekly": 1592,
     "degree_diploma_certificate_percent": 2.41935,
@@ -1522,6 +1712,7 @@
   {
     "SA2_NAME16": "Mordialloc - Parkdale",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.78966,
     "equivalised_household_income_median": 990.057,
     "median_tot_hhd_inc_weekly": 1697,
     "degree_diploma_certificate_percent": 17.5258,
@@ -1530,6 +1721,7 @@
   {
     "SA2_NAME16": "Mornington",
     "unemployed_percent": 3.0303,
+    "unemployment_rate": 5.1798,
     "equivalised_household_income_median": 789.033,
     "median_tot_hhd_inc_weekly": 1203,
     "degree_diploma_certificate_percent": 11.1111,
@@ -1538,6 +1730,7 @@
   {
     "SA2_NAME16": "Mount Dandenong - Olinda",
     "unemployed_percent": 10.2564,
+    "unemployment_rate": 4.27046,
     "equivalised_household_income_median": 926,
     "median_tot_hhd_inc_weekly": 1676,
     "degree_diploma_certificate_percent": 15.9574,
@@ -1546,6 +1739,7 @@
   {
     "SA2_NAME16": "Mount Eliza",
     "unemployed_percent": 12.2449,
+    "unemployment_rate": 4.55848,
     "equivalised_household_income_median": 1053.2,
     "median_tot_hhd_inc_weekly": 2024,
     "degree_diploma_certificate_percent": 20.5714,
@@ -1554,6 +1748,7 @@
   {
     "SA2_NAME16": "Mount Evelyn",
     "unemployed_percent": 10.8696,
+    "unemployment_rate": 4.46236,
     "equivalised_household_income_median": 855.187,
     "median_tot_hhd_inc_weekly": 1650,
     "degree_diploma_certificate_percent": 7.64331,
@@ -1562,6 +1757,7 @@
   {
     "SA2_NAME16": "Mount Martha",
     "unemployed_percent": 13.5135,
+    "unemployment_rate": 3.92992,
     "equivalised_household_income_median": 908.14,
     "median_tot_hhd_inc_weekly": 1707,
     "degree_diploma_certificate_percent": 25.5605,
@@ -1570,6 +1766,7 @@
   {
     "SA2_NAME16": "Mount Waverley - North",
     "unemployed_percent": null,
+    "unemployment_rate": 7.10243,
     "equivalised_household_income_median": 921.253,
     "median_tot_hhd_inc_weekly": 1625,
     "degree_diploma_certificate_percent": 5.72917,
@@ -1578,6 +1775,7 @@
   {
     "SA2_NAME16": "Mount Waverley - South",
     "unemployed_percent": null,
+    "unemployment_rate": 6.61964,
     "equivalised_household_income_median": 919.997,
     "median_tot_hhd_inc_weekly": 1649,
     "degree_diploma_certificate_percent": 0,
@@ -1586,6 +1784,7 @@
   {
     "SA2_NAME16": "Mulgrave",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.47697,
     "equivalised_household_income_median": 843.05,
     "median_tot_hhd_inc_weekly": 1570,
     "degree_diploma_certificate_percent": 1.47929,
@@ -1594,6 +1793,7 @@
   {
     "SA2_NAME16": "Murrumbeena",
     "unemployed_percent": null,
+    "unemployment_rate": 6.81458,
     "equivalised_household_income_median": 989.932,
     "median_tot_hhd_inc_weekly": 1650,
     "degree_diploma_certificate_percent": 6.77966,
@@ -1602,6 +1802,7 @@
   {
     "SA2_NAME16": "Narre Warren - North East",
     "unemployed_percent": 8.10811,
+    "unemployment_rate": 7.39952,
     "equivalised_household_income_median": 789.761,
     "median_tot_hhd_inc_weekly": 1618,
     "degree_diploma_certificate_percent": 3.84615,
@@ -1610,6 +1811,7 @@
   {
     "SA2_NAME16": "Narre Warren - South West",
     "unemployed_percent": 7.27273,
+    "unemployment_rate": 8.09249,
     "equivalised_household_income_median": 713,
     "median_tot_hhd_inc_weekly": 1343,
     "degree_diploma_certificate_percent": 28.2051,
@@ -1618,6 +1820,7 @@
   {
     "SA2_NAME16": "Narre Warren North",
     "unemployed_percent": null,
+    "unemployment_rate": 4.59328,
     "equivalised_household_income_median": 981.024,
     "median_tot_hhd_inc_weekly": 2182,
     "degree_diploma_certificate_percent": 38.0282,
@@ -1626,6 +1829,7 @@
   {
     "SA2_NAME16": "Narre Warren South (East)",
     "unemployed_percent": null,
+    "unemployment_rate": 6.10643,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 2003,
     "degree_diploma_certificate_percent": 22.7273,
@@ -1634,6 +1838,7 @@
   {
     "SA2_NAME16": "Narre Warren South (West)",
     "unemployed_percent": 8.16327,
+    "unemployment_rate": 7.87158,
     "equivalised_household_income_median": 759.727,
     "median_tot_hhd_inc_weekly": 1653,
     "degree_diploma_certificate_percent": 33.6,
@@ -1642,6 +1847,7 @@
   {
     "SA2_NAME16": "Newport",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.7032,
     "equivalised_household_income_median": 1094.8,
     "median_tot_hhd_inc_weekly": 2070,
     "degree_diploma_certificate_percent": 3.50877,
@@ -1650,6 +1856,7 @@
   {
     "SA2_NAME16": "Niddrie - Essendon West",
     "unemployed_percent": null,
+    "unemployment_rate": 4.15273,
     "equivalised_household_income_median": 976.541,
     "median_tot_hhd_inc_weekly": 1746,
     "degree_diploma_certificate_percent": 23.3766,
@@ -1658,6 +1865,7 @@
   {
     "SA2_NAME16": "Noble Park - East",
     "unemployed_percent": 14.8936,
+    "unemployment_rate": 9.05443,
     "equivalised_household_income_median": 673.515,
     "median_tot_hhd_inc_weekly": 1116,
     "degree_diploma_certificate_percent": 21.3675,
@@ -1666,6 +1874,7 @@
   {
     "SA2_NAME16": "Noble Park - West",
     "unemployed_percent": 0,
+    "unemployment_rate": 11.3172,
     "equivalised_household_income_median": 676.613,
     "median_tot_hhd_inc_weekly": 1101,
     "degree_diploma_certificate_percent": 9.77778,
@@ -1674,6 +1883,7 @@
   {
     "SA2_NAME16": "Noble Park North",
     "unemployed_percent": null,
+    "unemployment_rate": 8.807,
     "equivalised_household_income_median": 677.75,
     "median_tot_hhd_inc_weekly": 1212,
     "degree_diploma_certificate_percent": 4.84848,
@@ -1682,6 +1892,7 @@
   {
     "SA2_NAME16": "North Melbourne",
     "unemployed_percent": 2.9703,
+    "unemployment_rate": 10.5796,
     "equivalised_household_income_median": 883.167,
     "median_tot_hhd_inc_weekly": 1372,
     "degree_diploma_certificate_percent": null,
@@ -1690,6 +1901,7 @@
   {
     "SA2_NAME16": "Northcote",
     "unemployed_percent": 8.19672,
+    "unemployment_rate": 4.66638,
     "equivalised_household_income_median": 1091.04,
     "median_tot_hhd_inc_weekly": 1858,
     "degree_diploma_certificate_percent": 25.9669,
@@ -1698,6 +1910,7 @@
   {
     "SA2_NAME16": "Nunawading",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.58455,
     "equivalised_household_income_median": 884.605,
     "median_tot_hhd_inc_weekly": 1508,
     "degree_diploma_certificate_percent": 23.2044,
@@ -1706,6 +1919,7 @@
   {
     "SA2_NAME16": "Oakleigh - Huntingdale",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.26722,
     "equivalised_household_income_median": 866.85,
     "median_tot_hhd_inc_weekly": 1515,
     "degree_diploma_certificate_percent": 1.65239,
@@ -1714,6 +1928,7 @@
   {
     "SA2_NAME16": "Ormond - Glen Huntly",
     "unemployed_percent": null,
+    "unemployment_rate": 6.90322,
     "equivalised_household_income_median": 968.064,
     "median_tot_hhd_inc_weekly": 1546,
     "degree_diploma_certificate_percent": 32.3232,
@@ -1722,6 +1937,7 @@
   {
     "SA2_NAME16": "Pakenham - North",
     "unemployed_percent": 9.27835,
+    "unemployment_rate": 6.73633,
     "equivalised_household_income_median": 753.7,
     "median_tot_hhd_inc_weekly": 1370,
     "degree_diploma_certificate_percent": 15.2381,
@@ -1730,6 +1946,7 @@
   {
     "SA2_NAME16": "Pakenham - South",
     "unemployed_percent": 10.8696,
+    "unemployment_rate": 6.97287,
     "equivalised_household_income_median": 732.632,
     "median_tot_hhd_inc_weekly": 1389,
     "degree_diploma_certificate_percent": 33.0578,
@@ -1738,6 +1955,7 @@
   {
     "SA2_NAME16": "Panton Hill - St Andrews",
     "unemployed_percent": null,
+    "unemployment_rate": 3.78251,
     "equivalised_household_income_median": 966.005,
     "median_tot_hhd_inc_weekly": 1878,
     "degree_diploma_certificate_percent": 14.5833,
@@ -1746,6 +1964,7 @@
   {
     "SA2_NAME16": "Parkville",
     "unemployed_percent": 23.4043,
+    "unemployment_rate": 12.5939,
     "equivalised_household_income_median": 969.667,
     "median_tot_hhd_inc_weekly": 1594,
     "degree_diploma_certificate_percent": 13.3333,
@@ -1754,6 +1973,7 @@
   {
     "SA2_NAME16": "Pascoe Vale",
     "unemployed_percent": 8.98876,
+    "unemployment_rate": 6.32342,
     "equivalised_household_income_median": 889.567,
     "median_tot_hhd_inc_weekly": 1542,
     "degree_diploma_certificate_percent": 5.6266,
@@ -1762,6 +1982,7 @@
   {
     "SA2_NAME16": "Pascoe Vale South",
     "unemployed_percent": null,
+    "unemployment_rate": 5.83751,
     "equivalised_household_income_median": 964.371,
     "median_tot_hhd_inc_weekly": 1842,
     "degree_diploma_certificate_percent": 21.3675,
@@ -1770,6 +1991,7 @@
   {
     "SA2_NAME16": "Pearcedale - Tooradin",
     "unemployed_percent": 6.89655,
+    "unemployment_rate": 4.82635,
     "equivalised_household_income_median": 847.36,
     "median_tot_hhd_inc_weekly": 1534,
     "degree_diploma_certificate_percent": 34.0426,
@@ -1778,6 +2000,7 @@
   {
     "SA2_NAME16": "Plenty - Yarrambat",
     "unemployed_percent": null,
+    "unemployment_rate": 4.04997,
     "equivalised_household_income_median": 1018.91,
     "median_tot_hhd_inc_weekly": 2180,
     "degree_diploma_certificate_percent": 27.381,
@@ -1786,6 +2009,7 @@
   {
     "SA2_NAME16": "Point Cook - East",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.98122,
     "equivalised_household_income_median": 985.413,
     "median_tot_hhd_inc_weekly": 2126,
     "degree_diploma_certificate_percent": 39.6648,
@@ -1794,6 +2018,7 @@
   {
     "SA2_NAME16": "Point Cook - North",
     "unemployed_percent": 3.26087,
+    "unemployment_rate": 7.39473,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1964,
     "degree_diploma_certificate_percent": 14.2857,
@@ -1802,6 +2027,7 @@
   {
     "SA2_NAME16": "Point Cook - South",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.47866,
     "equivalised_household_income_median": 944.375,
     "median_tot_hhd_inc_weekly": 2104,
     "degree_diploma_certificate_percent": 24.1706,
@@ -1810,6 +2036,7 @@
   {
     "SA2_NAME16": "Point Nepean",
     "unemployed_percent": 5.40541,
+    "unemployment_rate": 5.30492,
     "equivalised_household_income_median": 716.933,
     "median_tot_hhd_inc_weekly": 1107,
     "degree_diploma_certificate_percent": 27.8539,
@@ -1818,6 +2045,7 @@
   {
     "SA2_NAME16": "Port Melbourne",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.02044,
     "equivalised_household_income_median": 1381.39,
     "median_tot_hhd_inc_weekly": 2186,
     "degree_diploma_certificate_percent": 36,
@@ -1826,6 +2054,7 @@
   {
     "SA2_NAME16": "Port Melbourne Industrial",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 1875,
     "degree_diploma_certificate_percent": 15.7895,
@@ -1834,6 +2063,7 @@
   {
     "SA2_NAME16": "Prahran - Windsor",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.54399,
     "equivalised_household_income_median": 1260.31,
     "median_tot_hhd_inc_weekly": 1839,
     "degree_diploma_certificate_percent": 12.7168,
@@ -1842,6 +2072,7 @@
   {
     "SA2_NAME16": "Preston - East",
     "unemployed_percent": 12.5786,
+    "unemployment_rate": 8.03237,
     "equivalised_household_income_median": 810.76,
     "median_tot_hhd_inc_weekly": 1382,
     "degree_diploma_certificate_percent": 3.54957,
@@ -1850,6 +2081,7 @@
   {
     "SA2_NAME16": "Preston - West",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.53668,
     "equivalised_household_income_median": 881.008,
     "median_tot_hhd_inc_weekly": 1527,
     "degree_diploma_certificate_percent": 14.0625,
@@ -1858,6 +2090,7 @@
   {
     "SA2_NAME16": "Research - North Warrandyte",
     "unemployed_percent": null,
+    "unemployment_rate": 4.01298,
     "equivalised_household_income_median": 1111.01,
     "median_tot_hhd_inc_weekly": 2289,
     "degree_diploma_certificate_percent": null,
@@ -1866,6 +2099,7 @@
   {
     "SA2_NAME16": "Reservoir - East",
     "unemployed_percent": 9.77778,
+    "unemployment_rate": 8.87656,
     "equivalised_household_income_median": 692.908,
     "median_tot_hhd_inc_weekly": 1135,
     "degree_diploma_certificate_percent": 6.07735,
@@ -1874,6 +2108,7 @@
   {
     "SA2_NAME16": "Reservoir - West",
     "unemployed_percent": 5.17241,
+    "unemployment_rate": 7.83824,
     "equivalised_household_income_median": 740.54,
     "median_tot_hhd_inc_weekly": 1268,
     "degree_diploma_certificate_percent": 36.6667,
@@ -1882,6 +2117,7 @@
   {
     "SA2_NAME16": "Richmond (Vic.)",
     "unemployed_percent": 3.52941,
+    "unemployment_rate": 4.83568,
     "equivalised_household_income_median": 1249.74,
     "median_tot_hhd_inc_weekly": 2010,
     "degree_diploma_certificate_percent": 13.9896,
@@ -1890,6 +2126,7 @@
   {
     "SA2_NAME16": "Riddells Creek",
     "unemployed_percent": null,
+    "unemployment_rate": 3.57318,
     "equivalised_household_income_median": 984.27,
     "median_tot_hhd_inc_weekly": 1826,
     "degree_diploma_certificate_percent": 4.13793,
@@ -1898,6 +2135,7 @@
   {
     "SA2_NAME16": "Ringwood",
     "unemployed_percent": 6.66667,
+    "unemployment_rate": 6.82731,
     "equivalised_household_income_median": 810.807,
     "median_tot_hhd_inc_weekly": 1355,
     "degree_diploma_certificate_percent": 3.40237,
@@ -1906,6 +2144,7 @@
   {
     "SA2_NAME16": "Ringwood East",
     "unemployed_percent": 6.25,
+    "unemployment_rate": 5.27676,
     "equivalised_household_income_median": 894.5,
     "median_tot_hhd_inc_weekly": 1588,
     "degree_diploma_certificate_percent": 5.81395,
@@ -1914,6 +2153,7 @@
   {
     "SA2_NAME16": "Ringwood North",
     "unemployed_percent": 12.8205,
+    "unemployment_rate": 4.79766,
     "equivalised_household_income_median": 976.541,
     "median_tot_hhd_inc_weekly": 1909,
     "degree_diploma_certificate_percent": 8.06452,
@@ -1922,6 +2162,7 @@
   {
     "SA2_NAME16": "Rockbank - Mount Cottrell",
     "unemployed_percent": 0,
+    "unemployment_rate": 8.3442,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 1115,
     "degree_diploma_certificate_percent": 8.76623,
@@ -1930,6 +2171,7 @@
   {
     "SA2_NAME16": "Romsey",
     "unemployed_percent": 14.5161,
+    "unemployment_rate": 4.39002,
     "equivalised_household_income_median": 870.093,
     "median_tot_hhd_inc_weekly": 1572,
     "degree_diploma_certificate_percent": 14.0351,
@@ -1938,6 +2180,7 @@
   {
     "SA2_NAME16": "Rosebud - McCrae",
     "unemployed_percent": 7.24638,
+    "unemployment_rate": 6.33624,
     "equivalised_household_income_median": 671.467,
     "median_tot_hhd_inc_weekly": 928,
     "degree_diploma_certificate_percent": 33.5968,
@@ -1946,6 +2189,7 @@
   {
     "SA2_NAME16": "Rowville - Central",
     "unemployed_percent": 8.10811,
+    "unemployment_rate": 5.45106,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1762,
     "degree_diploma_certificate_percent": 12.0192,
@@ -1954,6 +2198,7 @@
   {
     "SA2_NAME16": "Rowville - North",
     "unemployed_percent": null,
+    "unemployment_rate": 5.02209,
     "equivalised_household_income_median": 923.17,
     "median_tot_hhd_inc_weekly": 1919,
     "degree_diploma_certificate_percent": 3.31858,
@@ -1962,6 +2207,7 @@
   {
     "SA2_NAME16": "Rowville - South",
     "unemployed_percent": null,
+    "unemployment_rate": 4.98957,
     "equivalised_household_income_median": 969.838,
     "median_tot_hhd_inc_weekly": 2049,
     "degree_diploma_certificate_percent": 3.54478,
@@ -1970,6 +2216,7 @@
   {
     "SA2_NAME16": "Roxburgh Park - Somerton",
     "unemployed_percent": 6.77966,
+    "unemployment_rate": 11.0263,
     "equivalised_household_income_median": 613.108,
     "median_tot_hhd_inc_weekly": 1357,
     "degree_diploma_certificate_percent": null,
@@ -1978,6 +2225,7 @@
   {
     "SA2_NAME16": "Sandringham - Black Rock",
     "unemployed_percent": 10,
+    "unemployment_rate": 4.12034,
     "equivalised_household_income_median": 1250.55,
     "median_tot_hhd_inc_weekly": 2102,
     "degree_diploma_certificate_percent": 13.3333,
@@ -1986,6 +2234,7 @@
   {
     "SA2_NAME16": "Seabrook",
     "unemployed_percent": null,
+    "unemployment_rate": 7.96289,
     "equivalised_household_income_median": 851.933,
     "median_tot_hhd_inc_weekly": 1672,
     "degree_diploma_certificate_percent": 7.72947,
@@ -1994,6 +2243,7 @@
   {
     "SA2_NAME16": "Seaford (Vic.)",
     "unemployed_percent": 8.75912,
+    "unemployment_rate": 7.14286,
     "equivalised_household_income_median": 786.405,
     "median_tot_hhd_inc_weekly": 1206,
     "degree_diploma_certificate_percent": 12.5461,
@@ -2002,6 +2252,7 @@
   {
     "SA2_NAME16": "Seddon - Kingsville",
     "unemployed_percent": 0,
+    "unemployment_rate": 6.10034,
     "equivalised_household_income_median": 1062.65,
     "median_tot_hhd_inc_weekly": 1852,
     "degree_diploma_certificate_percent": 2.95983,
@@ -2010,6 +2261,7 @@
   {
     "SA2_NAME16": "Skye - Sandhurst",
     "unemployed_percent": 7.40741,
+    "unemployment_rate": 5.02355,
     "equivalised_household_income_median": 923.17,
     "median_tot_hhd_inc_weekly": 1911,
     "degree_diploma_certificate_percent": 11.2426,
@@ -2018,6 +2270,7 @@
   {
     "SA2_NAME16": "Somerville",
     "unemployed_percent": 9.34579,
+    "unemployment_rate": 4.43579,
     "equivalised_household_income_median": 843.05,
     "median_tot_hhd_inc_weekly": 1475,
     "degree_diploma_certificate_percent": 35.7143,
@@ -2026,6 +2279,7 @@
   {
     "SA2_NAME16": "South Melbourne",
     "unemployed_percent": 8,
+    "unemployment_rate": 6.04457,
     "equivalised_household_income_median": 1273.43,
     "median_tot_hhd_inc_weekly": 1867,
     "degree_diploma_certificate_percent": 13.4454,
@@ -2034,6 +2288,7 @@
   {
     "SA2_NAME16": "South Morang (North)",
     "unemployed_percent": 8.51064,
+    "unemployment_rate": 6.36264,
     "equivalised_household_income_median": 884.605,
     "median_tot_hhd_inc_weekly": 1886,
     "degree_diploma_certificate_percent": 39.4366,
@@ -2042,6 +2297,7 @@
   {
     "SA2_NAME16": "South Morang (South)",
     "unemployed_percent": 8.06452,
+    "unemployment_rate": 6.30496,
     "equivalised_household_income_median": 815.6,
     "median_tot_hhd_inc_weekly": 1590,
     "degree_diploma_certificate_percent": 12,
@@ -2050,6 +2306,7 @@
   {
     "SA2_NAME16": "South Yarra - East",
     "unemployed_percent": 6.25,
+    "unemployment_rate": 5.71025,
     "equivalised_household_income_median": 1249.74,
     "median_tot_hhd_inc_weekly": 1766,
     "degree_diploma_certificate_percent": 15.3846,
@@ -2058,6 +2315,7 @@
   {
     "SA2_NAME16": "South Yarra - West",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.59593,
     "equivalised_household_income_median": 1360.37,
     "median_tot_hhd_inc_weekly": 2019,
     "degree_diploma_certificate_percent": 12.7854,
@@ -2066,6 +2324,7 @@
   {
     "SA2_NAME16": "Southbank",
     "unemployed_percent": 0,
+    "unemployment_rate": 7.92994,
     "equivalised_household_income_median": 1111.01,
     "median_tot_hhd_inc_weekly": 1855,
     "degree_diploma_certificate_percent": 29.2683,
@@ -2074,6 +2333,7 @@
   {
     "SA2_NAME16": "Springvale",
     "unemployed_percent": null,
+    "unemployment_rate": 11.7818,
     "equivalised_household_income_median": 645.311,
     "median_tot_hhd_inc_weekly": 1077,
     "degree_diploma_certificate_percent": 10.1639,
@@ -2082,6 +2342,7 @@
   {
     "SA2_NAME16": "Springvale South",
     "unemployed_percent": null,
+    "unemployment_rate": 9.77608,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 1220,
     "degree_diploma_certificate_percent": 9.09091,
@@ -2090,6 +2351,7 @@
   {
     "SA2_NAME16": "St Albans - North",
     "unemployed_percent": 18.4211,
+    "unemployment_rate": 13.7427,
     "equivalised_household_income_median": 610.604,
     "median_tot_hhd_inc_weekly": 988,
     "degree_diploma_certificate_percent": 1.11248,
@@ -2098,6 +2360,7 @@
   {
     "SA2_NAME16": "St Albans - South",
     "unemployed_percent": 0,
+    "unemployment_rate": 13.7751,
     "equivalised_household_income_median": 596.139,
     "median_tot_hhd_inc_weekly": 1036,
     "degree_diploma_certificate_percent": 4.01786,
@@ -2106,6 +2369,7 @@
   {
     "SA2_NAME16": "St Kilda",
     "unemployed_percent": 9.56522,
+    "unemployment_rate": 5.79829,
     "equivalised_household_income_median": 1133.32,
     "median_tot_hhd_inc_weekly": 1616,
     "degree_diploma_certificate_percent": null,
@@ -2114,6 +2378,7 @@
   {
     "SA2_NAME16": "St Kilda East",
     "unemployed_percent": 9.25926,
+    "unemployment_rate": 5.01322,
     "equivalised_household_income_median": 1087.66,
     "median_tot_hhd_inc_weekly": 1631,
     "degree_diploma_certificate_percent": 14.0401,
@@ -2122,6 +2387,7 @@
   {
     "SA2_NAME16": "Strathmore",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.72523,
     "equivalised_household_income_median": 1082.58,
     "median_tot_hhd_inc_weekly": 2064,
     "degree_diploma_certificate_percent": 7.02703,
@@ -2130,6 +2396,7 @@
   {
     "SA2_NAME16": "Sunbury",
     "unemployed_percent": 14.2857,
+    "unemployment_rate": 6.35287,
     "equivalised_household_income_median": 884.605,
     "median_tot_hhd_inc_weekly": 1706,
     "degree_diploma_certificate_percent": 29.0323,
@@ -2138,6 +2405,7 @@
   {
     "SA2_NAME16": "Sunbury - South",
     "unemployed_percent": 8.41121,
+    "unemployment_rate": 6.1864,
     "equivalised_household_income_median": 841.88,
     "median_tot_hhd_inc_weekly": 1506,
     "degree_diploma_certificate_percent": 23.1884,
@@ -2146,6 +2414,7 @@
   {
     "SA2_NAME16": "Sunshine",
     "unemployed_percent": 0,
+    "unemployment_rate": 11.6386,
     "equivalised_household_income_median": 688.227,
     "median_tot_hhd_inc_weekly": 1187,
     "degree_diploma_certificate_percent": 3.91061,
@@ -2154,6 +2423,7 @@
   {
     "SA2_NAME16": "Sunshine North",
     "unemployed_percent": null,
+    "unemployment_rate": 12.6344,
     "equivalised_household_income_median": 628.16,
     "median_tot_hhd_inc_weekly": 1091,
     "degree_diploma_certificate_percent": 5.88235,
@@ -2162,6 +2432,7 @@
   {
     "SA2_NAME16": "Sunshine West",
     "unemployed_percent": 10.4167,
+    "unemployment_rate": 12.6381,
     "equivalised_household_income_median": 658.896,
     "median_tot_hhd_inc_weekly": 1148,
     "degree_diploma_certificate_percent": 7.5,
@@ -2170,6 +2441,7 @@
   {
     "SA2_NAME16": "Surrey Hills (East) - Mont Albert",
     "unemployed_percent": "#N/A",
+    "unemployment_rate": 4.9862,
     "equivalised_household_income_median": "#N/A",
     "median_tot_hhd_inc_weekly": 2139,
     "degree_diploma_certificate_percent": "#N/A",
@@ -2178,6 +2450,7 @@
   {
     "SA2_NAME16": "Surrey Hills (West) - Canterbury",
     "unemployed_percent": "#N/A",
+    "unemployment_rate": 5.18831,
     "equivalised_household_income_median": "#N/A",
     "median_tot_hhd_inc_weekly": 2338,
     "degree_diploma_certificate_percent": "#N/A",
@@ -2186,6 +2459,7 @@
   {
     "SA2_NAME16": "Sydenham",
     "unemployed_percent": 12.9032,
+    "unemployment_rate": 8.83767,
     "equivalised_household_income_median": 788.587,
     "median_tot_hhd_inc_weekly": 1525,
     "degree_diploma_certificate_percent": 9.61539,
@@ -2194,6 +2468,7 @@
   {
     "SA2_NAME16": "Tarneit",
     "unemployed_percent": 9.78261,
+    "unemployment_rate": 8.32143,
     "equivalised_household_income_median": 790.792,
     "median_tot_hhd_inc_weekly": 1715,
     "degree_diploma_certificate_percent": 2.46679,
@@ -2202,6 +2477,7 @@
   {
     "SA2_NAME16": "Taylors Hill",
     "unemployed_percent": null,
+    "unemployment_rate": 6.70751,
     "equivalised_household_income_median": 825.82,
     "median_tot_hhd_inc_weekly": 1889,
     "degree_diploma_certificate_percent": 5.10204,
@@ -2210,6 +2486,7 @@
   {
     "SA2_NAME16": "Taylors Lakes",
     "unemployed_percent": null,
+    "unemployment_rate": 6.08835,
     "equivalised_household_income_median": 908.747,
     "median_tot_hhd_inc_weekly": 1843,
     "degree_diploma_certificate_percent": 8.62745,
@@ -2218,6 +2495,7 @@
   {
     "SA2_NAME16": "Templestowe",
     "unemployed_percent": null,
+    "unemployment_rate": 6.12601,
     "equivalised_household_income_median": 989.932,
     "median_tot_hhd_inc_weekly": 1911,
     "degree_diploma_certificate_percent": 14.1304,
@@ -2226,6 +2504,7 @@
   {
     "SA2_NAME16": "Templestowe Lower",
     "unemployed_percent": null,
+    "unemployment_rate": 6.29371,
     "equivalised_household_income_median": 897.033,
     "median_tot_hhd_inc_weekly": 1591,
     "degree_diploma_certificate_percent": 13.4615,
@@ -2234,6 +2513,7 @@
   {
     "SA2_NAME16": "The Basin",
     "unemployed_percent": null,
+    "unemployment_rate": 5.12484,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1716,
     "degree_diploma_certificate_percent": 15.625,
@@ -2242,6 +2522,7 @@
   {
     "SA2_NAME16": "Thomastown",
     "unemployed_percent": 9.43396,
+    "unemployment_rate": 10.2379,
     "equivalised_household_income_median": 610.604,
     "median_tot_hhd_inc_weekly": 1019,
     "degree_diploma_certificate_percent": 26.6667,
@@ -2250,6 +2531,7 @@
   {
     "SA2_NAME16": "Thornbury",
     "unemployed_percent": 9.80392,
+    "unemployment_rate": 5.47474,
     "equivalised_household_income_median": 960.268,
     "median_tot_hhd_inc_weekly": 1536,
     "degree_diploma_certificate_percent": 16.9811,
@@ -2258,6 +2540,7 @@
   {
     "SA2_NAME16": "Toorak",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.62007,
     "equivalised_household_income_median": 1385.63,
     "median_tot_hhd_inc_weekly": 2309,
     "degree_diploma_certificate_percent": 6.45161,
@@ -2266,6 +2549,7 @@
   {
     "SA2_NAME16": "Truganina",
     "unemployed_percent": 3.0303,
+    "unemployment_rate": 8.39847,
     "equivalised_household_income_median": 801.695,
     "median_tot_hhd_inc_weekly": 1743,
     "degree_diploma_certificate_percent": 31.5217,
@@ -2274,6 +2558,7 @@
   {
     "SA2_NAME16": "Tullamarine",
     "unemployed_percent": null,
+    "unemployment_rate": 7.41696,
     "equivalised_household_income_median": 727.914,
     "median_tot_hhd_inc_weekly": 1190,
     "degree_diploma_certificate_percent": 32.1429,
@@ -2282,6 +2567,7 @@
   {
     "SA2_NAME16": "Upwey - Tecoma",
     "unemployed_percent": null,
+    "unemployment_rate": 5.28792,
     "equivalised_household_income_median": 926.733,
     "median_tot_hhd_inc_weekly": 1757,
     "degree_diploma_certificate_percent": 5.05051,
@@ -2290,6 +2576,7 @@
   {
     "SA2_NAME16": "Vermont",
     "unemployed_percent": null,
+    "unemployment_rate": 5.61183,
     "equivalised_household_income_median": 900.8,
     "median_tot_hhd_inc_weekly": 1660,
     "degree_diploma_certificate_percent": 8.82353,
@@ -2298,6 +2585,7 @@
   {
     "SA2_NAME16": "Vermont South",
     "unemployed_percent": null,
+    "unemployment_rate": 7.11717,
     "equivalised_household_income_median": 899.97,
     "median_tot_hhd_inc_weekly": 1664,
     "degree_diploma_certificate_percent": 9.83607,
@@ -2306,6 +2594,7 @@
   {
     "SA2_NAME16": "Viewbank - Yallambie",
     "unemployed_percent": 13.8889,
+    "unemployment_rate": 5.31975,
     "equivalised_household_income_median": 905.539,
     "median_tot_hhd_inc_weekly": 1682,
     "degree_diploma_certificate_percent": 12.1951,
@@ -2314,6 +2603,7 @@
   {
     "SA2_NAME16": "Wallan",
     "unemployed_percent": 5.30303,
+    "unemployment_rate": 5.69198,
     "equivalised_household_income_median": 801.983,
     "median_tot_hhd_inc_weekly": 1645,
     "degree_diploma_certificate_percent": 20.202,
@@ -2322,6 +2612,7 @@
   {
     "SA2_NAME16": "Wandin - Seville",
     "unemployed_percent": 6.52174,
+    "unemployment_rate": 4.12241,
     "equivalised_household_income_median": 844.714,
     "median_tot_hhd_inc_weekly": 1612,
     "degree_diploma_certificate_percent": 8.41121,
@@ -2330,6 +2621,7 @@
   {
     "SA2_NAME16": "Wantirna",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.93459,
     "equivalised_household_income_median": 866.85,
     "median_tot_hhd_inc_weekly": 1572,
     "degree_diploma_certificate_percent": 2.23097,
@@ -2338,6 +2630,7 @@
   {
     "SA2_NAME16": "Wantirna South",
     "unemployed_percent": null,
+    "unemployment_rate": 6.5462,
     "equivalised_household_income_median": 880.867,
     "median_tot_hhd_inc_weekly": 1572,
     "degree_diploma_certificate_percent": 4.58015,
@@ -2346,6 +2639,7 @@
   {
     "SA2_NAME16": "Warrandyte - Wonga Park",
     "unemployed_percent": null,
+    "unemployment_rate": 4.86287,
     "equivalised_household_income_median": 1111.01,
     "median_tot_hhd_inc_weekly": 2315,
     "degree_diploma_certificate_percent": 22.1053,
@@ -2354,6 +2648,7 @@
   {
     "SA2_NAME16": "Watsonia",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.11555,
     "equivalised_household_income_median": 875.447,
     "median_tot_hhd_inc_weekly": 1542,
     "degree_diploma_certificate_percent": 14.9038,
@@ -2362,6 +2657,7 @@
   {
     "SA2_NAME16": "Wattle Glen - Diamond Creek",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.45609,
     "equivalised_household_income_median": 985.833,
     "median_tot_hhd_inc_weekly": 2064,
     "degree_diploma_certificate_percent": 27.1186,
@@ -2370,6 +2666,7 @@
   {
     "SA2_NAME16": "Werribee - East",
     "unemployed_percent": 16.9935,
+    "unemployment_rate": 10.6456,
     "equivalised_household_income_median": 673.515,
     "median_tot_hhd_inc_weekly": 1197,
     "degree_diploma_certificate_percent": 23.6842,
@@ -2378,6 +2675,7 @@
   {
     "SA2_NAME16": "Werribee - South",
     "unemployed_percent": 16.3636,
+    "unemployment_rate": 7.23931,
     "equivalised_household_income_median": 789.761,
     "median_tot_hhd_inc_weekly": 1303,
     "degree_diploma_certificate_percent": 11.4369,
@@ -2386,6 +2684,7 @@
   {
     "SA2_NAME16": "Werribee - West",
     "unemployed_percent": 4.7619,
+    "unemployment_rate": 7.60301,
     "equivalised_household_income_median": 800.08,
     "median_tot_hhd_inc_weekly": 1493,
     "degree_diploma_certificate_percent": 10.4938,
@@ -2394,6 +2693,7 @@
   {
     "SA2_NAME16": "West Footscray - Tottenham",
     "unemployed_percent": 15,
+    "unemployment_rate": 8.7177,
     "equivalised_household_income_median": 867.37,
     "median_tot_hhd_inc_weekly": 1445,
     "degree_diploma_certificate_percent": 5.22388,
@@ -2402,6 +2702,7 @@
   {
     "SA2_NAME16": "West Melbourne",
     "unemployed_percent": null,
+    "unemployment_rate": 0,
     "equivalised_household_income_median": null,
     "median_tot_hhd_inc_weekly": 0,
     "degree_diploma_certificate_percent": 10.1064,
@@ -2410,6 +2711,7 @@
   {
     "SA2_NAME16": "Wheelers Hill",
     "unemployed_percent": null,
+    "unemployment_rate": 6.08374,
     "equivalised_household_income_median": 915.727,
     "median_tot_hhd_inc_weekly": 1669,
     "degree_diploma_certificate_percent": 4.45469,
@@ -2418,6 +2720,7 @@
   {
     "SA2_NAME16": "Whittlesea",
     "unemployed_percent": 5.66038,
+    "unemployment_rate": 4.21998,
     "equivalised_household_income_median": 821.188,
     "median_tot_hhd_inc_weekly": 1449,
     "degree_diploma_certificate_percent": 4.34783,
@@ -2426,6 +2729,7 @@
   {
     "SA2_NAME16": "Williamstown",
     "unemployed_percent": 7.69231,
+    "unemployment_rate": 5.38128,
     "equivalised_household_income_median": 1131.83,
     "median_tot_hhd_inc_weekly": 1997,
     "degree_diploma_certificate_percent": 2.05761,
@@ -2434,6 +2738,7 @@
   {
     "SA2_NAME16": "Wollert",
     "unemployed_percent": null,
+    "unemployment_rate": 6.65158,
     "equivalised_household_income_median": 796.676,
     "median_tot_hhd_inc_weekly": 1613,
     "degree_diploma_certificate_percent": 6.57895,
@@ -2442,6 +2747,7 @@
   {
     "SA2_NAME16": "Wyndham Vale",
     "unemployed_percent": 8,
+    "unemployment_rate": 8.63181,
     "equivalised_household_income_median": 762.174,
     "median_tot_hhd_inc_weekly": 1509,
     "degree_diploma_certificate_percent": 17.4157,
@@ -2450,6 +2756,7 @@
   {
     "SA2_NAME16": "Yarra - North",
     "unemployed_percent": 0,
+    "unemployment_rate": 4.35636,
     "equivalised_household_income_median": 1289.22,
     "median_tot_hhd_inc_weekly": 2186,
     "degree_diploma_certificate_percent": 19.697,
@@ -2458,6 +2765,7 @@
   {
     "SA2_NAME16": "Yarra Valley",
     "unemployed_percent": 7.69231,
+    "unemployment_rate": 5.6915,
     "equivalised_household_income_median": 692.908,
     "median_tot_hhd_inc_weekly": 1138,
     "degree_diploma_certificate_percent": 27.027,
@@ -2466,6 +2774,7 @@
   {
     "SA2_NAME16": "Yarraville",
     "unemployed_percent": 0,
+    "unemployment_rate": 5.15006,
     "equivalised_household_income_median": 1089.91,
     "median_tot_hhd_inc_weekly": 2035,
     "degree_diploma_certificate_percent": 2.12766,

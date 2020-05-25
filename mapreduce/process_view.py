@@ -1,7 +1,8 @@
 import couchdb
+from config import server_address
 
 
-server = "http://admin:admin@172.26.134.56:5984/"
+server = server_address()
 couch = couchdb.Server(server)
 
 
@@ -31,6 +32,7 @@ def computePercent(senti, tt, id):
     if id in db_results_australia_tweet:
         del db_results_australia_tweet[id]
     db_results_australia_tweet.save(items)
+
 
 computePercent(db_results_australia_tweet["city_alcohol_senti_count"]['rows'],
                db_results_australia_tweet['city_alcohol_count']['rows'],

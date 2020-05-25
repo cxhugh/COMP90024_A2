@@ -256,34 +256,59 @@ map_function_alcohol_sa2_senti_count = """function(doc){
 
 # alcohol australia sentiment count
 map_function_alcohol_australia_senti_count = """function(doc){
+    location = [96.8168,-43.7405,159.1092,-9.1422];
+
     if(doc.related == 1){
-        emit(doc.sentiment);
+        if(doc.coordinates != null){
+            lat = doc.coordinates[0];
+            lng = doc.coordinates[1];
+            if(location[0] <= lng && lng <= location[2] && location[1]<=lat && lat<=location[3]){
+                emit(doc.sentiment);
+            }
+        } 
     }
 }"""
 
 
 # alltopic australia hashtag count
 map_function_alltopic_australia_hashtag_count = """function(doc){
-    text = doc.text;
-    text.split(" ").forEach(function(x) {
-        if(x.indexOf("#") != -1){
-            emit(x);
+    location = [96.8168,-43.7405,159.1092,-9.1422];
+
+    if(doc.coordinates != null){
+        lat = doc.coordinates[0];
+        lng = doc.coordinates[1];
+        if(location[0] <= lng && lng <= location[2] && location[1]<=lat && lat<=location[3]){
+        
+            text = doc.text;
+            text.split(" ").forEach(function(x) {
+                if(x.indexOf("#") != -1){
+                    emit(x);
+                }
+            });
         }
-    });
+    }
 
 }"""
 
 # alcohol australia hashtag count
 map_function_alcohol_australia_hashtag_count = """function(doc){
-    if(doc.related == 1){
-        text = doc.text;
-        text.split(" ").forEach(function(x) {
-            if(x.indexOf("#") != -1){
-                emit(x);
-            }
-        });
-    }
+    location = [96.8168,-43.7405,159.1092,-9.1422];
 
+    if(doc.related == 1){
+        if(doc.coordinates != null){
+            lat = doc.coordinates[0];
+            lng = doc.coordinates[1];
+            if(location[0] <= lng && lng <= location[2] && location[1]<=lat && lat<=location[3]){
+
+                text = doc.text;
+                text.split(" ").forEach(function(x) {
+                    if(x.indexOf("#") != -1){
+                        emit(x);
+                    }
+                });
+            }
+        }
+    }
 }"""
 
 # _sum, _count, _stats

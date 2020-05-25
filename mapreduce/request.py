@@ -2,8 +2,10 @@ import requests
 import couchdb
 import json
 from create_view import *
+from config import server_address
 
-server = "http://admin:admin@172.26.134.56:5984/"
+
+server = server_address()
 couch = couchdb.Server(server)
 
 
@@ -48,10 +50,11 @@ def save_toJSON(file_name, response):
 
 def request_and_save(server,viewdb_name,design_name, view_name, group_level,view_db,map_func, reduce_func,save_db,id):
     while True:
+        print("requesting ...")
         response = request(server,viewdb_name,design_name,view_name,group_level)
         if response == "404":
             create_view(view_db,design_name,view_name,map_func,reduce_func)
-            print("created the view.")
+            print("created view.")
         elif response != None:
             save_toDB(save_db,id,response)
             print("saved %s to db."%(id))
@@ -60,10 +63,11 @@ def request_and_save(server,viewdb_name,design_name, view_name, group_level,view
 
 def request_and_save_top(server,viewdb_name,design_name, view_name, group_level,view_db,map_func, reduce_func,save_db,id):
     while True:
+        print("requesting ...")
         response = request(server,viewdb_name,design_name,view_name,group_level)
         if response == "404":
             create_view(view_db,design_name,view_name,map_func,reduce_func)
-            print("created the view.")
+            print("created view.")
         elif response != None:
             # sorting (sort by value)
             rows = response['rows']
@@ -86,6 +90,7 @@ if __name__ == "__main__":
 
     # australia tweet
     # state, all topic, count
+
     request_and_save(server, australia_tweet, "state", "alltopic_count", 1, db_australia_tweet,
                      map_function_alltopic_state_count,
                      reduce_function_count, db_results_australia_tweet, "state_alltopic_count")
@@ -94,7 +99,6 @@ if __name__ == "__main__":
     request_and_save(server, australia_tweet, "state", "alcohol_count", 1, db_australia_tweet,
                      map_function_alcohol_state_count,
                      reduce_function_count, db_results_australia_tweet, "state_alcohol_count")
-
 
     # city, all topic, count
     request_and_save(server, australia_tweet, "city", "alltopic_count", 1, db_australia_tweet,
@@ -105,9 +109,10 @@ if __name__ == "__main__":
     request_and_save(server, australia_tweet, "city", "alcohol_count", 1, db_australia_tweet,
                      map_function_alcohol_city_count,
                      reduce_function_count, db_results_australia_tweet, "city_alcohol_count")
-
+    
 
     # sa2, all topic, count
+
     request_and_save(server, australia_tweet, "sa2", "alltopic_count",1, db_australia_tweet,
                      map_function_alltopic_sa2_count,
                      reduce_function_count, db_results_australia_tweet, "sa2_alltopic_count")
@@ -116,8 +121,7 @@ if __name__ == "__main__":
     request_and_save(server, australia_tweet, "sa2", "alcohol_count",1, db_australia_tweet,
                      map_function_alcohol_sa2_count,
                      reduce_function_count, db_results_australia_tweet, "sa2_alcohol_count")
-
-
+    
     # state, all topic, sentiment avg
     request_and_save(server, australia_tweet, "state", "alltopic_senti_avg",1, db_australia_tweet,
                      map_function_alltopic_state_senti_avg,
@@ -149,7 +153,6 @@ if __name__ == "__main__":
                      reduce_function_avg, db_results_australia_tweet, "sa2_alcohol_senti_avg")
 
 
-
     # state, alcohol, sentiment count
     request_and_save(server, australia_tweet, "state", "alcohol_senti_count", 2, db_australia_tweet,
                      map_function_alcohol_state_senti_count,
@@ -168,17 +171,17 @@ if __name__ == "__main__":
                      reduce_function_count, db_results_australia_tweet, "sa2_alcohol_senti_count")
 
     # australia, alcohol,sentiment count
-    request_and_save(server, australia_tweet, "australia", "alcohol_senti_count",1, db_australia_tweet,
+    request_and_save(server, australia_tweet, "australia2", "alcohol_senti_count",1, db_australia_tweet,
                      map_function_alcohol_australia_senti_count,
                      reduce_function_count, db_results_australia_tweet, "australia_alcohol_senti_count")
 
 
-    request_and_save_top(server, australia_tweet, "australia", "alltopic_hashtag_count", 1, db_australia_tweet,
+    request_and_save_top(server, australia_tweet, "australia2", "alltopic_hashtag_count", 1, db_australia_tweet,
                          map_function_alltopic_australia_hashtag_count,
                          reduce_function_count, db_results_australia_tweet, "australia_hashtag_count")
 
 
-    request_and_save_top(server, australia_tweet, "australia", "alcohol_hashtag_count", 1, db_australia_tweet,
+    request_and_save_top(server, australia_tweet, "australia2", "alcohol_hashtag_count", 1, db_australia_tweet,
                      map_function_alcohol_australia_hashtag_count,
                      reduce_function_count, db_results_australia_tweet, "australia_alcohol_hashtag_count")
 

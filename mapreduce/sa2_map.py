@@ -1,5 +1,6 @@
 import json
 import couchdb
+from config import server_address
 
 file = open("../aurin/aurin_result/greaterMelbourne_sa2_map_aurin.json", encoding='utf8').read()
 data = json.loads(file)
@@ -10,7 +11,8 @@ file = open("../geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding = 'utf8')
 geojson = json.loads(file)
 geojson['_id'] = 'sa2_map_twitter'
 
-server = "http://admin:admin@172.26.134.56:5984/"
+
+server = server_address()
 couch = couchdb.Server(server)
 
 
@@ -32,7 +34,8 @@ for item in geojson['features']:
 
     for d in data:
         if d['SA2_NAME16'] == name:
-            item['properties']['unemployed_percent'] = d['unemployed_percent']
+            #item['properties']['unemployed_percent'] = d['unemployed_percent']
+            item['properties']['unemployed_percent'] = d['unemployment_rate']
             item['properties']['population_density'] = d['population_density']
             #item['properties']['equivalised_household_income_median'] = d['equivalised_household_income_median']
             item['properties']['median_total_household_income_weekly'] = d['median_tot_hhd_inc_weekly']
