@@ -68,7 +68,7 @@ option = {
     },
     yAxis: {
         type: 'category',
-        data: ['Australian Capital Territory', 'Greater Adelaide', 'Greater Brisbane', 'Greater Darwin', 'Greater Hobart', 'Greater Melbourne', 'Greater Perth']
+        data: ['Australian Capital Territory', 'Greater Adelaide', 'Greater Brisbane', 'Greater Darwin', 'Greater Hobart', 'Greater Melbourne', 'Greater Perth', 'Greater Sydney']
     },
     series: [
         {

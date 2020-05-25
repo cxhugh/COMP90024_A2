@@ -13,11 +13,7 @@ def readfile():
 def get_dbserver_ip():
     ips = readfile()
     return ips['dbServer']
-
-def get_web_ip():
-    ips = readfile()
-    return ips['webServer']
-
+ 
 def get_harvester1_ip():
     ips = readfile()
     return ips['harverster1'] 
