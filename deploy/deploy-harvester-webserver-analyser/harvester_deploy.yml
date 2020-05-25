@@ -44,3 +44,18 @@
 
     - name: display shell script result
       debug: msg="{{is_api_run.stdout}}"
+
+- hosts: harverster2
+  tasks:
+    - name: copy app to server
+      copy:
+      src: ../../streaming
+      dest: /home/ubuntu
+      mode: 0755
+      owner: ubuntu
+      group: ubuntu
+
+    - name: start stream api
+      shell: bash run.sh
+      args:
+        chdir: /home/ubuntu/sentiment/
