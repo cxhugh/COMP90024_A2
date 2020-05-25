@@ -2,7 +2,7 @@ var auth = btoa('admin:admin');
 
 var char1 = [];
 $.ajax({
-        url:'http://172.26.134.56:5984/view_results(total_search)/city_sentiment_percent(total_search)',
+        url:'http://172.26.134.56:5984/view_results(australia_tweets)/city_alcohol_senti_percent',
         dataType:'json',
         async : false,
         xhrFields:{

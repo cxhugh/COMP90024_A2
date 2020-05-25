@@ -95,13 +95,17 @@ def search_tweets(api,db,geocode,key_group):
                         'state':get_stateID_frm_coord(coordinates),
                         'suburb':sub_id,
                         'related':alcohol_related}
-                    db.save(filter_tweet_info)
+                    try:
+                        db.save(filter_tweet_info)
+                    except Exception as e:
+                        print(e)
+                        pass 
                     count+=1
 
                     if tweet['user']['id_str'] not in user_list:
                         user_list.append(tweet['user']['id_str'])
-        except tweepy.TweepError as e:
-            print(e)
+        except tweepy.TweepError as e1:
+            print(e1)
     return user_list
 
 def search_tweets_by_user(user_list,api,db,key_group):
@@ -148,7 +152,11 @@ def search_tweets_by_user(user_list,api,db,key_group):
                                 'state':get_stateID_frm_coord(coordinates),
                                 'suburb':sub_id,
                                 'related':alcohol_related}
-                            db.save(filter_tweet_info)                         
+                            try:
+                                db.save(filter_tweet_info) 
+                            except Exception as e1:
+                                print(e1)
+                                pass                        
         except Exception as e:
             print(e)
 

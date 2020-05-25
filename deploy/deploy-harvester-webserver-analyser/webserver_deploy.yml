@@ -42,7 +42,7 @@
     - name: Install dependencies
       become: yes
       apt:
-        name: ['nginx', 'curl', 'git', 'python3-dev', 'python3-pip', 'unzip', 'vim']
+        name: ['nginx', 'curl', 'git', 'python-dev', 'net-tools','python-pip', 'unzip', 'vim']
         state: latest
 
     - name: Update pip

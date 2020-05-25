@@ -1,7 +1,7 @@
 # This file is use to get ip of each server
 
 def readfile():
-    with open ('../deploy/config/generic.yaml','r') as f:
+    with open ('./generic.yaml','r') as f:
         data = f.readlines()
     f.close()
     ips = {}

@@ -10,6 +10,14 @@
         mode: 0755
         owner: ubuntu
         group: ubuntu
+    
+    - name: copy ip list files to server
+      copy:
+        src: ../../deploy/config/generic.yaml
+        dest: /home/ubuntu/harvester
+        mode: 0755
+        owner: ubuntu
+        group: ubuntu
 
     - name: Update apt
       become: yes
