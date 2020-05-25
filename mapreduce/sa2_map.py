@@ -10,7 +10,7 @@ file = open("../geojson_data/SA2_2016_AUST_GreaterMelb.json", encoding = 'utf8')
 geojson = json.loads(file)
 geojson['_id'] = 'sa2_map_twitter'
 
-server = "http://admin:admin@172.26.129.233:5984/"
+server = "http://admin:admin@172.26.134.56:5984/"
 couch = couchdb.Server(server)
 
 

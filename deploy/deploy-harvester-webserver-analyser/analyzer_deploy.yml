@@ -2,7 +2,7 @@
 
 - hosts: dbServer
   tasks:
-    - name: copy python files to server
+    - name: copy aurin data to server
       copy:
         src: ../../aurin
         dest: /home/ubuntu
@@ -10,7 +10,7 @@
         owner: ubuntu
         group: ubuntu
 
-    - name: copy python files2 to server
+    - name: copy mapreduce funtcion to server
       copy:
         src: ../../mapreduce
         dest: /home/ubuntu
@@ -18,7 +18,7 @@
         owner: ubuntu
         group: ubuntu
 
-    - name: copy python files to server
+    - name: copy geo data to server
       copy:
         src: ../../geojson_data
         dest: /home/ubuntu

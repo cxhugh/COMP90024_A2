@@ -5,7 +5,7 @@ import couchdb
 file = open("../aurin/aurin_result/ageGroup_number.json", encoding='utf8').read()
 data = json.loads(file)
 
-server = "http://admin:admin@172.26.129.233:5984/"
+server = "http://admin:admin@172.26.134.56:5984/"
 couch = couchdb.Server(server)
 
 database_name = "aurin_result"

@@ -2,7 +2,7 @@ import json
 import couchdb
 
 
-server = "http://admin:admin@172.26.129.233:5984/"
+server = "http://admin:admin@172.26.134.56:5984/"
 couch = couchdb.Server(server)
 
 db_results_australia_tweet = couch["view_results(australia_tweets)"]
