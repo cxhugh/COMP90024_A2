@@ -1,6 +1,6 @@
 
 def server_address():
-    with open('../deploy/config/generic.yaml',encoding='utf8') as f:
+    with open('./generic.yaml',encoding='utf8') as f:
         text = f.readlines()
         for line in text:
             if line.startswith("dbServer"):

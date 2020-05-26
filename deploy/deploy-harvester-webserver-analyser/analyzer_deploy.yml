@@ -24,6 +24,14 @@
         mode: 0755
         owner: ubuntu
         group: ubuntu
+    
+    - name: copy ip list files to server
+      copy:
+        src: ../../deploy/config/generic.yaml
+        dest: /home/ubuntu/mapreduce
+        mode: 0755
+        owner: ubuntu
+        group: ubuntu
 
     - name: copy geo data to server
       copy:

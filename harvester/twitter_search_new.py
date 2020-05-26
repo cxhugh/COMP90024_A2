@@ -7,7 +7,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from breakpoint_restart_new import save_searchpoint,save_userpoint
 from geojson_data.sa2 import get_suburbID_frm_coord, get_stateID_frm_coord
 from shapely.geometry import Point
-from get_ips import get_dbserver_ip
+from get_ips import server_address
 
 # CONSTANT
 TWEETSPREQUERY = 100 # max for search api
@@ -15,7 +15,7 @@ USER_TIMELINE_MAXCOUNT = 200
 TOTAL_TWEET_PER_USER = 1000
 MAX_TWITTER_NUMS = 200000
 # db_server = 'http://lzy:woaideni@127.0.0.1:5984'
-db_server = 'http://admin:admin@' + get_dbserver_ip() + ':5984'
+db_server = 'http://admin:admin@' + server_address() + ':5984'
 db_name = 'australia_tweets'
 sentiment_analyzer = SentimentIntensityAnalyzer()
 

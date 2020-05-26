@@ -4,13 +4,13 @@ from tqdm import tqdm
 # from mpi4py import MPI
 import sys
 sys.path.append("../")
-from harvester.get_ips import get_dbserver_ip
+from harvester.get_ips import server_address
 
 
 class Cold_dataloader():
     
     def __init__(self):
-        self.server = db_server = 'http://admin:admin@' + get_dbserver_ip() + ':5984'
+        self.server = db_server = 'http://admin:admin@' + server_address() + ':5984'
         # self.server = "http://lzy:woaideni@127.0.0.1:5984/"
         self.couch = couchdb.Server(self.server)
         self.database_name = "australia_tweets"

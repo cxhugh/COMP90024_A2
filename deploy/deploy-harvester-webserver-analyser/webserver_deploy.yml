@@ -13,89 +13,97 @@
     - ../config/generic.yaml
   
   tasks:
-    - name: copy python files to server
-      copy:
-        src: ../../web
-        dest: /home/ubuntu
-        mode: 0644
-        owner: ubuntu
-        group: ubuntu
-        force: yes
+#     - name: copy python files to server
+#       copy:
+#         src: ../../web
+#         dest: /home/ubuntu
+#         mode: 0644
+#         owner: ubuntu
+#         group: ubuntu
+#         force: yes
 
-    - name: Add proxy in /etc/environment
-      become: yes
-      lineinfile:
-        dest: /etc/environment
-        line: "{{ item }}"
-      with_items:
-        - 'HTTP_PROXY=http://wwwproxy.unimelb.edu.au:8000/'
-        - 'HTTPS_PROXY=http://wwwproxy.unimelb.edu.au:8000/'
-        - 'http_proxy=http://wwwproxy.unimelb.edu.au:8000/'
-        - 'https_proxy=http://wwwproxy.unimelb.edu.au:8000/'
-        - 'no_proxy=localhost,127.0.0.1,localaddress,172.16.0.0/12,.melbourne.rc.nectar.org.au,.storage.unimelb.edu.au,.cloud.unimelb.edu.au'
+#     - name: Add proxy in /etc/environment
+#       become: yes
+#       lineinfile:
+#         dest: /etc/environment
+#         line: "{{ item }}"
+#       with_items:
+#         - 'HTTP_PROXY=http://wwwproxy.unimelb.edu.au:8000/'
+#         - 'HTTPS_PROXY=http://wwwproxy.unimelb.edu.au:8000/'
+#         - 'http_proxy=http://wwwproxy.unimelb.edu.au:8000/'
+#         - 'https_proxy=http://wwwproxy.unimelb.edu.au:8000/'
+#         - 'no_proxy=localhost,127.0.0.1,localaddress,172.16.0.0/12,.melbourne.rc.nectar.org.au,.storage.unimelb.edu.au,.cloud.unimelb.edu.au'
 
-    - name: Reboot a machine
-      become: yes
-      reboot:
-        reboot_timeout: 600
+#     - name: Reboot a machine
+#       become: yes
+#       reboot:
+#         reboot_timeout: 600
 
-    - name: Update apt
-      become: yes
-      apt:
-        upgrade: yes
-        update_cache: yes
-# apt-get upgrade; apt-get update
+#     - name: Update apt
+#       become: yes
+#       apt:
+#         upgrade: yes
+#         update_cache: yes
+# # apt-get upgrade; apt-get update
 
-    - name: Install dependencies
-      become: yes
-      apt:
-        name: ['nginx', 'curl', 'git', 'python-dev', 'net-tools','python-pip', 'unzip', 'vim']
-        state: latest
+#     - name: Install dependencies
+#       become: yes
+#       apt:
+#         name: ['nginx', 'curl', 'git', 'python3-dev', 'net-tools','python3-pip', 'unzip', 'vim']
+#         state: latest
 
-    - name: Update pip
-      become: yes
-      pip:
-        name: ['pip']
-        state: latest
+#     - name: Update pip
+#       become: yes
+#       pip:
+#         name: ['pip']
+#         state: latest
 
-    - name: copy config files to server
-      copy:
-        src: ../config/nginx.conf
-        dest: /home/ubuntu/web/nginx.conf
-        mode: 0644
-        force: yes
+#     - name: copy config files to server
+#       copy:
+#         src: ../config/nginx.conf
+#         dest: /home/ubuntu/web/nginx.conf
+#         mode: 0644
+#         force: yes
 
-    - name: copy nginx setting to server
-      become: yes
-      copy:
-        src: ../config/default
-        dest: /etc/nginx/sites-available/default
-        mode: 0644
-        force: yes
+#     - name: copy nginx setting to server
+#       become: yes
+#       copy:
+#         src: ../config/default
+#         dest: /etc/nginx/sites-available/default
+#         mode: 0644
+#         force: yes
 
-    - name: Add nginx setting to /etc/nginx/sites-available
-      become: yes
-      lineinfile:
-        dest: /etc/nginx/sites-available/default
-        line: "{{ item }}"
-      with_items:
-        - 'upstream flask {'
-        - '    server {{ webServer }}:5000;'
-        - '}'
-        - 'server {'
-        - '    listen 80; '
-        - '    server_name localhost; '
-        - '    location / {'
-        - '        proxy_pass http://flask;'
-        - '        proxy_set_header Host $host;'
-        - '        proxy_set_header X-Real-IP $remote_addr;'
-        - '    }}'
+#     - name: Add nginx setting to /etc/nginx/sites-available
+#       become: yes
+#       lineinfile:
+#         dest: /etc/nginx/sites-available/default
+#         line: "{{ item }}"
+#       with_items:
+#         - 'upstream flask {'
+#         - '    server {{ webServer }}:5000;'
+#         - '}'
+#         - 'server {'
+#         - '    listen 80; '
+#         - '    server_name localhost; '
+#         - '    location / {'
+#         - '        proxy_pass http://flask;'
+#         - '        proxy_set_header Host $host;'
+#         - '        proxy_set_header X-Real-IP $remote_addr;'
+#         - '    }}'
 
-    - name: install python libraries
-      pip:
-        name: ['flask']
-        state: latest
+#     - name: install python libraries
+#       pip:
+#         name: ['flask']
+#         state: latest
     
+    # - name: modify python version
+    #   become: yes
+    #   shell: echo alias python=python3 >> ~/.bashrc
+
+    # - name: refresh
+    #   become: yes
+    #   shell: source ~/.bashrc
+
     - name: start nginx
       become: yes
       shell: nginx -c /home/ubuntu/web/nginx.conf

@@ -1,4 +1,12 @@
 # This file is use to get ip of each server
+def server_address():
+    with open('./generic.yaml',encoding='utf8') as f:
+        text = f.readlines()
+        for line in text:
+            if line.startswith("dbServer"):
+                ip = line.split(":")[1].strip()
+
+    return ip
 
 def readfile():
     with open ('./generic.yaml','r') as f:
@@ -24,5 +32,5 @@ def get_harvester2_ip():
     return ips['harverster2']   
 
 
-db_server = 'http://admin:admin@' + get_dbserver_ip() + ':5984'
-print(db_server)
+# db_server = 'http://admin:admin@' + get_dbserver_ip() + ':5984'
+# print(db_server)
