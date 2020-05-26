@@ -1,11 +1,18 @@
-[dbserver]
-172.26.129.233 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+###################################################################################################################################
+##Project: COMP90024--2020S1--Assignment2--Alcohol Tweets and Australian Cities Analytics on the Cloud
+##Purpose:  to find out the correlations between alcohol-related tweets and demographic 
+##          and behavioural characteristics in Australia cities.
+##Team: group05-- Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia YIN (1017231), Fang Qu (1070888)
+###################################################################################################################################
 
-[harvester1]
-172.26.131.90 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[dbServer]
+172.26.134.56 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
-[harvester2]
-172.26.129.158 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[harverster1]
+172.26.131.81 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
-[webserver]
-172.26.131.14 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[harverster2]
+172.26.132.135 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+[webServer]
+172.26.131.29 ansible_ssh_private_key_file=./keys/db3.pem ansible_python_interpreter=/usr/bin/python3 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
