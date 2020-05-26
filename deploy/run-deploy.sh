@@ -26,4 +26,4 @@ ansible-playbook -i ./inventory/hosts.ini -u ubuntu couchdb.yml
 cd ../deploy-harvester-webserver-analyser
 ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu harvester_deploy.yml
 ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu webserver_deploy.yml
-# ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu analyzer_deploy.yml
+ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu analyzer_deploy.yml
