@@ -5,5 +5,5 @@
 #          and behavioural characteristics in Australia cities.
 #Team: group05-- Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia YIN (1017231), Fang Qu (1070888)
 
-chmod go-wrx ../deploy-couchdb-clusters/keys/*.pem
+chmod go-wrx ./keys/*.pem
 . ../openrc.sh; ansible-playbook -i ../deploy-couchdb-clusters/inventory/hosts.ini -u ubuntu harvester_deploy.yml
