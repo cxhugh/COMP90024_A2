@@ -1,10 +1,3 @@
-###################################################################################################################################
-##Project: COMP90024--2020S1--Assignment2--Alcohol Tweets and Australian Cities Analytics on the Cloud
-##Purpose:  to find out the correlations between alcohol-related tweets and demographic 
-##          and behavioural characteristics in Australia cities.
-##Team: group05-- Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia YIN (1017231), Fang Qu (1070888)
-###################################################################################################################################
-
 ---
 # Create a security group
 - name: Create a security group
@@ -90,6 +83,12 @@
       remote_ip_prefix: 0.0.0.0/0
       state: present
 
+- name: Create security group rules for icmp
+  os_security_group_rule:
+    security_group: COMP90024-grp05
+    protocol: tcp
+    remote_ip_prefix: 0.0.0.0/0
+    state: present
 
 - name: Create security group rules for icmp
   os_security_group_rule:
@@ -97,6 +96,4 @@
     protocol: icmp
     remote_ip_prefix: 0.0.0.0/0
     state: present
-
-
 
