@@ -56,13 +56,13 @@
   tasks:
     - name: copy app to server
       copy:
-      src: ../../streaming
-      dest: /home/ubuntu
-      mode: 0755
-      owner: ubuntu
-      group: ubuntu
+        src: ../../streaming
+        dest: /home/ubuntu
+        mode: 0755
+        owner: ubuntu
+        group: ubuntu
 
     - name: start stream api
       shell: bash run.sh
       args:
-        chdir: /home/ubuntu/sentiment/
+        chdir: /home/ubuntu/streaming/

@@ -9,8 +9,8 @@
 ---
 
 - hosts: webServer
-  vars: 
-    webServer: 172.26.131.29
+  vars_files: 
+    - ../config/generic.yaml
   
   tasks:
     - name: copy python files to server
