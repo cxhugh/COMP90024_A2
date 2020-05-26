@@ -1,6 +1,6 @@
 
-     var mymap = L.map('map1').setView([-30,135], 4);
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiamlhbnhpbnh1IiwiYSI6ImNrYWM2OGtmcDAxeG4zMHA2bmdjYXNscmkifQ.tyW3dKaenLGHgXAHRPvWvg ', {
+var mymap = L.map('map1').setView([-30,135], 4);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiamlhbnhpbnh1IiwiYSI6ImNrYWM2OGtmcDAxeG4zMHA2bmdjYXNscmkifQ.tyW3dKaenLGHgXAHRPvWvg ', {
 	     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
 		id: 'mapbox/streets-v11',
@@ -17,7 +17,7 @@
 
 
 
-            var LeafIcon = L.Icon.extend({
+ var LeafIcon = L.Icon.extend({
     options: {
         iconSize:     [20, 20],
         iconAnchor:   [22, 22],
@@ -31,8 +31,8 @@ var posIcon = new LeafIcon({iconUrl: '../static/img/pos.png'}),
     neuIcon = new LeafIcon({iconUrl: '../static/img/neu.png'});
 
 
-    	var cities = L.layerGroup();
-       var cities1 = L.layerGroup();
+var cities = L.layerGroup();
+var cities1 = L.layerGroup();
 
 
 var auth = btoa('admin:admin');
@@ -108,30 +108,10 @@ function add_sentiment_icon1(point,value){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var population;
 var baseMaps;
 var overlayMaps = {	"Alcohol Average Sentiment": cities,
-       "Topic Average Sentiment": cities1,};
+                        "Topic Average Sentiment": cities1,};
 var currentLegend;
 var currentLayer;
 var currentInfo;
@@ -182,9 +162,7 @@ function getMapAusTotal() {
 
 
 
-
 //getMapAusTotal()
-
 
 
 
@@ -255,12 +233,6 @@ function styleA(feature) {
 
 
 
-
-
-
-
-
-
 // mouse on hover highlight
 function highlightFeature(e) {
     var layer = e.target;
@@ -288,9 +260,6 @@ function highlightFeature(e) {
 
 
 function resetHighlight(e) {
-
-
-
     if (currentLayer === "Population"){
         population.resetStyle(e.target);
         infoP.update();
@@ -359,29 +328,7 @@ infoA.update = function (props) {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	var legendP = L.control({position: 'bottomright'});
+var legendP = L.control({position: 'bottomright'});
 
 	legendP.onAdd = function (mymap) {
 
@@ -430,15 +377,8 @@ infoA.update = function (props) {
 	};
 
 
-
-
-
-          //   legend.addTo(mymap);
+//   legend.addTo(mymap);
 getMapAusTotal();
-
-
-
-
 
 legendP.addTo(mymap);
 infoP.addTo(mymap);
