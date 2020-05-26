@@ -1,3 +1,9 @@
+###################################################################################################################################
+##Project: COMP90024--2020S1--Assignment2--Alcohol Tweets and Austrilian Cities_Analytics On the Cloud
+##Purpose:  to find out the correlations between alcohol-related tweets and  demographic 
+##          and behavioural characteristics in Australia cities.
+##Team: group05-- Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia YIN (1017231),Fang Qu (1070888)
+###################################################################################################################################
 # Server IP Addresses
 dbServer: 172.26.134.56
 harverster1: 172.26.131.81
