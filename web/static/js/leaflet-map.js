@@ -1,3 +1,7 @@
+/*
+Project:COMP90024--2020S1--Assignment2--Alcohol Tweets and Australian Cities_Analytics on the Cloud
+Team:group05--Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia Yin (1017231), Fang Qu (1070888)
+*/
 
 var mymap = L.map('map1').setView([-30,135], 4);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiamlhbnhpbnh1IiwiYSI6ImNrYWM2OGtmcDAxeG4zMHA2bmdjYXNscmkifQ.tyW3dKaenLGHgXAHRPvWvg ', {
