@@ -1,3 +1,10 @@
+###################################################################################################################################
+##Project: COMP90024--2020S1--Assignment2--Alcohol Tweets and Australian Cities Analytics on the Cloud
+##Purpose:  to find out the correlations between alcohol-related tweets and demographic 
+##          and behavioural characteristics in Australia cities.
+##Team: group05-- Ruiqi Zhu (939162), Zhengyang Li (952972), Jianxin Xu (1014840), Qiuxia YIN (1017231), Fang Qu (1070888)
+###################################################################################################################################
+
 import json
 from shapely.geometry import Point, shape
 
@@ -70,42 +77,3 @@ def get_suburbID_frm_place(place):
                     max_area_sub_id = item['properties']['SA2_MAIN16']
                     sub_name = item['properties']['SA2_NAME16']
     return max_area_sub_id, sub_name
-
-# test
-# place= {
-#     "url": "https://api.twitter.com/1.1/geo/id/00c262dc7a56fb4e.json",
-#     "place_type": "city",
-#     "country_code": "AU",
-#     "id": "00c262dc7a56fb4e",
-#     "bounding_box": {
-#         "type": "Polygon",
-#         "coordinates": [
-#             [
-#                 [
-#                     145.650457088,
-#                     -17.038658997
-#                 ],
-#                 [
-#                     145.783431648,
-#                     -17.038658997
-#                 ],
-#                 [
-#                     145.783431648,
-#                     -16.7223939305
-#                 ],
-#                 [
-#                     145.650457088,
-#                     -16.7223939305
-#                 ]
-#             ]
-#         ]
-#     },
-#     "full_name": "Cairns, Queensland",
-#     "country": "Australia",
-#     "contained_within": [],
-#     "attributes": {},
-#     "name": "Cairns"
-# }
-
-# suburb_id, suburb_name = get_suburbID_frm_place(place)
-# print(suburb_id,suburb_name)
